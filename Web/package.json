@@ -40,6 +40,7 @@
     "@gammastream/scully-plugin-http404": "^1.0.4",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "scully-plugin-minify-html":"6.0.0",
     "codelyzer": "^6.0.0",
     "html-minifier-terser": "^5.1.1",
     "jasmine-core": "~3.6.0",

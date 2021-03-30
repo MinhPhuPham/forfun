@@ -8587,6 +8587,14 @@ schematics-utilities@^2.0.0:
   optionalDependencies:
     parse5 "^5.1.0"
 
+scully-plugin-minify-html@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/scully-plugin-minify-html/-/scully-plugin-minify-html-6.0.0.tgz#8e9229ffb7a842cf443b17b80adb70efe7e87ec0"
+  integrity sha512-/bX/VR1R4nlXBmW5VJtQ36XZ96v/JOeaH46hUR18kAeNiTUF3GWHoVD/GAl8PFUBK/6WpAIHpK9egGTcasFXgQ==
+  dependencies:
+    html-minifier-terser "^5.1.1"
+    tslib "^2.0.0"
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
