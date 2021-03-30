@@ -1,0 +1,24 @@
+.social-contacts {
+    background-color: #dae1e9;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1334px;
+        margin: 0 auto;
+    }
+
+    &__social {
+        ul {
+            display: flex;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        
+        ul {
+            display: flex;
+        }
+    }
+}
