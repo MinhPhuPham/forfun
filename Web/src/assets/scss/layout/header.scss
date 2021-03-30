@@ -1,0 +1,375 @@
+
+#header {
+    height: 115px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    border-top: 43px solid #193252;
+    background-color: #fff;
+}
+
+#header .container-fluid {
+    position: relative;
+    height: 100%;
+    max-width: 1334px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#header .logo img {
+    max-height: 24px;
+}
+
+#header .contact {
+    position: absolute;
+    right: 15px;
+    top: -43px;
+    line-height: 43px;
+    display: flex;
+}
+
+#header .links {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#header .links a {
+    color: #fff;
+}
+
+#header .links a:hover {
+    color: #f09718;
+}
+
+#header .links> ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#header .links> ul> li {
+    padding: 0 10px;
+    margin: 0;
+    display: inline-block;
+}
+
+#header .phone a, #header .frs-phone-number {
+    font-size: 20px;
+    color: #f09718;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+#header .phone a:hover {
+    opacity: 0.6;
+}
+
+#header .nav {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    bottom: 0;
+}
+
+#header .nav .launch-menu-button {
+    color: #000;
+}
+
+#header .nav .launch-menu-only {
+    display: none;
+}
+
+#header .nav .plus-icon {
+    display: none;
+}
+
+#header .social {
+    position: absolute;
+    left: 15px;
+    top: -43px;
+    line-height: 43px;
+}
+
+#header .social ul li a {
+    width: auto;
+    margin: 0 5px;
+}
+
+#header .social li:first-child> a {
+    margin-left: 0;
+}
+
+#header .mobile-hide {
+    display: block!Important;
+}
+
+#header .mobile-show {
+    display: none!Important;
+}
+
+#header.affix {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 991px) {
+    #header {
+        height: 80px;
+        border-top: 37px solid #193252;
+    }
+
+    #header .logo img {
+        max-height: 20px;
+    }
+
+    #header .contact {
+        position: absolute;
+        top: -37px;
+        line-height: 37px;
+        left: 15px;
+        right: 15px;
+        text-align: center;
+    }
+
+    #header .phone {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #header .phone::before {
+        content: 'Give us a call:';
+        color: #fff;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #header .social, #header .links {
+        display: none;
+    }
+
+    #header .nav {
+        top: 7px;
+    }
+
+    #header .mobile-show, #header.affix .mobile-show {
+        display: block!Important;
+    }
+
+    #header .mobile-hide, #header.affix .mobile-hide {
+        display: none!Important;
+    }
+
+    #header.affix .nav {
+        left: auto;
+        right: 15px;
+        top: 7px;
+        border: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    #header.affix .logo img {
+        max-width: 180px;
+    }
+}
+
+#nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 700;
+}
+
+#nav> ul {
+    padding: 0;
+    margin: 0;
+}
+
+#nav> ul> li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 72px;
+    transition: 0.3s;
+}
+
+#nav> ul> li> a, #nav> ul> li> a:link, #nav> ul> li> a:visited {
+    display: inline-block;
+    color: inherit;
+    transition: 0s
+}
+
+#nav> ul> li:hover, #nav> ul> li.active {
+    color: #f09718;
+    background: #193252;
+    transition: 0.3s;
+}
+
+#nav> ul> li> ul {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 575;
+    text-align: left;
+    padding: 0;
+    background-color: #193252;
+    top: 100%;
+    left: 0px;
+    min-width: 100%;
+}
+
+#nav> ul> li:hover> ul {
+    display: block;
+}
+
+#nav> ul> li.dropdown:hover> ul {
+    display: none;
+}
+
+#nav> ul> li> ul> li, #nav> ul> li> ul> li a {
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    padding: 0 25px;
+}
+
+#nav> ul> li> ul> li> a {
+    color: #fff;
+    padding: 0;
+}
+
+#nav> ul> li> ul> li:hover a {
+    color: #f09718;
+}
+
+@media (max-width: 1199px) {
+    #nav > ul > li {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    #nav > ul > li {
+        padding: 0 15px;
+    }
+}
+
+.launch-menu-mask {
+    background: #000;
+}
+
+.launch-menu.sidebar {
+    background: #1E3250;
+}
+
+.launch-menu .launch-menu-close {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.launch-menu .row {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.launch-menu ul li {
+    padding: 0 25px;
+}
+
+.launch-menu> ul> li {
+    border-bottom: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 28px;
+    position: relative;
+}
+
+.launch-menu> ul> li a {
+    padding: 5px 0;
+}
+
+.launch-menu> ul> li:hover {
+    background: none;
+}
+
+.launch-menu> ul> li:first-child {
+    border-top: 0;
+}
+
+.launch-menu a {
+    color: #fff;
+}
+
+.launch-menu a:hover {
+    color: #f09718;
+}
+
+.launch-menu> ul> li> ul> li:hover {
+    background: none;
+}
+
+.launch-menu> ul> li> ul {
+    text-transform: none;
+    display: none;
+}
+
+.launch-menu .phone {
+    font-size: 26px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.launch-menu .phone a:hover {
+    color: #193252;
+}
+
+.launch-menu .links {
+    background: #222;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+}
+
+.launch-menu .links> ul> li {
+    padding: 10px 0;
+}
+
+.launch-menu .links> ul> li a {
+    color: #fff;
+    font-size: 10px;
+    line-height: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.launch-menu .social {
+    text-align: left;
+    padding: 0 25px;
+}
+
+.launch-menu .social ul li {
+    padding: 0 10px 0 0;
+}
+
+.launch-menu .social ul li a {
+    width: auto;
+}
+
+.launch-menu .launch-menu-hidden {
+    display: none;
+}
