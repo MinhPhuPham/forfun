@@ -1370,10 +1370,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@scullyio/scully@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@scullyio/scully/-/scully-1.1.0.tgz#e586a7183fd4fccc3b995a5a758b01f6e1b4606d"
-  integrity sha512-tfWqBtWq8QbtpgDXdMXhV0Hgz0LoAAl+WoSNdJrdXx2mWQBQiPhfUoqoFzqE4rXE8uPczlH6PUS+c6jOdS5gpQ==
+"@scullyio/scully@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@scullyio/scully/-/scully-1.1.1.tgz#63032ff2a3c39ca05095e8adb94f26e101cb9190"
+  integrity sha512-myuaGdNdZCGNR8+WsT+eInole3GK7sv8pZuFT4Tg2g9ee4SDvTtQWw0i2RJbEhJhUAViDqWzl4+IrfdelKoB2Q==
   dependencies:
     "@sentry/node" "^5.20.1"
     chalk "^4.1.0"
@@ -1391,7 +1391,7 @@
     marked "^2.0.0"
     open "^7.3.0"
     os "^0.1.1"
-    prismjs "1.21.0"
+    prismjs "^1.23.0"
     puppeteer "^5.5.0"
     rxjs "^6.6.2"
     selfsigned "^1.10.8"
@@ -5708,11 +5708,6 @@ jest-worker@26.6.2, jest-worker@^26.5.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jquery@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
-  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
-
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -7847,10 +7842,10 @@ pretty-bytes@^5.3.0:
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
   integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
 
-prismjs@1.21.0:
-  version "1.21.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.21.0.tgz#36c086ec36b45319ec4218ee164c110f9fc015a3"
-  integrity sha512-uGdSIu1nk3kej2iZsLyDoJ7e9bnPzIgY0naW/HdknGj61zScaprVEVGHrPoXqI+M9sP0NDnTK2jpkvmldpuqDw==
+prismjs@^1.23.0:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   optionalDependencies:
     clipboard "^2.0.0"
 

@@ -1,7 +1,10 @@
-import { ScullyConfig, RouteTypes } from '@scullyio/scully';
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { MinifyHtml } from 'scully-plugin-minify-html';
 
+setPluginConfig('md', { enableSyntaxHighlighting: true });
+
+// when have child router like blog/a and blog/b => using extentRoutes of scully for render static
 export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "Clockwork",

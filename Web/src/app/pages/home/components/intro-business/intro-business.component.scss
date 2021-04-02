@@ -1,0 +1,13 @@
+.business-wrapper {
+    padding: 3% 7.5%;
+
+    .container {
+        margin: 0 auto;
+    }
+
+    ::ng-deep {
+        .btn:first-child {
+            margin-bottom: 30px;
+        }
+    }
+}

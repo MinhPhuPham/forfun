@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { MetaService } from 'src/app/shared';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly metaService: MetaService) {}
 
   ngOnInit(): void {
+    this.metaService.resetMeta();
   }
 
 }
