@@ -170,7 +170,7 @@
   </div>
   <ul>
     <li class="launch-menu-only"><a href="/">Home</a></li>
-    <li><a href="/owners">Owners</a><i [className]="'plus-icon fas ' + iconOwners" (click)="ControlMobileSubMenu(isOwnersShow, 'owners')"></i>
+    <li><a href="/owners">Owners</a><i [className]="'plus-icon fas ' + iconOwners" (click)="ControlMobileSubMenu(isOwnersShow, subMenuID.Owners)"></i>
       <ul [style.display]="isOwnersShow ? 'block' : 'none'">
         <li><a href="/chino-hills-property-management">Management</a></li>
         <li><a href="/leasing">Leasing</a></li>
@@ -185,7 +185,7 @@
     <li><a href="/pricing">Pricing</a></li>
     <!-- <li><a href="/#home-pricing" class="smooth-scroll">Pricing</a></li> -->
     <li>
-      <a href="/tenants">Tenants</a><i [className]="'plus-icon fas ' + iconTenants" (click)="ControlMobileSubMenu(isTenantsShow, 'tenants')"></i>
+      <a href="/tenants">Tenants</a><i [className]="'plus-icon fas ' + iconTenants" (click)="ControlMobileSubMenu(isTenantsShow, subMenuID.Tenants)"></i>
       <ul [style.display]="isTenantsShow ? 'block' : 'none'">
         <li><a href="/tenants">Tenant Resources</a></li>
         <li><a href="https://scpm.appfolio.com/connect/users/sign_in" target="_blank">Request Maintenance</a></li>
@@ -195,7 +195,7 @@
       </ul>
     </li>
     <li>
-      <a href="/about">About Us </a><i [className]="'plus-icon fas ' + iconAbout" (click)="ControlMobileSubMenu(isAboutShow, 'about')"></i>
+      <a href="/about">About Us </a><i [className]="'plus-icon fas ' + iconAbout" (click)="ControlMobileSubMenu(isAboutShow, subMenuID.AboutUs)"></i>
       <ul [style.display]="isAboutShow ? 'block' : 'none'">
         <li><a href="/our-team">Our Team</a></li>
         <li><a href="/careers">Join Our Team</a></li>

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { SubMenuID } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   right = '-300';
   iconOwners = 'fa-plus';
   iconTenants = 'fa-plus';
@@ -20,36 +15,42 @@ export class HeaderComponent implements OnInit {
   isOwnersShow = false;
   isTenantsShow = false;
   isAboutShow = false;
+  subMenuID =  SubMenuID;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   ControlMobileMenu(isShow: boolean) : void {
     this.right = isShow ? "0" : '-300';
   }
 
-  ControlMobileSubMenu(isShow : boolean, subMenu : string) : void {
+  ControlMobileSubMenu(isShow : boolean, id : SubMenuID) : void {
     if(isShow) {
-      if(subMenu == 'owners') {
+      if(id == this.subMenuID.Owners) {
         this.iconOwners = 'fa-plus';
         this.isOwnersShow = !this.isOwnersShow;
       }
-      else if(subMenu == 'tenants') {
+      else if(id == this.subMenuID.Tenants) {
         this.iconTenants = 'fa-plus';
         this.isTenantsShow = !this.isTenantsShow;
       }
-      else if(subMenu == 'about') {
+      else if(id == this.subMenuID.AboutUs) {
         this.iconAbout = 'fa-plus';
         this.isAboutShow = !this.isAboutShow;
       }
     }
     else {
-      if(subMenu == 'owners') {
+      if(id == this.subMenuID.Owners) {
         this.iconOwners = 'fa-minus';
         this.isOwnersShow = !this.isOwnersShow;
       }
-      else if(subMenu == 'tenants') {
+      else if(id == this.subMenuID.Tenants) {
         this.iconTenants = 'fa-minus';
         this.isTenantsShow = !this.isTenantsShow;
       }
-      else if(subMenu == 'about') {
+      else if(id == this.subMenuID.AboutUs) {
         this.iconAbout = 'fa-minus';
         this.isAboutShow = !this.isAboutShow;
       }

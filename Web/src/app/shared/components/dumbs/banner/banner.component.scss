@@ -1,5 +1,4 @@
 .launch-image-banner {
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: fill;
@@ -7,17 +6,17 @@
     margin-top: 107px;
 
     .container-fluid .main-section .main-title {
-        font-size: 56px;
+        font-size: 75px;
         text-align: center;
         display: block;
         color: #193252;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         line-height: 56px;
         font-family: 'gorditabold';
     }
 
     .container-fluid .main-section .sub-title {
-        font-size: 20px;
+        font-size: 35px;
         text-transform: uppercase;
         color: #193252;
         text-align: center;
@@ -28,9 +27,9 @@
 
 .launch-image-banner {
     position: relative;
-    height: 400px;
+    height: 760px;
     overflow: hidden;
-    padding-top: 115px;
+    padding-top: 12%;
 }
 
 @media (max-width: 991px) {

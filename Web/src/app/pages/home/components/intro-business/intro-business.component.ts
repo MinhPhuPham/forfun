@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import {DomSanitizer,SafeResourceUrl,} from '@angular/platform-browser';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-intro-business',
@@ -8,16 +8,15 @@ import {DomSanitizer,SafeResourceUrl,} from '@angular/platform-browser';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IntroBusinessComponent implements OnInit {
+  backgroundImage: string = 'https://i3.ytimg.com/vi/Semi7ws9SfI/maxresdefault.jpg';
+  videoThumbnail = true;
+  url!: SafeResourceUrl;
 
   constructor (public sanitizer:DomSanitizer) {
   }
 
   ngOnInit(): void {
   }
-
-  backgroundImage: string = 'https://i3.ytimg.com/vi/Semi7ws9SfI/maxresdefault.jpg';
-  videoThumbnail = true;
-  url!: SafeResourceUrl;
 
   propertyButton = {
     text: 'explore our guarantees',
@@ -26,7 +25,7 @@ export class IntroBusinessComponent implements OnInit {
   }
 
   AutoPlay() : void {
-    this.videoThumbnail =false;
+    this.videoThumbnail = false;
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/Semi7ws9SfI?rel=0;&autoplay=1");
   }
 }
