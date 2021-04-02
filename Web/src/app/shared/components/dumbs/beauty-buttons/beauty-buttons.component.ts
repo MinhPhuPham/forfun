@@ -12,7 +12,7 @@ export class BeautyButtonsComponent implements OnInit {
 
   constructor() { }
 
-  @Input() buttonConfigs: ButtonConfigs;
+  @Input() buttonConfigs: ButtonConfigs = {};
 
   ngOnInit(): void {
   }

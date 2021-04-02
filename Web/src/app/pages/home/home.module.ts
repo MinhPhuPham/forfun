@@ -9,6 +9,7 @@ import { ProtectionComponent } from './components/protection/protection.componen
 import { PropertyManagementComponent } from './components/property-management/property-management.component';
 import { NgbCarouselModule } from 'src/app/shared/modules/carousel/carousel.module';
 import { IntroBusinessComponent } from './components/intro-business/intro-business.component';
+import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 
 export const HomeRoutes: Routes = [
   {
@@ -18,12 +19,12 @@ export const HomeRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, ServicesComponent, ProtectionComponent, PropertyManagementComponent, IntroBusinessComponent],
+  declarations: [HomeComponent, ServicesComponent, ProtectionComponent, PropertyManagementComponent, IntroBusinessComponent, SafePipe],
   imports: [
     CommonModule,
     DumbsModule,
     NgbCarouselModule,
     RouterModule.forChild(HomeRoutes)
-  ]
+  ],exports:[SafePipe]
 })
 export class HomeModule { }
