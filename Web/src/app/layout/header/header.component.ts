@@ -4,10 +4,16 @@ import { SubMenuID } from 'src/app/shared/models';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  //styleUrls: ['src/assets/scss/themes/_header.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
   right = '-300';
   iconOwners = 'fa-plus';
   iconTenants = 'fa-plus';
@@ -15,8 +21,6 @@ export class HeaderComponent implements OnInit {
   isOwnersShow = false;
   isTenantsShow = false;
   isAboutShow = false;
-  subMenuID =  SubMenuID;
-
   constructor() { }
 
   ngOnInit(): void {
@@ -24,33 +28,35 @@ export class HeaderComponent implements OnInit {
 
   ControlMobileMenu(isShow: boolean) : void {
     this.right = isShow ? "0" : '-300';
-  }
-
+  ControlMobileMenu(isShow: boolean) : void {
+    this.right = isShow ? "0" : '-300';
   ControlMobileSubMenu(isShow : boolean, id : SubMenuID) : void {
     if(isShow) {
       if(id == this.subMenuID.Owners) {
-        this.iconOwners = 'fa-plus';
-        this.isOwnersShow = !this.isOwnersShow;
+    if(isShow) {
+      if(subMenu == 'owners') {
       }
       else if(id == this.subMenuID.Tenants) {
-        this.iconTenants = 'fa-plus';
-        this.isTenantsShow = !this.isTenantsShow;
+      }
+      else if(subMenu == 'tenants') {
       }
       else if(id == this.subMenuID.AboutUs) {
-        this.iconAbout = 'fa-plus';
-        this.isAboutShow = !this.isAboutShow;
       }
+      else if(subMenu == 'about') {
+        this.iconAbout = 'fa-plus';
     }
     else {
       if(id == this.subMenuID.Owners) {
-        this.iconOwners = 'fa-minus';
-        this.isOwnersShow = !this.isOwnersShow;
+    else {
+      if(subMenu == 'owners') {
       }
       else if(id == this.subMenuID.Tenants) {
-        this.iconTenants = 'fa-minus';
-        this.isTenantsShow = !this.isTenantsShow;
+      }
+      else if(subMenu == 'tenants') {
       }
       else if(id == this.subMenuID.AboutUs) {
+      }
+      else if(subMenu == 'about') {
         this.iconAbout = 'fa-minus';
         this.isAboutShow = !this.isAboutShow;
       }
