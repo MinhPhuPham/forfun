@@ -11,3 +11,51 @@
         }
     }
 }
+
+.video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 25%;
+    transition: 0.3s;
+  }
+
+  &:hover::before {
+    background: rgba(255,0,0,255);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-44%, -50%);
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 9px 19px;
+    border-color: transparent transparent transparent #ffffff;
+    z-index: 999;
+  }
+}

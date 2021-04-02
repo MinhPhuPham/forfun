@@ -1,7 +1,27 @@
+@font-face {
+  font-family: 'gorditalight';
+  src: url('/assets/fonts/gordita/Gordita\ Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gorditabold';
+  src: url('/assets/fonts/gordita/Gordita\ Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gorditamedium';
+  src: url('/assets/fonts/gordita/Gordita\ Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .property-wrapper {
-    padding: 3% 7.5%;
     text-align: center;
-    // font-family: 'gorditamedium';
+    font-family: 'gorditalight';
 
     .intro {
         margin-bottom: 70px;
