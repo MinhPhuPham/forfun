@@ -8,17 +8,14 @@ import { ErrorComponent } from './pages/error/error.component';
 import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ErrorComponent
-  ],
+  declarations: [AppComponent, ErrorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ScullyLibModule,
-    LayoutModule
+    LayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

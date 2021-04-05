@@ -8,12 +8,11 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from 'src/app/shared/
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProtectionComponent implements OnInit {
-
   images = [
     {
       img: 'icon_guarantee_pet',
       title: 'Pet Guarantee',
-      content: 'Up to $1,000 in damage protection for any pet damage above and beyond what the security deposit covers.' 
+      content: 'Up to $1,000 in damage protection for any pet damage above and beyond what the security deposit covers.'
     },
     {
       img: 'icon_guarantee_owner_distribution',
@@ -23,22 +22,22 @@ export class ProtectionComponent implements OnInit {
     {
       img: 'icon_guarantee_30dayrental',
       title: '30 Day Rental Guarantee',
-      content: 'If we are unable to lease your home in 30 days or less we will give you ONE month management free! This means we will WAIVE your first month management fee.' 
+      content: 'If we are unable to lease your home in 30 days or less we will give you ONE month management free! This means we will WAIVE your first month management fee.'
     },
     {
       img: 'icon_guarantee_reachability',
       title: 'Reachability Guarantee',
-      content: 'Manager guarantees our staff will be reachable via phone, text, or email and will respond to any Owners concerns within 24 hours. If Manager fails to respond to Owner within 24 hours, the management fee for one month will be waived.' 
+      content: 'Manager guarantees our staff will be reachable via phone, text, or email and will respond to any Owners concerns within 24 hours. If Manager fails to respond to Owner within 24 hours, the management fee for one month will be waived.'
     },
     {
       img: 'icon_guarantee_satisfaction',
       title: 'Satisfaction Guarantee',
-      content: 'Our goal is to ensure every client has a great customer experience. If for any reason you are not completely happy with our services, you can cancel your management agreement at anytime without penalty.' 
+      content: 'Our goal is to ensure every client has a great customer experience. If for any reason you are not completely happy with our services, you can cancel your management agreement at anytime without penalty.'
     },
     {
       img: 'icon_guarantee_tenantplacement',
       title: 'Leasing Guarantee',
-      content: 'You should never have to pay twice for us to find a new tenant for your property. If a tenant fails to complete their lease terms there will be no fee charged to replace that tenant.' 
+      content: 'You should never have to pay twice for us to find a new tenant for your property. If a tenant fails to complete their lease terms there will be no fee charged to replace that tenant.'
     },
     {
       img: 'icon_guarantee_results',

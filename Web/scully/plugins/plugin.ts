@@ -1,60 +1,12 @@
-import { minify, Options } from 'html-minifier-terser';
-import { getMyConfig, registerPlugin } from '@scullyio/scully';
 
-export const MinifyHtml = 'minifyHtml';
+import { registerPlugin, getPluginConfig } from '@scullyio/scully';
 
-export interface MinifyHtmlOptions {
-  minifyOptions: Options;
-}
+export const myPlugin = 'myPlugin';
 
-const defaultMinifyOptions: Options = {
-  caseSensitive: true,
-  removeComments: true,
-  collapseWhitespace: true,
-  collapseBooleanAttributes: true,
-  removeRedundantAttributes: true,
-  useShortDoctype: true,
-  removeEmptyAttributes: true,
-  minifyCSS: true,
-  minifyJS: true,
-  removeScriptTypeAttributes: true,
-  removeStyleLinkTypeAttributes: true,
-  // don't remove attribute quotes, not all social media platforms can parse this over-optimization
-  removeAttributeQuotes: false,
-  // don't remove optional tags, like the head, not all social media platforms can parse this over-optimization
-  removeOptionalTags: false,
-  // scully specific HTML comments
-  // this will always be added in the final minifyOptions config
-  ignoreCustomComments: [/scullyContent-(begin|end)/],
-  // scully specific data injection
-  // this will always be added in the final minifyOptions config
-  ignoreCustomFragments: [/\/\*\* ___SCULLY_STATE_(START|END)___ \*\//],
+const myFunctionPlugin = async (html: string): Promise<string> => {
+  return html;
 };
 
-export const minifyHtmlPlugin = (html: string): Promise<string> => {
-  let localMinifyOptions = defaultMinifyOptions;
-  const customMinifyOptions = getMyConfig<MinifyHtmlOptions>(minifyHtmlPlugin);
+const validator = async () => [];
 
-  if (customMinifyOptions && customMinifyOptions.minifyOptions) {
-    localMinifyOptions = {
-      ...defaultMinifyOptions,
-      ...customMinifyOptions.minifyOptions,
-      ignoreCustomComments: [
-        ...defaultMinifyOptions.ignoreCustomComments,
-        ...(customMinifyOptions.minifyOptions.ignoreCustomComments
-          ? customMinifyOptions.minifyOptions.ignoreCustomComments
-          : []),
-      ],
-      ignoreCustomFragments: [
-        ...defaultMinifyOptions.ignoreCustomFragments,
-        ...(customMinifyOptions.minifyOptions.ignoreCustomFragments
-          ? customMinifyOptions.minifyOptions.ignoreCustomFragments
-          : []),
-      ],
-    };
-  }
-
-  return Promise.resolve(minify(html, localMinifyOptions));
-};
-
-registerPlugin('postProcessByHtml', MinifyHtml, minifyHtmlPlugin);
+registerPlugin('render', myPlugin, myFunctionPlugin, validator);

@@ -13,7 +13,7 @@
     "scully": "scully",
     "scully:serve": "scully serve",
     "scully:preview": "npm run scully:build && npm run scully:serve",
-    "scully:build": "ng build --prod && npm run scully",
+    "scully:build": "ng build --prod && npm run scully && scully -- --scanRoutes",
     "build:prod": "ng build --prod && scully -- --scanRoutes"
   },
   "private": true,
@@ -36,14 +36,13 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.6",
+    "@angular-devkit/build-angular": "^0.1102.7",
     "@angular/cli": "~11.2.6",
     "@angular/compiler-cli": "~11.2.7",
     "@gammastream/scully-plugin-http404": "^1.0.4",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "html-minifier-terser": "^5.1.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.1.0",

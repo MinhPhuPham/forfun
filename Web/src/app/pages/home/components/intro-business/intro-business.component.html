@@ -2,18 +2,17 @@
     <div class="container row">
         <div class="col-md-8">
           <div class="video-container">
-            <div class="video-wrapper lazy-video" (click)='AutoPlay()'>
-              <div *ngIf="videoThumbnail" class="video-thumbnail" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}"></div>
-              <iframe width="1280" height="720" class="lazyload" [src]="url"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+            <div class="video-wrapper lazy-video">
+              <iframe src="https://www.youtube.com/embed/Semi7ws9SfI" loading="lazy"
+              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Semi7ws9SfI?rel=0;&autoplay=1><img src=https://i3.ytimg.com/vi/Semi7ws9SfI/maxresdefault.jpg alt='Clockwork Property Management'><span>▶</span></a>"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"></iframe>
             </div>
           </div>
         </div>
         <div class="col-md-4 d-flex flex-column justify-content-center group-btn-business">
-            <a routerLink="/" class="btn yellow">CHECK OUT OUR PRICING</a>
-            <a routerLink="/" class="btn purple">FIND OUT WHAT YOUR HOME COULD RENT FOR</a>
+            <a routerLink="/" class="btn btn-clock yellow">CHECK OUT OUR PRICING</a>
+            <a routerLink="/" class="btn btn-clock purple">FIND OUT WHAT YOUR HOME COULD RENT FOR</a>
         </div>
     </div>
 </div>

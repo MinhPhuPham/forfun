@@ -12,19 +12,12 @@ export class IntroBusinessComponent implements OnInit {
   backgroundImage: string = 'https://i3.ytimg.com/vi/Semi7ws9SfI/maxresdefault.jpg';
   videoThumbnail = true;
   url!: SafeResourceUrl;
-  propertyButton : ButtonConfigs={}
 
   constructor (public sanitizer:DomSanitizer) {
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl("");
-    this.propertyButton= {
-      text: 'explore our guarantees',
-      link: '',
-      class: 'yellow text-white'
-    }
   }
 
   ngOnInit(): void {
-    console.log(this.propertyButton)
   }
 
   AutoPlay() : void {

@@ -12,10 +12,4 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  propertyButton = {
-    text: 'explore our guarantees',
-    link: '',
-    class: 'yellow text-white'
-  }
-
 }
