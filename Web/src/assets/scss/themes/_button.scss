@@ -78,10 +78,6 @@
     background-color: #0fb2e4;
 }
 
-.purple:hover {
-    background-color: #0facdb;
-}
-
 .orange {
     background-color: #e67e22;
 }
@@ -91,9 +87,17 @@
 }
 
 .yellow {
-    background-color: #ff9e1a;
+  background-color: #ff9e1a;
 }
 
-.yellow:hover {
-    background-color: #ee9518;
+.text-white {
+  font-size: 18px;
+  font-family: "gorditamedium";
+  display: inherit !important;
+
+  &:hover {
+    background-color: #fff;
+    color: #ff9e1a !important;
+    border-color: #ff9e1a;
+  }
 }

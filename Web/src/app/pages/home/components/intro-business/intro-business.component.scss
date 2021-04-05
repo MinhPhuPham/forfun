@@ -6,7 +6,6 @@
     margin: 0 auto;
 
     .btn {
-      font-size: 14px;
       font-family: 'gorditamedium';
     }
   }
@@ -74,6 +73,13 @@
     border-color: transparent transparent transparent #ffffff;
     z-index: 999;
   }
+}
+
+.lazyload {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 @media (max-width: 991.98px) {

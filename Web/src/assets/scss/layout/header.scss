@@ -1,6 +1,5 @@
 .launch-menu-sidebar {
-  background: #28446e;
-  color: #fff;
+  background: #dae1e9;
   position: fixed;
   left: auto;
   top: 0;
@@ -15,12 +14,6 @@
     @include flex-space-center;
     margin-bottom: 10px;
 
-    // img {
-    //   filter: brightness(0) invert(1);
-    //   -webkit-filter: brightness(0) invert(1);
-    //   width: 1.5rem;
-    // }
-
     ul {
       display: grid;
       grid-template-columns: repeat(2, 2.5rem);
@@ -33,7 +26,6 @@
         font-size: 1.5rem;
 
         a {
-
           i {
             -webkit-transition: all 0.4s;
             -o-transition: all 0.4s;
@@ -67,7 +59,7 @@
   }
 
   .sidebar-quick {
-    background: #222;
+    background: #062f6e;
     padding: 0.5rem 1.5rem;
 
     ul {
@@ -77,6 +69,7 @@
         padding: 0.5rem 0;
 
         a {
+          color: #dae1e9 !important;
           font-size: 0.8rem;
           line-height: 11px;
           font-family: 'gorditabold';
@@ -85,7 +78,7 @@
           text-decoration: none;
 
           &:hover {
-            color: #f09718;
+            color: #f09718 !important;
           }
         }
       }
@@ -98,6 +91,10 @@
 
     .card {
       background-color: transparent;
+
+      a:hover {
+        color: #f09718 !important;
+      }
     }
 
     &__toolbar {
@@ -109,11 +106,16 @@
         cursor: pointer;
       }
 
-      .plus-icon:hover {
-        cursor: pointer;
-        &::after, &::before {
-          background-color: #f09718;
-        }
+      .plus-icon {
+          &::after, &::before {
+            background-color: #062f6e;
+          }
+          &:hover {
+            cursor: pointer;
+            &::after, &::before {
+              background-color: #f09718;
+            }
+          }
       }
     }
 
@@ -129,10 +131,8 @@
           font-size: 14px;
           cursor: pointer;
 
-          &:hover {
-            a {
-              color: #f09718;
-            }
+          a:hover {
+            color: #f09718;
           }
 
           a {
@@ -148,7 +148,7 @@
 
   a {
     text-decoration: none;
-    color: $white;
+    color: #062f6e !important;
   }
 
   ul {
@@ -225,45 +225,58 @@
 }
 
 .launch-sticky-header {
-  width: 100%;
-  background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 2;
 
   .socials-contacts-wrapper {
-    @include flex-space-center;
-    @include top-bar;
     background-color: #dae1e9;
-    height: 36px;
-    padding: 0 8%;
+    .container-fluid {
+      @include flex-space-center;
+      @include top-bar;
+      max-width: 1334px;
+      height: 36px;
+      padding: 0px;
 
-    .social {
-      line-height: 43px;
+      .social {
+        line-height: 43px;
 
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-
-        li {
+        ul {
           list-style-type: none;
           padding: 0;
-          margin: 0 8px 0 0;
-          display: inline-block;
+          margin: 0;
 
-          a {
-            width: auto;
-            margin: 0 5px;
+          li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 20px 0 0;
+            display: inline-block;
 
-            img {
-              width: 50%;
+            a {
+              font-size: 23px;
+              color: #062f6e;
+              i {
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+              }
+
+              &:hover {
+                border-color: transparent;
+                color: #f09718;
+
+                i {
+                  -webkit-transform: rotate(360deg);
+                  -ms-transform: rotate(360deg);
+                  transform: rotate(360deg);
+                }
+              }
             }
           }
-        }
 
-        li:first-child>a {
-          margin-left: 0;
+          li:first-child>a {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -274,10 +287,18 @@
     }
   }
 
+  .container-nav-wrapper {
+    background-color: #fff !important;
+    width: 100%;
+  }
+
   .nav-wrapper {
     @include top-bar;
     @include flex-space-center;
+    max-width: 1334px;
     min-height: 3.5rem;
+    background-color: #fff !important;
+    padding: 0px;
 
     .logo img {
       &:hover {
@@ -380,7 +401,7 @@
 @media (max-width: 991px) {
   .launch-sticky-header {
     .socials-contacts-wrapper {
-      background-color: #2f4b6f;
+      background-color: #dae1e9;
     }
 
     .logo {
@@ -513,6 +534,7 @@
     display: block !important;
   }
 
+  cursor: pointer;
   background: #94dcec;
   transition: 0.3s;
 }
@@ -539,7 +561,7 @@
 }
 
 .top-navbar>ul>li>ul>li:hover a {
-  color: #f09718;
+  color: #062f6e  !important;
 }
 
 @media (max-width: 1330px) {
