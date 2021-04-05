@@ -24,7 +24,6 @@ export class IntroBusinessComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.propertyButton)
   }
 
   AutoPlay() : void {

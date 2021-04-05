@@ -4,7 +4,7 @@
           <div class="video-container">
             <div class="video-wrapper lazy-video" (click)='AutoPlay()'>
               <div *ngIf="videoThumbnail" class="video-thumbnail" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}"></div>
-              <iframe width="1280" height="720" class="lazyload" [src]="url"
+              <iframe class="lazyload" [src]="url"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>

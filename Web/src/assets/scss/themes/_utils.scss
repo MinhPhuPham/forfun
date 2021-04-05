@@ -30,9 +30,8 @@
 }
 
 @mixin top-bar {
-    position: relative;
+    position: sticky;
     width: 100%;
-    padding: 0 7.5%;
     margin: 0 auto;
 }
 
