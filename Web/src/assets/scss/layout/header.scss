@@ -104,14 +104,16 @@
       @include flex-space-center;
       text-transform: uppercase;
 
-      a:hover{
+      a:hover {
         color: #f09718;
         cursor: pointer;
       }
 
       .plus-icon:hover {
         cursor: pointer;
-        &::after, &::before {
+
+        &::after,
+        &::before {
           background-color: #f09718;
         }
       }
@@ -347,6 +349,12 @@
     .launch-menu-button {
       color: #000;
       cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #f79712;
+      }
     }
 
     .launch-menu-only {
@@ -362,7 +370,7 @@
     display: block;
 
     a {
-      color: $dark-blue-900 !important;
+      color: $dark-blue-900;
     }
   }
 
@@ -505,8 +513,10 @@
 
 .top-navbar>ul>li:hover,
 .top-navbar>ul>li.active {
+  cursor: pointer;
+
   a {
-    color: #fff !important;
+    color: #ffffff;
   }
 
   ul {
@@ -538,8 +548,12 @@
   padding: 0;
 }
 
+.top-navbar>ul>li>ul>li:hover {
+  background-color: #99d5e4;
+}
+
 .top-navbar>ul>li>ul>li:hover a {
-  color: #f09718;
+  color: #1959b9;
 }
 
 @media (max-width: 1330px) {

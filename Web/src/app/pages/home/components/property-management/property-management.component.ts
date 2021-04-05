@@ -13,10 +13,4 @@ export class PropertyManagementComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  propertyButton = {
-    text: 'request a free property evaluation',
-    link: '',
-    class: 'yellow text-white'
-  }
-
 }

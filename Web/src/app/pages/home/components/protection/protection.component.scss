@@ -59,7 +59,7 @@
 
         .carousel-inner {
             width: 80%;
-            min-height: 230px;
+            min-height: 250px;
             margin: 0 auto
         }
 
@@ -88,7 +88,6 @@
     }
 
     ::ng-deep {
-
         .carousel-control-next-icon,
         .carousel-control-prev-icon {
             width: 30px !important;

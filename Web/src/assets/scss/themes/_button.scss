@@ -27,7 +27,7 @@
     padding: 10px 20px;
     font-size: 16px;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -42,8 +42,11 @@
     }
 }
 
-
-
+.btn-clock {
+    font-size: 12px;
+    font-family: 'gorditamedium';
+    letter-spacing: 1px;
+}
 
 .btn:active {
     transform: translate(0px, 5px);

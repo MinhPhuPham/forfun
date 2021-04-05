@@ -51,80 +51,13 @@
             <div class="mobile-hide">
                 <div class="top-navbar">
                     <ul>
-                        <li class="dropdown">
-                            <a routerLink="/owners">Owners</a>
-                            <ul style="display: none">
-                                <li class="dropdown">
-                                    <a routerLink="/chino-hills-property-management">Management</a>
-                                </li>
-                                <li class="dropdown"><a routerLink="/leasing">Leasing</a></li>
-                                <li class="dropdown">
-                                    <a routerLink="/guarantees">Our Guarantees</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a routerLink="/properties-we-manage" target="_blank">Properties We Manage</a>
-                                </li>
-                                <li class="dropdown"><a routerLink="/owner-faq">Owner FAQs</a></li>
-                                <li class="dropdown">
-                                    <a routerLink="/landlord-protection">Landlord Protection Insurance</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a routerLink="/international-clients">International Clients</a>
+                        <li class="dropdown" *ngFor="let item of sideBarMenuData">
+                            <a routerLink="{{ item.link }}">{{ item.title }}</a>
+                            <ul style="display: none" *ngIf="item.submenu">
+                                <li class="dropdown" *ngFor="let sub of item.submenu">
+                                    <a routerLink="{{ sub.link }}">{{ sub.title }}</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="dropdown"><a routerLink="/pricing">Pricing</a></li>
-                        <!-- <li><a routerLink="/#home-pricing" class="smooth-scroll">Pricing</a></li> -->
-                        <li class="dropdown">
-                            <a routerLink="/tenants">Tenants</a>
-                            <ul style="display: none">
-                                <li class="dropdown">
-                                    <a routerLink="/tenants">Tenant Resources</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a routerLink="https://scpm.appfolio.com/connect/users/sign_in"
-                                        target="_blank">Request
-                                        Maintenance</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a routerLink="https://scpm.appfolio.com/connect/users/sign_in"
-                                        target="_blank">Tenant
-                                        Login</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a routerLink="https://learn.homebridge.com/clockwork/" target="_blank">Home Buyer
-                                        Program</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a routerLink="https://www.greatschools.org/" target="_blank">School Information</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a routerLink="/about">About Us </a>
-                            <ul style="display: none">
-                                <li class="dropdown"><a routerLink="/our-team">Our Team</a></li>
-                                <li class="dropdown"><a routerLink="/careers">Join Our Team</a></li>
-                                <li class="dropdown"><a routerLink="/testimonials">Reviews</a></li>
-                                <li class="dropdown"><a routerLink="/contact">Contact Us</a></li>
-                                <li class="dropdown"><a routerLink="/blog">Blog</a></li>
-                            </ul>
-                        </li>
-                        <li class="launch-menu-hidden dropdown">
-                            <a routerLink="/chino-hills-homes-for-rent">Browse Our Listings</a>
-                            <!-- <ul>
-          <li><a href="/chino-hills-homes-for-rent">Original Design</a></li>
-          <li><a href="/san-bernardino-homes-for-rent">Postcard Design</a></li>
-          <li><a href="/riverside-homes-for-rent">Simple Design</a></li>
-      </ul> -->
-                        </li>
-                        <li class="dropdown">
-                            <a routerLink="/agents">Agents</a>
-                            <!-- <ul>
-          <li><a href="/chino-hills-homes-for-rent">Original Design</a></li>
-          <li><a href="/san-bernardino-homes-for-rent">Postcard Design</a></li>
-          <li><a href="/riverside-homes-for-rent">Simple Design</a></li>
-      </ul> -->
                         </li>
                     </ul>
                 </div>
@@ -167,10 +100,12 @@
         </ul>
     </div>
     <div class="sidebar-menu">
-        <ngb-accordion [closeOthers]="true" (panelChange)="changeActiveSideMenu($event)" #sideBarMenu="ngbAccordion" [activeIds]="activeSideId">
+        <ngb-accordion [closeOthers]="true" (panelChange)="changeActiveSideMenu($event)" #sideBarMenu="ngbAccordion"
+            [activeIds]="activeSideId">
             <ngb-panel *ngFor="let item of sideBarMenuData; let index = index" id="sidemenu-{{ index }}">
                 <ng-template ngbPanelHeader>
-                    <div class="sidebar-menu__toolbar" [ngClass]="{'sidebar-active': activeSideId === ('sidemenu-' + index)}">
+                    <div class="sidebar-menu__toolbar"
+                        [ngClass]="{'sidebar-active': activeSideId === ('sidemenu-' + index)}">
                         <a href="#">{{ item.title }}</a>
                         <span *ngIf="item.submenu" class="plus-icon" ngbPanelToggle></span>
                     </div>
