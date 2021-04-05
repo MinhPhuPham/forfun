@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { ErrorComponent } from './pages/error/error.component';
 import { LayoutModule } from './layout/layout.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ErrorComponent
-  ],
+  declarations: [AppComponent, ErrorComponent],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    CommonModule,
+    BrowserModule,
     ScullyLibModule,
-    LayoutModule
+    LayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
