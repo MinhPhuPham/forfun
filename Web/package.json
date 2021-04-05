@@ -8,11 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "unused-css": "ngx-unused-css",
+    "postbuild": "node environments/postbuild.js",
     "scully": "scully",
     "scully:serve": "scully serve",
     "scully:preview": "npm run scully:build && npm run scully:serve",
     "scully:build": "ng build --prod && npm run scully",
-    "build:prod": "ng build --prod && scully --prod --scanRoutes"
+    "build:prod": "ng build --prod && scully -- --scanRoutes"
   },
   "private": true,
   "dependencies": {
@@ -49,7 +51,9 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ngx-unused-css": "^3.0.0",
     "protractor": "~7.0.0",
+    "purgecss": "^4.0.3",
     "scully-plugin-minify-html": "6.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

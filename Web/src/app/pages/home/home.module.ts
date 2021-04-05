@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { DumbsModule } from 'src/app/shared';
+import { AnimateOnScrollModule, DumbsModule } from 'src/app/shared';
 import { ServicesComponent } from './components/services/services.component';
 import { ProtectionComponent } from './components/protection/protection.component';
 import { PropertyManagementComponent } from './components/property-management/property-management.component';
@@ -24,7 +24,8 @@ export const HomeRoutes: Routes = [
     CommonModule,
     DumbsModule,
     NgbCarouselModule,
-    RouterModule.forChild(HomeRoutes)
+    RouterModule.forChild(HomeRoutes),
+    AnimateOnScrollModule.forRoot(),
   ],exports:[SafePipe]
 })
 export class HomeModule { }

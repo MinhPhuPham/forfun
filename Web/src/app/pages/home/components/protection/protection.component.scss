@@ -1,3 +1,11 @@
+@mixin custom-control-btn($url-img) {
+    background-image: url($url-img);
+    width: 43px;
+    height: 72px;
+    background-position: center;
+    background-size: contain;
+}
+
 .protection-wrapper {
     padding: 3% 7.5%;
     text-align: center;
@@ -9,5 +17,82 @@
 
     .btn-process {
         margin-top: 40px;
+    }
+
+    .protection-carousel {
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 80%;
+        margin: 0 auto;
+
+        &-img {
+            margin-bottom: 1%;
+
+            img {
+                width: calc(100vw / 10);
+                max-width: 100px;
+                min-width: 60px;
+            }
+        }
+
+        &-content {
+            font-size: 1rem;
+            font-family: 'gorditaRegular';
+
+            .content-title {
+                font-size: 1.5rem;
+                font-family: 'gorditamedium';
+                color: #00b2e2;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    ::ng-deep {
+
+        .carousel,
+        .carousel-inner {
+            outline: none
+        }
+
+        .carousel-inner {
+            width: 80%;
+            min-height: 230px;
+            margin: 0 auto
+        }
+
+        .carousel-control-next-icon {
+            @include custom-control-btn("/assets/images/icons/Icon_blue_arrow_right.png")
+        }
+
+        .carousel-control-prev-icon {
+            @include custom-control-btn("/assets/images/icons/Icon_blue_arrow_left.png");
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .protection-wrapper {
+        padding: 4% 2%;
+
+        .protection-carousel-content {
+            font-size: 0.9rem;
+
+            .content-title {
+                font-size: 1.2rem;
+                margin-top: 0.3rem;
+            }
+        }
+    }
+
+    ::ng-deep {
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 30px !important;
+            height: calc(30px * 1.67);
+        }
     }
 }

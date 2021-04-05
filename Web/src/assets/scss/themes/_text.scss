@@ -1,6 +1,42 @@
 .title-intro {
-    font-size: 32px;
-    color: #062f6e;
-    font-family: 'gorditabold';
-    line-height: 60px;
+    font-size: 2.5rem;
+    color: $dark-blue-900;
+    font-family: 'gorditamedium';
+    margin-bottom: 1rem;
+}
+
+.content-md-intro {
+    font-size: 1.1rem;
+    font-family: 'gorditaRegular';
+    color: $gray-600;
+}
+
+.content-lg-intro {
+    font-family: 'gorditaRegular';
+    color: $dark-blue-900;
+    font-size: 1.2rem;
+}
+
+@include media-breakpoint-down(md) {
+    .title-intro {
+        font-size: 2rem;
+    }
+
+    .content-md-intro {
+        font-size: 0.9rem;
+    }
+
+    .content-lg-intro {
+        font-size: 1rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .title-intro {
+        font-size: 1.5rem;
+    }
+
+    .content-md-intro, .content-lg-intro {
+        font-size: 0.85rem;
+    }
 }

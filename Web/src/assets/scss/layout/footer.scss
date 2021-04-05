@@ -1,0 +1,229 @@
+/*footer*/
+.col_white_amrc {
+    color: #FFF;
+}
+
+@mixin footer-section {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'gorditalight';
+}
+
+.footer {
+    width: 100%;
+    background-color: #8c8c8c;
+    min-height: 250px;
+    padding-top: 10px;
+
+    .row {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    &__section-1 {
+        padding: 2.5rem 0;
+
+        .btn {
+            padding: .8rem 2rem;
+            border-radius: 10px;
+            letter-spacing: 1.5px;
+            font-size: .8rem;
+            font-family: 'gorditamedium';
+            transition: all 0.5s;
+
+            &:hover {
+                color: #2f3236;
+            }
+        }
+
+        .logo-submit {
+            .logo {
+                margin-bottom: 30px;
+                max-height: 34px;
+            }
+        }
+    }
+
+    &__section-2 {
+        @include footer-section;
+        padding: 2.5rem 0;
+
+        .social_footer_ul {
+            display: table;
+            margin: 2.5rem auto;
+
+            span {
+                display: block;
+                font-family: 'gorditabold';
+                letter-spacing: 1.2px;
+                margin-bottom: 1.5rem;
+            }
+
+            li {
+                padding-left: 20px;
+                padding-top: 10px;
+                float: left;
+
+                &:nth-child(1) {
+                    padding-left: 0;
+                }
+
+                a {
+                    color: #CCC;
+                    border: 1px solid #CCC;
+                    padding: 8px;
+                    border-radius: 50%;
+                }
+
+                i {
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+
+        h5 {
+            font-family: 'gorditamedium';
+            letter-spacing: 1.5px;
+            font-size: 1rem;
+        }
+
+        .address {
+            margin-top: 1.5rem;
+
+            &_title {
+                font-family: 'gorditamedium';
+            }
+        }
+
+        .with-pipes {
+            li {
+                display: inline;
+
+                &:nth-child(1n+2):before {
+                    content: "|";
+                    margin: 0 8px 0 6px;
+                }
+            }
+        }
+    }
+
+    &__section-3 {
+        @include footer-section;
+        padding: 1.5rem 0;
+    }
+
+    p {
+        font-size: 13px;
+        color: #CCC;
+        padding-bottom: 0px;
+        margin-bottom: 8px;
+    }
+
+    .container-fluid {
+        max-width: 1334px;
+        margin: 0 auto;
+    }
+
+    .headin5_amrc {
+        font-family: 'gorditamedium';
+        font-size: 1rem;
+    }
+
+    .footer_ul_amrc {
+        margin: 0px;
+        list-style-type: none;
+        font-size: 1rem;
+        font-family: 'gorditalight';
+        padding: 0px 0px 10px 0px;
+
+        li {
+            padding: 0px 0px 5px 0px;
+
+            a {
+                color: #CCC;
+
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+    .bottom_border {
+        border-bottom: 1px solid #f6f6f6;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer {
+        text-align: center;
+
+        &__section-1 {
+            padding: 1.5rem 0;
+
+            .logo-submit {
+                width: 60%;
+                margin: 0 auto 1rem;
+            }
+
+            .col-md-3:nth-child(n) {
+                margin-bottom: 1rem;
+            }
+
+            .col-md-3:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__section-2 {
+            >.row {
+                .col-md-6:first-child {
+                    margin-bottom: 2.5rem;
+                }
+
+                .col-md-6:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .footer {
+        &__section-1 {
+            padding: 1.5rem 0;
+
+            .logo-submit {
+                width: 100%;
+                margin: 0 auto 1rem;
+            }
+        }
+
+        .row {
+            margin-left: 0px;
+        }
+
+        .adr,
+        .address {
+            font-size: 0.8rem;
+        }
+
+        h5 {
+            font-size: 0.9rem;
+        }
+
+        &__section-3,
+        .copy.with-pipes {
+            font-size: 0.8rem;
+        }
+    }
+}

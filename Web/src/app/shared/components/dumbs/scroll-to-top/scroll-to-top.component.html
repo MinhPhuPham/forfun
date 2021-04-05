@@ -1,1 +1,5 @@
-<p>scroll-to-top works!</p>
+<div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+    <button (click)="scrollToTop()" class="gradient-button btn-top">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+</div>

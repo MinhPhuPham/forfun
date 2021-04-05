@@ -1,0 +1,76 @@
+.launch-image-banner {
+    position: relative;
+    height: calc(100% / 3);
+    max-height: 450px;
+    min-height: 350px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: fill;
+
+    .container-fluid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .main-section {
+            .main-title {
+                margin-bottom: 2rem;
+                line-height: 56px;
+                font-size: 3rem;
+                text-align: center;
+                display: block;
+                color: $dark-blue-900;
+                font-family: 'gorditabold';
+            }
+
+            .sub-title {
+                text-align: center;
+                letter-spacing: .2rem;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                color: $dark-blue-900;
+                font-family: 'gorditabold';
+            }
+        }
+
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .launch-image-banner {
+        .container-fluid {
+            .main-section {
+                .main-title {
+                    font-size: 2.5rem;
+                    line-height: 50px;
+                }
+
+                .sub-title {
+                    letter-spacing: 0.1rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .launch-image-banner {
+        .container-fluid {
+            .main-section {
+                .main-title {
+                    margin-bottom: 1.8rem;
+                    line-height: 42px;
+                    font-size: 2.2rem;
+                }
+
+                .sub-title {
+                    font-size: 0.9em;
+                    font-family: "gorditamedium";
+                }
+            }
+        }
+    }
+}

@@ -53,13 +53,8 @@ export const ngbRunTransition =
         const running = runningTransitions.get(element);
         if (running) {
             switch (options.runningTransition) {
-                // If there is one running and we want for it to 'continue' to run, we have to cancel the new one.
-                // We're not emitting any values, but simply completing the observable (EMPTY).
                 case 'continue':
                     return EMPTY;
-                // If there is one running and we want for it to 'stop', we have to complete the running one.
-                // We're simply completing the running one and not emitting any values and merging newly provided context
-                // with the one coming from currently running transition.
                 case 'stop':
                     zone.run(() => running.transition$.complete());
                     context = Object.assign(running.context, context);
@@ -67,13 +62,7 @@ export const ngbRunTransition =
             }
         }
 
-        // Running the start function
         const endFn = startFn(element, options.animation, context) || noopFn;
-
-        // If 'prefer-reduced-motion' is enabled, the 'transition' will be set to 'none'.
-        // If animations are disabled, we have to emit a value and complete the observable
-        // In this case we have to call the end function, but can finish immediately by emitting a value,
-        // completing the observable and executing end functions synchronously.
         if (!options.animation || window.getComputedStyle(element).transitionProperty === 'none') {
             zone.run(() => endFn());
             return of(undefined).pipe(runInZone(zone));
@@ -93,13 +82,6 @@ export const ngbRunTransition =
         });
 
         const transitionDurationMs = getTransitionDurationMs(element);
-
-        // 1. We have to both listen for the 'transitionend' event and have a 'just-in-case' timer,
-        // because 'transitionend' event might not be fired in some browsers, if the transitioning
-        // element becomes invisible (ex. when scrolling, making browser tab inactive, etc.). The timer
-        // guarantees, that we'll release the DOM element and complete 'ngbRunTransition'.
-        // 2. We need to filter transition end events, because they might bubble from shorter transitions
-        // on inner DOM elements. We're only interested in the transition on the 'element' itself.
         zone.runOutsideAngular(() => {
             const transitionEnd$ =
                 fromEvent(element, 'transitionend').pipe(takeUntil(stop$), filter(({ target }) => target === element));

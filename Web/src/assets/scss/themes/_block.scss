@@ -8,18 +8,54 @@
     margin: 0 auto;
 
     .box-title {
+        @include flex-box;
+        @include align-center;
         position: absolute;
         top: -30px;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
-        display: flex;
-        align-items: center;
-        max-width: 80%;
+        max-width: 75%;
         background-color: #ffffff;
         padding-left: 10px;
         color: #4fc7eb;
         font-family: 'gorditamedium';
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .box-item {
+        .box-title {
+            font-size: 0.8rem;
+            top: -20px;
+
+            img {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .property-wrapper .intro {
+        margin-bottom: 3rem !important;
+    }
+
+    .block-content {
+        .col-md-4:not(.col-md-4:last-child) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .box-item {
+        .box-title {
+            font-size: 1rem;
+            top: -30px;
+        }
+
+        .content-box {
+            font-size: 0.9rem;
+        }
     }
 }

@@ -5,17 +5,25 @@
         </div>
     </div>
     <div class="block-content">
-        <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
-            <ng-template ngbSlide *ngFor="let img of images; index as i">
-              <div class="carousel-caption">
-                <h3>My slide {{i + 1}} title</h3>
-              </div>
-              <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
-                <div class="picsum-img-wrapper">
-                  <img [src]="img" alt="My image {{i + 1}} description">
+        <ngb-carousel #carousel [showNavigationIndicators]="false" [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+            <ng-template ngbSlide *ngFor="let item of images; index as i">
+              <div class="protection-carousel">
+                <div class="protection-carousel-img">
+                    <img [src]="item.img">
                 </div>
-              </a>
+
+                <div class="protection-carousel-content">
+                    <p class="content-title">
+                        {{ item.title }}
+                    </p>
+                    {{ item.content }}
+                </div>
+              </div>
             </ng-template>
           </ngb-carousel>
+    </div>
+
+    <div class="btn-process">
+        <a routerLink="/" class="btn yellow ">explore our guarantees</a>
     </div>
 </div>

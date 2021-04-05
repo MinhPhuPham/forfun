@@ -1,9 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+
+* {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0
+    }
+}
 
 @import "./assets/scss/variables.scss";
 @import "./assets/scss/themes/themes.scss";
 
+
 @import "./assets/scss/layout/header.scss";
+@import "./assets/scss/layout/banner.scss";
+@import "./assets/scss/layout/footer.scss";

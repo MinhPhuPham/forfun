@@ -1,15 +1,31 @@
 .business-wrapper {
-    padding: 3% 7.5%;
+  padding: 3% 7.5% 4%;
+  background-color: #f7f7f7;
 
-    .container {
-        margin: 0 auto;
-    }
+  .container {
+    margin: 0 auto;
 
-    ::ng-deep {
-        .btn:first-child {
-            margin-bottom: 30px;
-        }
+    .btn {
+      font-size: 14px;
+      font-family: 'gorditamedium';
     }
+  }
+
+  ::ng-deep {
+    .btn:first-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.video-wrapper {
+  padding-bottom: 56.25% !important;
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
 }
 
 .video-thumbnail {
@@ -42,7 +58,7 @@
   }
 
   &:hover::before {
-    background: rgba(255,0,0,255);
+    background: rgba(255, 0, 0, 255);
   }
 
   &::after {
@@ -57,5 +73,37 @@
     border-width: 9px 0 9px 19px;
     border-color: transparent transparent transparent #ffffff;
     z-index: 999;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .business-wrapper {
+    padding: 3% 5% 4%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .business-wrapper {
+    padding: 3%;
+
+    .col-md-4 {
+      width: 80%;
+      margin: 0 auto;
+
+      .btn:first-child {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .business-wrapper {
+    padding: 3% 0;
+
+    .col-md-4 {
+      width: auto;
+    }
   }
 }

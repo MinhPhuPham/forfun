@@ -1,6 +1,6 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
-import { MinifyHtml } from 'scully/plugins/plugin';
+import { MinifyHtml } from 'scully-plugin-minify-html';
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 
