@@ -6,7 +6,7 @@ namespace RealPort.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ContentController : Controller
+    public class MetadataController : Controller
     {
         [HttpGet]
         public IActionResult Index()
