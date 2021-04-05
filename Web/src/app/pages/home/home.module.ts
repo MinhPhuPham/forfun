@@ -10,22 +10,32 @@ import { PropertyManagementComponent } from './components/property-management/pr
 import { NgbCarouselModule } from 'src/app/shared/modules/carousel/carousel.module';
 import { IntroBusinessComponent } from './components/intro-business/intro-business.component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 export const HomeRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
 ];
 
 @NgModule({
-  declarations: [HomeComponent, ServicesComponent, ProtectionComponent, PropertyManagementComponent, IntroBusinessComponent, SafePipe],
+  declarations: [
+    HomeComponent,
+    ServicesComponent,
+    ProtectionComponent,
+    PropertyManagementComponent,
+    IntroBusinessComponent,
+    SafePipe,
+  ],
   imports: [
     CommonModule,
+    HttpClientModule,
     DumbsModule,
     NgbCarouselModule,
     RouterModule.forChild(HomeRoutes),
     AnimateOnScrollModule.forRoot(),
-  ],exports:[SafePipe]
+  ],
+  exports: [SafePipe],
 })
-export class HomeModule { }
+export class HomeModule {}
