@@ -18,45 +18,45 @@ export class MetaService {
     ) { }
 
     update(front: Frontmatter) {
-        this.title.setTitle(MetaService.getTitle(front.title));
+        this.title.setTitle(MetaService.getTitle(front?.title));
 
         this.meta.updateTag({
             property: 'og:title',
-            content: front.title as string,
+            content: front?.title,
         });
 
         this.meta.updateTag({
             name: 'twitter:title',
-            content: front.title as string,
+            content: front?.title,
         });
 
         this.meta.updateTag({
             name: 'twitter:description',
-            content: front.description as string || this._defaultDescription,
+            content: front?.description || this._defaultDescription,
         });
 
         this.meta.updateTag({
             property: 'og:description',
-            content: front.description as string || this._defaultDescription,
+            content: front?.description || this._defaultDescription,
         });
 
         this.meta.updateTag({
             name: 'description',
-            content: front.title as string,
+            content: front?.title,
         });
 
         this.meta.updateTag({
             property: 'og:url',
-            content: front.url as string,
+            content: front?.url,
         });
 
-        if (front.tags?.length) {
-            this.meta.updateTag({ name: 'keywords', content: front.tags.join(', ') });
+        if (front?.tags?.length) {
+            this.meta.updateTag({ name: 'keywords', content: front?.tags.join(', ') });
         }
 
         this.meta.updateTag({
             name: 'twitter:image',
-            content: front.image || this._defaultImage,
+            content: front?.image || this._defaultImage,
         });
 
         this.meta.updateTag({
@@ -71,10 +71,10 @@ export class MetaService {
 
         this.meta.updateTag({
             property: 'og:image',
-            content: front.image || this._defaultImage,
+            content: front?.image || this._defaultImage,
         });
 
-        this.updateCanonical(front.url);
+        this.updateCanonical(front?.url);
     }
 
     updateTagTitle(tagName: string) {

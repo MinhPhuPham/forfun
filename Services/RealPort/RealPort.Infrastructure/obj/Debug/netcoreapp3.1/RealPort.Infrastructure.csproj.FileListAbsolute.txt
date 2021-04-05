@@ -1,0 +1,9 @@
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\bin\Debug\netcoreapp3.1\RealPort.Infrastructure.deps.json
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\bin\Debug\netcoreapp3.1\RealPort.Infrastructure.dll
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\bin\Debug\netcoreapp3.1\RealPort.Infrastructure.pdb
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\obj\Debug\netcoreapp3.1\RealPort.Infrastructure.csprojAssemblyReference.cache
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\obj\Debug\netcoreapp3.1\RealPort.Infrastructure.AssemblyInfoInputs.cache
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\obj\Debug\netcoreapp3.1\RealPort.Infrastructure.AssemblyInfo.cs
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\obj\Debug\netcoreapp3.1\RealPort.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\obj\Debug\netcoreapp3.1\RealPort.Infrastructure.dll
+D:\ErmRepos\Clockwork\Services\RealPort\RealPort.Infrastructure\obj\Debug\netcoreapp3.1\RealPort.Infrastructure.pdb
