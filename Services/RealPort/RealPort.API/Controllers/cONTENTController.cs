@@ -11,6 +11,7 @@ namespace RealPort.API.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
             var actionResp = new ActionResponse();
             var page = new Page() { Title = "Clockwork", Keywords = "CPM" };
             actionResp.Data = page;
