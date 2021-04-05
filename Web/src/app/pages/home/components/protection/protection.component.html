@@ -9,7 +9,8 @@
             <ng-template ngbSlide *ngFor="let item of images; index as i">
               <div class="protection-carousel">
                 <div class="protection-carousel-img">
-                    <img [src]="item.img">
+                    <img [src]="item.img" class="hide-on-init" animateOnScroll
+                    animationName="auto-animated animated zoomIn">
                 </div>
 
                 <div class="protection-carousel-content">

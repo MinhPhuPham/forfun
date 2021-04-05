@@ -52,7 +52,7 @@
         @include footer-section;
         padding: 2.5rem 0;
 
-        .social_footer_ul {
+        .social_ul {
             display: table;
             margin: 2.5rem auto;
 
@@ -76,7 +76,9 @@
                     padding: 8px;
                 }
 
-                i {
+                img {
+                  filter: brightness(0) invert(1);
+                  -webkit-filter: brightness(0) invert(1);
                   -webkit-transition: all 0.4s;
                   -o-transition: all 0.4s;
                   transition: all 0.4s;
@@ -86,7 +88,7 @@
                   border-color: transparent;
                   color: #f09718;
 
-                  i {
+                  img {
                     -webkit-transform: rotate(360deg);
                     -ms-transform: rotate(360deg);
                     transform: rotate(360deg);

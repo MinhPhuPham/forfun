@@ -27,7 +27,7 @@
 @include media-breakpoint-down(md) {
     .box-item {
         .box-title {
-            font-size: 0.8rem;
+            font-size: 0.8rem !important;
             top: -20px;
 
             img {
