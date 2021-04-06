@@ -13,12 +13,12 @@ export class AppComponent extends Destroyable implements AfterViewInit {
   title = 'Clockwork';
 
   ngAfterViewInit(): void {
-    fromEvent(window, 'resize')
-      .pipe(
-        takeUntil(this.$destroyed),
-        debounceTime(500),
-      ).subscribe((evt: any) => {
+    // fromEvent(window, 'resize')
+    //   .pipe(
+    //     takeUntil(this.$destroyed),
+    //     debounceTime(500),
+    //   ).subscribe((evt: any) => {
         
-      });
+    //   });
   }
 }

@@ -13,7 +13,7 @@
     "scully": "scully",
     "scully:serve": "scully serve",
     "scully:preview": "npm run scully:build && npm run scully:serve",
-    "scully:build": "ng build --prod && npm run scully && scully -- --scanRoutes",
+    "scully:build": "ng build --prod && scully -- --scanRoutes && npm run scully",
     "build:prod": "ng build --prod && scully -- --scanRoutes"
   },
   "private": true,
@@ -40,6 +40,8 @@
     "@angular/cli": "~11.2.6",
     "@angular/compiler-cli": "~11.2.7",
     "@gammastream/scully-plugin-http404": "^1.0.4",
+    "@notiz/scully-plugin-lazy-images": "^0.4.1",
+    "@scullyio/scully-plugin-flash-prevention": "^1.1.1",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",

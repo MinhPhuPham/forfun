@@ -11,8 +11,16 @@ import { ErrorComponent } from './pages/error/error.component';
     AppComponent,
     ErrorComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ScullyLibModule, LayoutModule],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    ScullyLibModule.forRoot({
+      useTransferState: true,
+      alwaysMonitor: true,
+    }), 
+    LayoutModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
