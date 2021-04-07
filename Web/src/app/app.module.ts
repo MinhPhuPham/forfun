@@ -15,7 +15,6 @@ import { ErrorComponent } from './pages/error/error.component';
     BrowserModule, 
     AppRoutingModule, 
     ScullyLibModule.forRoot({
-      useTransferState: true,
       alwaysMonitor: true,
     }), 
     LayoutModule

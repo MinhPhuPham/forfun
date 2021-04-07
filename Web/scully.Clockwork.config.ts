@@ -7,12 +7,16 @@ import * as lazyImages from '@notiz/scully-plugin-lazy-images'
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 
+const FlashPreventionPlugin = getFlashPreventionPlugin({
+	appRootSelector: 'app-root'
+});
+
 // when have child router like blog/a and blog/b => using extentRoutes of scully for render static
 export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "Clockwork",
   outDir: './dist/static',
-  defaultPostRenderers: [MinifyHtml, getFlashPreventionPlugin, getHttp404Plugin(), 'seoHrefOptimise', lazyImages],
+  defaultPostRenderers: [MinifyHtml, FlashPreventionPlugin, getHttp404Plugin(), 'seoHrefOptimise', lazyImages],
   routes: {
   }
 };
