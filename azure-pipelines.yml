@@ -11,6 +11,9 @@ pool:
 
 
 steps:
+  - task: CmdLine@2
+    inputs:
+      script: 'cd Web'
   - task: Npm@1
     inputs:
       command: 'custom'
