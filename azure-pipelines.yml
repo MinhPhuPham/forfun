@@ -17,7 +17,7 @@ steps:
   - task: Npm@1
     inputs:
       command: 'custom'
-      customCommand: npm run scully:build
+      customCommand: run scully:build
       workingDir: 'Web'
   - task: AzureStaticWebApp@0
     inputs:
