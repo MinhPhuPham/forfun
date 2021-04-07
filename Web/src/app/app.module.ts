@@ -9,14 +9,14 @@ import { ErrorComponent } from './pages/error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorComponent,
+    ErrorComponent
   ],
   imports: [
-    BrowserModule, 
-    AppRoutingModule, 
+    BrowserModule,
+    AppRoutingModule,
     ScullyLibModule.forRoot({
       alwaysMonitor: true,
-    }), 
+    }),
     LayoutModule
   ],
   providers: [],

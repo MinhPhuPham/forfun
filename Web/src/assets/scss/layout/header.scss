@@ -1,6 +1,6 @@
 .launch-menu-sidebar {
-  background: #28446e;
-  color: #fff;
+  background: $dark-blue-600;
+  color: $white;
   position: fixed;
   left: auto;
   top: 0;
@@ -41,9 +41,6 @@
           }
 
           &:hover {
-            // filter: brightness(0);
-            // -webkit-filter: brightness(0);
-
             img {
               -webkit-transform: rotate(360deg);
               -ms-transform: rotate(360deg);
@@ -67,7 +64,7 @@
   }
 
   .sidebar-quick {
-    background: #222;
+    background:  $color-basic-1100;
     padding: 0.5rem 1.5rem;
 
     ul {
@@ -85,7 +82,7 @@
           text-decoration: none;
 
           &:hover {
-            color: #f09718;
+            color: $orange-600;
           }
         }
       }
@@ -105,7 +102,7 @@
       text-transform: uppercase;
 
       a:hover {
-        color: #f09718;
+        color: $orange-600;
         cursor: pointer;
       }
 
@@ -114,7 +111,7 @@
 
         &::after,
         &::before {
-          background-color: #f09718;
+          background-color: $orange-600;
         }
       }
     }
@@ -133,7 +130,7 @@
 
           &:hover {
             a {
-              color: #f09718;
+              color: $orange-600;
             }
           }
 
@@ -173,7 +170,7 @@
     &:after {
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
-      background-color: #f09718;
+      background-color: $orange-600;
     }
   }
 }
@@ -195,7 +192,7 @@
     display: block;
     width: 12px;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
     position: absolute;
     top: 8px;
     left: 4px;
@@ -216,7 +213,7 @@
   left: 0px;
   right: 0px;
   z-index: 2;
-  background: #333;
+  background:  $color-basic-1100;
   opacity: .75;
 }
 
@@ -228,7 +225,7 @@
 
 .launch-sticky-header {
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -236,7 +233,7 @@
   .socials-contacts-wrapper {
     @include flex-space-center;
     @include top-bar;
-    background-color: #dae1e9;
+    background-color: $patone-650;
     height: 36px;
     padding: 0 8%;
 
@@ -300,7 +297,7 @@
       color: $dark-blue-900;
 
       &:hover {
-        color: #f09718;
+        color: $orange-600;
         text-decoration: none;
       }
     }
@@ -321,7 +318,7 @@
   .phone {
     a {
       font-size: 18px;
-      color: #ff9e1a;
+      color: $orange-600;
       white-space: nowrap;
       padding-left: 10px;
       font-family: 'gorditabold';
@@ -335,7 +332,7 @@
 
   .frs-phone-number {
     font-size: 18px;
-    color: #ff9e1a;
+    color: $orange-600;
     white-space: nowrap;
     padding-left: 10px;
     font-family: 'gorditabold';
@@ -356,15 +353,15 @@
       }
 
       &:hover {
-        color: #f79712;
+        color: $orange-600;
 
         .bt-menu-trigger {
           span {
-            background-color: #f79712;
+            background-color: $orange-600;
 
             &::before,
             &::after {
-              background-color: #f79712;
+              background-color: $orange-600;
             }
           }
         }
@@ -394,15 +391,15 @@
 }
 
 .launch-sticky-header.affix {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 0px 5px 0px  $color-basic-1100;
+  box-shadow: 0px 0px 5px 0px  $color-basic-1100;
 }
 
 
 @media (max-width: 991px) {
   .launch-sticky-header {
     .socials-contacts-wrapper {
-      background-color: #2f4b6f;
+      background-color: $patone-650;
     }
 
     .logo {
@@ -423,7 +420,7 @@
 
       &::before {
         content: 'Give us a call:';
-        color: #fff;
+        color: $white;
         font-size: 16px;
         line-height: 25px;
       }
@@ -505,7 +502,7 @@
         z-index: 575;
         text-align: left;
         padding: 0;
-        background-color: #94dcec;
+        background-color:  $white-blue-300;
         top: 100%;
         left: 0px;
         min-width: 100%;
@@ -519,14 +516,14 @@
   cursor: pointer;
 
   a {
-    color: #ffffff;
+    color: $white;
   }
 
   ul {
     display: block !important;
   }
 
-  background: #94dcec;
+  background:  $white-blue-300;
   transition: 0.3s;
 }
 
@@ -547,16 +544,16 @@
 }
 
 .top-navbar>ul>li>ul>li>a {
-  color: #fff;
+  color: $white;
   padding: 0;
 }
 
 .top-navbar>ul>li>ul>li:hover {
-  background-color: #99d5e4;
+  background-color:  $white-blue-300;
 }
 
 .top-navbar>ul>li>ul>li:hover a {
-  color: #1959b9;
+  color:  $dark-blue-900;
 }
 
 @media (max-width: 1330px) {
@@ -589,6 +586,6 @@
 }
 
 .top-navbar a:hover {
-  color: #f09718;
+  color: $orange-600;
   text-decoration: none;
 }

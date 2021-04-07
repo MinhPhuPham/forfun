@@ -1,0 +1,23 @@
+.block-content {
+  max-width: 1334px;
+  margin: 0 auto;
+  font-family: 'gorditalight';
+  padding: 3% 0%;
+  justify-content: center;
+  color: $gray-600;
+  font-family: "gorditaRegular";
+  font-size: 1rem;
+
+  .box-title {
+      font-size: 1.2rem;
+  }
+
+  .box-title {
+    font-size: 1.2rem;
+  }
+
+  .content-box {
+    text-align: left !important;
+    margin: 3% 3%;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Banner } from 'src/app/shared/models/banner';
 
 @Component({
   selector: 'app-banner',
@@ -10,6 +11,7 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   @Input() backgroundImage: string = '/assets/images/home/cpm_banner_home.webp';
+  @Input() banner: Banner;
 
   ngOnInit(): void {
     const brower = this.getBrowserName();
@@ -36,4 +38,6 @@ export class BannerComponent implements OnInit {
         return 'other';
     }
   }
+
+
 }

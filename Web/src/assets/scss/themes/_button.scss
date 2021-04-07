@@ -4,7 +4,7 @@
     padding: 10px 20px;
     font-size: 16px;
     text-decoration: none;
-    color: #ffffff;
+    color: $white;
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -15,7 +15,7 @@
     }
 
     .border-white {
-        border: 1px solid #ffffff;
+        border: 1px solid $white;
     }
 }
 
@@ -32,24 +32,24 @@
 }
 
 .purple {
-    background-color: #0fb2e4;
+    background-color: $light-blue-500;
     transition: all .3s;
 
     &:hover {
         background-color: transparent;
-        color: #0fb2e4;
-        border: 1px solid #0fb2e4;
+        color: $light-blue-500;
+        border: 1px solid $light-blue-500;
     }
 }
 
 .yellow {
-  background-color: #ff9e1a;
+  background-color: $orange-600;
   transition: all .3s;
 
   &:hover {
       background-color: transparent;
-      color: #ff9e1a;
-      border: 1px solid #ff9e1a;
+      color: $orange-600;
+      border: 1px solid $orange-600;
   }
 }
 

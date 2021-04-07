@@ -1,11 +1,9 @@
 
-<section class="launch-image-banner" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+<section class="launch-image-banner" [ngStyle]="{'background-image': 'url(' + banner.backgroundImage + ')'}">
     <div class="container-fluid">
         <div class="main-section">
-            <div class="main-title animated fadeIn">Clockwork Property Management</div>
-            <div class="sub-title animated fadeIn">PROPERTY MANAGEMENT FOR LOS ANGELES, ORANGE COUNTY,<br>RIVERSIDE,
-                AND SAN BERNARDINO COUNTIES</div>
-                <!-- <ng-content></ng-content> -->
+            <div class="main-title animated fadeIn">{{banner.mainTitle}}</div>
+            <div class="sub-title animated fadeIn" [innerHTML] = "banner.subTitle"></div>
         </div>
     </div>
 </section>

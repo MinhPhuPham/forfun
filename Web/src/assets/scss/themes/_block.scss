@@ -1,6 +1,6 @@
 .box-item {
     position: relative;
-    border: 2px solid #d7d7d7;
+    border: 2px solid  $gray-400;
     height: 100%;
     display: block;
     padding: 40px 20px;
@@ -17,9 +17,9 @@
         left: 0;
         right: 0;
         max-width: 75%;
-        background-color: #ffffff;
+        background-color:  $white;
         padding-left: 10px;
-        color: #4fc7eb;
+        color:  $white-blue-400;
         font-family: 'gorditamedium';
     }
 }

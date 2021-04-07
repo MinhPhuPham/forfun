@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Frontmatter, MetaService } from 'src/app/shared';
 import { HttpClient } from '@angular/common/http';
+import { Banner, PageId } from 'src/app/shared/models/banner';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,15 @@ import { HttpClient } from '@angular/common/http';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
-  data;
+
+  banner : Banner = {
+    pageID : PageId.Home,
+    mainTitle : "Clockwork Property Management",
+    subTitle : `PROPERTY MANAGEMENT FOR LOS ANGELES, ORANGE COUNTY,<br>RIVERSIDE,
+    AND SAN BERNARDINO COUNTIES`,
+    backgroundImage : "/assets/images/home/cpm_banner_home.webp"
+  }
+
   constructor(
     private readonly metaService: MetaService,
     private http: HttpClient

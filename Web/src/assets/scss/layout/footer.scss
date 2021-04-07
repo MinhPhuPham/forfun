@@ -1,17 +1,17 @@
 /*footer*/
 .col_white_amrc {
-    color: #FFF;
+    color: $white;
 }
 
 @mixin footer-section {
-    color: #ffffff;
+    color: $white;
     text-align: center;
     font-family: 'gorditalight';
 }
 
 .footer {
     width: 100%;
-    background-color: #8c8c8c;
+    background-color: $light-grey;
     min-height: 250px;
     padding-top: 10px;
 
@@ -21,7 +21,7 @@
 
     a {
         text-decoration: none;
-        color: #ffffff;
+        color: $white;
     }
 
     &__section-1 {
@@ -36,7 +36,7 @@
             transition: all 0.5s;
 
             &:hover {
-                color: #2f3236;
+                color: $color-basic-1200;
             }
         }
 
@@ -86,7 +86,7 @@
 
                 &:hover {
                   border-color: transparent;
-                  color: #f09718;
+                  color: $orange-600;
 
                   img {
                     -webkit-transform: rotate(360deg);
@@ -124,14 +124,14 @@
     }
 
     &__section-3 {
-      border-bottom: 1px solid #f6f6f6;
+      border-bottom: 1px solid  $puper-300;
         @include footer-section;
         padding: 2.5rem 0;
     }
 
     p {
         font-size: 13px;
-        color: #CCC;
+        color:  $puper-500;
         padding-bottom: 0px;
         margin-bottom: 8px;
     }
@@ -157,10 +157,10 @@
             padding: 0px 0px 5px 0px;
 
             a {
-                color: #CCC;
+                color: $puper-500;
 
                 &:hover {
-                    color: #fff;
+                    color: $white;
                     text-decoration: none;
                 }
             }
@@ -169,7 +169,7 @@
     }
 
     .bottom_border {
-        border-bottom: 1px solid #f6f6f6;
+        border-bottom: 1px solid  $puper-300;
     }
 
     .margin-botton {
