@@ -7,8 +7,11 @@ const routes: Routes = [
 		path: '',
 		loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
 	},
-	{ 	path: 'about', 
-		loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) 
+  { 	path: 'tenants',
+		loadChildren: () => import('./pages/tenants/tenants.module').then(m => m.TenantsModule)
+	},
+	{ 	path: 'about',
+		loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
 	},
 	{
 		path: '**',

@@ -45,11 +45,11 @@ export const SIDEBAR_MENU: SideBarMenu[] = [
     },
     {
         title: 'tenants',
-        link: '',
+        link: '/tenants',
         submenu: [
             {
                 title: 'Tenant Resources',
-                link: ''
+                link: '/tenants'
             },
             {
                 title: 'Request Maintenance',

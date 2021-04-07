@@ -1,6 +1,6 @@
 .business-wrapper {
   padding: 3% 7.5% 4%;
-  background-color: #f7f7f7;
+  background-color: $puper-300;
 
   .container {
     margin: 0 auto;
@@ -10,10 +10,9 @@
     }
   }
 
-  ::ng-deep {
+  &__ng-deep,
     .btn:first-child {
       margin-bottom: 30px;
-    }
   }
 }
 
@@ -24,7 +23,7 @@
   height: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000;
+  background-color: $black;
 
   iframe {
     height: 100%;

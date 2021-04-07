@@ -1,10 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ButtonConfigs } from 'src/app/shared/models';
 @Component({
   selector: 'app-intro-business',
   templateUrl: './intro-business.component.html',
-  styleUrls: ['./intro-business.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IntroBusinessComponent implements OnInit {
