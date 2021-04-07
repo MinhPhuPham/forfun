@@ -11,9 +11,10 @@ pool:
 
 
 steps:
-  - task: CmdLine@2
+  - task: Npm@1
     inputs:
-      script: 'cd Web'
+      command: 'install'
+      workingDir: '/Web'
   - task: Npm@1
     inputs:
       command: 'custom'
