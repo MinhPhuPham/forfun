@@ -41,7 +41,7 @@ export const SIDEBAR_MENU: SideBarMenu[] = [
     },
     {
         title: 'pricing',
-        link: ''
+        link: '/pricing'
     },
     {
         title: 'tenants',
