@@ -5,7 +5,7 @@ export class DynamicForm {
   title: string;
   subtitle: string;
   settings: FormSettings;
-  controls: FormControl;
+  controls: FormControl[];
 }
 export class FormSettings {
   style: FormStyle;
