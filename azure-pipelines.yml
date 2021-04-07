@@ -22,8 +22,8 @@ steps:
       workingDir: 'Web'
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: "/Web" 
+      app_location: "Web" 
       api_location: "api"
-      output_location: "/dist/static"
+      output_location: "dist/static"
     env:
       azure_static_web_apps_api_token: $(deployment_token)
