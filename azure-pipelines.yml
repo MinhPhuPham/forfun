@@ -14,7 +14,7 @@ steps:
   - task: Npm@1
     inputs:
       command: 'install'
-      workingDir: '/Web'
+      workingDir: 'Web'
   - task: Npm@1
     inputs:
       command: 'custom'
