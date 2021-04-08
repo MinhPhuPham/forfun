@@ -1,22 +1,33 @@
 .group-tabs {
     width: 100%;
+    padding: 20px 0 0;
+    background-color: $puper-300;
 
     .tabs-header {
         list-style: none;
         @include flex-space-around;
-        background-color: #f7f7f7;
+        max-width: 1634px;
+        margin: 0 auto 70px;
 
         li {
-            a {
-                font-family: 'gorditabold';
-                font-size: 1rem;
-                color: $dark-blue-900;
-            }
+          padding: 15px 10px;
+          text-transform: uppercase;
+
+          a {
+              font-family: 'gorditabold';
+              font-size: 12px;
+              color: $dark-blue-900;
+
+              &:hover {
+                border-bottom: 6px solid $dark-blue-900;
+                transition: 0.3s;
+                margin: 0 auto;
+              }
+          }
         }
     }
 }
 
 .tab-active {
-    background-color: $white;
-    color: #00b2e2;
+  border-bottom: 6px solid $dark-blue-900;
 }

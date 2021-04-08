@@ -61,23 +61,23 @@ export class ManagementComponent implements OnInit, OnDestroy {
     },
     {
       text: 'accounting',
-      link: 'overview'
+      link: 'accounting'
     },
     {
       text: 'access & support',
-      link: 'overview'
+      link: 'access-support'
     },
     {
       text: 'compliance & inspections',
-      link: 'overview'
+      link: 'compliance-inspections'
     },
     {
       text: 'turnover',
-      link: 'overview'
+      link: 'turnover'
     },
     {
       text: 'guarantees',
-      link: 'overview'
+      link: 'guarantees'
     }
   ]
 
@@ -97,7 +97,7 @@ export class ManagementComponent implements OnInit, OnDestroy {
     this.groupBtn = this.elementRef.nativeElement.querySelectorAll('a');
     this.groupBtn.forEach((anchor: HTMLAnchorElement) => {
       console.log(anchor);
-      
+
       anchor.addEventListener('click', this.overViewClick)
     })
   }
@@ -114,7 +114,7 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
   overViewClick() {
     console.log('click');
-    
+
   }
 
 }

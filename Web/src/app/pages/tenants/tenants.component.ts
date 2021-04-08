@@ -17,7 +17,7 @@ export class TenantsComponent implements OnInit {
     pageID : PageId.Tenants,
     mainTitle : "Solutions for Tenants",
     subTitle : `Search, pay, maintenance, resources...whatever you need you’ll find it here`,
-    backgroundImage : "/assets/images/tenants/cpm_banner_tenants.png"
+    backgroundImage : "/assets/images/tenants/cpm_banner_tenants.webp"
   }
 
   blockContent : BlockContent[] = [
