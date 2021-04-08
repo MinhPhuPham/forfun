@@ -1,4 +1,17 @@
-<app-banner [banner]="banner">
+<app-banner [banner]="banner" [buttonBannerTemplate]="buttonBanner">
 </app-banner>
-<app-block-content [blockContent]="blockContent"></app-block-content>
+<app-block-content [blockContent]="blockContent" >
+
+</app-block-content>
 <app-get-help></app-get-help>
+<app-rent-easy></app-rent-easy>
+<app-get-quote></app-get-quote>
+
+<ng-template #buttonBanner>
+  <div class="btn-list">
+    <a href="https://scpm.appfolio.com/connect/users/sign_in" target="_blank" class="btn btn-clock yellow">Download Rental Application</a>
+    <a href="https://scpm.appfolio.com/connect/users/sign_in" target="_blank" class="btn btn-clock purple">Pay Your Rent Online</a>
+    <a href="https://scpm.appfolio.com/connect/users/sign_in" target="_blank" class="btn btn-clock yellow">Submit a Maintenance Request</a>
+  </div>
+
+</ng-template>

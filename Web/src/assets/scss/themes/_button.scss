@@ -53,6 +53,28 @@
   }
 }
 
+.dark-blue {
+  background-color: $dark-blue-900;
+  transition: all .3s;
+
+  &:hover {
+      background-color: transparent;
+      color: $dark-blue-900;
+      border: 1px solid $dark-blue-900;
+  }
+}
+
+.btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  justify-content: center;
+
+  .btn {
+    margin: 2% 1%;
+  }
+}
+
 @include media-breakpoint-down(sm) {
     .btn-clock {
         padding: 10px 20px;

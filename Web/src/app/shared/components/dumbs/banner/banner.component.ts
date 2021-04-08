@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, TemplateRef } from '@angular/core';
 import { Banner } from 'src/app/shared/models/banner';
 
 @Component({
@@ -12,6 +12,7 @@ export class BannerComponent implements OnInit {
 
   @Input() backgroundImage: string = '/assets/images/home/cpm_banner_home.webp';
   @Input() banner: Banner;
+  @Input() buttonBannerTemplate: TemplateRef<any>;
 
   ngOnInit(): void {
     const brower = this.getBrowserName();

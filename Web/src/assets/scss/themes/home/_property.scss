@@ -2,25 +2,36 @@
   max-width: 1334px;
   margin: 0 auto;
   text-align: center;
-  font-family: 'gorditalight';
-  padding: 3% 5%;
 
   .intro {
-      margin-bottom: 70px;
+      margin: 70px 0px;
   }
 
   .btn-process {
-      margin-top: 3.5%;
+      margin: 3.5% 0;
   }
 
   .block-content {
+    &__ng-deep,
+    .col-md-4:first-child {
+      padding-left: 0px;
+    }
+
+    &__ng-deep,
+    .col-md-4:last-child {
+      padding-right: 0px;
+    }
+
+    .content-box {
+      text-align: center !important;
       justify-content: center;
       color: $gray-600;
       font-family: "gorditaRegular";
       font-size: 1rem;
+
       .box-title {
           font-size: 1.2rem;
       }
-
+    }
   }
 }

@@ -108,7 +108,7 @@
                 <ng-template ngbPanelHeader>
                     <div class="sidebar-menu__toolbar"
                         [ngClass]="{'sidebar-active': activeSideId === ('sidemenu-' + index)}">
-                        <a href="#">{{ item.title }}</a>
+                        <a href={{item.link}}>{{ item.title }}</a>
                         <span *ngIf="item.submenu" class="plus-icon" ngbPanelToggle></span>
                     </div>
                 </ng-template>
