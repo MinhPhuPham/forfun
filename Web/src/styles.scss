@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
-body:not(.loaded) app-root {
-    display: none;
-}
+// body:not(.loaded) app-root {
+//     display: none;
+// }
 
-body.loaded app-root-scully {
-    display: inherit;
-}
+// body.loaded app-root-scully {
+//     display: inherit;
+// }
 
 @import "~bootstrap/scss/bootstrap";
 

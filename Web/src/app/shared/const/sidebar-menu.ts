@@ -11,7 +11,7 @@ export const SIDEBAR_MENU: SideBarMenu[] = [
         submenu: [
             {
                 title: 'Management',
-                link: ''
+                link: '/management'
             },
             {
                 title: 'Leasing',

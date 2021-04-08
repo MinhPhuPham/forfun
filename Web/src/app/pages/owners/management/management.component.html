@@ -1,0 +1,18 @@
+<app-banner [banner]="activeBanner">
+    <div class="management-banner" [innerHTML]="activeBanner.inner"></div>
+</app-banner>
+
+<div class="group-tabs">
+    <ul class="tabs-header">
+        <li *ngFor="let tab of tabs">
+            <a routerLink="{{ tab.link }}" routerLinkActive="tab-active">
+                {{ tab.text }}
+            </a>
+        </li>
+    </ul>
+    <div class="tabs-content">
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
