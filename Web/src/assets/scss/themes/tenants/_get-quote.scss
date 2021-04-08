@@ -1,0 +1,29 @@
+#get-quote {
+  padding: 100px 0;
+  background:  $light-blue-500;
+  color: #fff;
+  font-family: 'gorditaMedium';
+
+  .container {
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    font-size: 45px;
+    margin: 0 0 30px;
+    font-weight: normal;
+    line-height: 50px;
+    color: inherit;
+
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}

@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 @Component({
-  selector: 'app-get-help',
-  templateUrl: './get-help.component.html',
+  selector: 'app-rent-easy',
+  templateUrl: './rent-easy.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GetHelpComponent implements OnInit {
+export class RentEasyComponent implements OnInit {
 
   constructor () {
   }

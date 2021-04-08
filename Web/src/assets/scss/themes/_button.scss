@@ -53,6 +53,17 @@
   }
 }
 
+.dark-blue {
+  background-color: $dark-blue-900;
+  transition: all .3s;
+
+  &:hover {
+      background-color: transparent;
+      color: $dark-blue-900;
+      border: 1px solid $dark-blue-900;
+  }
+}
+
 @include media-breakpoint-down(sm) {
     .btn-clock {
         padding: 10px 20px;

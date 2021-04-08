@@ -24,19 +24,19 @@ export class TenantsComponent implements OnInit {
   blockContent : BlockContent[] = [
     {
       title : "FUTURE TENANTS",
-      content : "<li>Browse Our Listings</li><br><li>Free Help From Local Experts</li><br><li>Ask Us a Question</li>",
+      content : "<li>Browse Our Listings</li><li>Free Help From Local Experts</li><li>Ask Us a Question</li>",
       image : "/assets/images/icons/icon_tenants_new.png",
       imageAlt : "Future tenants"
     },
     {
       title : "CURRENT TENANTS",
-      content : "<li>Pay Rent Online</li><br><li>Request Maintenance</li><br><li>Contact Property Manager</li>",
+      content : "<li>Pay Rent Online</li><li>Request Maintenance</li><li>Contact Property Manager</li>",
       image : "/assets/images/icons/icon_tenants_existing.png",
       imageAlt : "Current tenants"
     },
     {
       title : "TENANT RESOURCES",
-      content : "<li>Utility Connections</li><br><li>Moving In & Out</li><br><li>Rental Guidelines & Policies</li>",
+      content : "<li>Utility Connections</li><li>Moving In & Out</li><li>Rental Guidelines & Policies</li>",
       image : "/assets/images/icons/icon_tenants_resources.png",
       imageAlt : "Tenants resources"
     }

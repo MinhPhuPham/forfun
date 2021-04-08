@@ -1,1 +1,10 @@
+.btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  justify-content: center;
 
+  .btn {
+    margin: 2% 1%;
+  }
+}
