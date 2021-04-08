@@ -1,8 +1,9 @@
 On parent component:
 
-# Solotion 2
+# Solution 1
 
 ### .ts
+
 ```typescript
     formData$: Observable<DynamicForm>;
     constructor(private http: HttpClient, private ref: ChangeDetectorRef) {
@@ -21,7 +22,7 @@ On parent component:
 ></dynamic-form>
 ```
 
-# Solotion 1
+# Solution 2
 
 ### .ts
 
