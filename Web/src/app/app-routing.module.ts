@@ -29,8 +29,7 @@ const routes: Routes = [
 	{
 		path: '404',
 		component: ErrorComponent
-	},
-	{ path: 'management', loadChildren: () => import('./pages/owners/management/management.module').then(m => m.ManagementModule) }
+	}
 ];
 
 @NgModule({
