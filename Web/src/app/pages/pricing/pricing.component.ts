@@ -17,7 +17,7 @@ export class PricingComponent implements OnInit {
     pageID : PageId.Tenants,
     mainTitle : "Full Service Property Solutions",
     subTitle : `For owners and investors in the San Bernardino, Riverside, Orange, and Los Angeles Counties`,
-    backgroundImage : "../../../assets/images/pricing/cpm_banner_pricing.png"
+    backgroundImage : "../../../assets/images/pricing/cpm_banner_pricing.webp"
   }
 
 }
