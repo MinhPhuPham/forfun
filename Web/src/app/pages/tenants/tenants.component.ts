@@ -5,7 +5,6 @@ import { BlockContent } from 'src/app/shared/models/block-content';
 @Component({
   selector: 'app-tenants',
   templateUrl: './tenants.component.html',
-  styleUrls: ['./tenants.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TenantsComponent implements OnInit {

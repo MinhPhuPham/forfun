@@ -64,6 +64,17 @@
   }
 }
 
+.btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  justify-content: center;
+
+  .btn {
+    margin: 2% 1%;
+  }
+}
+
 @include media-breakpoint-down(sm) {
     .btn-clock {
         padding: 10px 20px;
