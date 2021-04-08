@@ -28,14 +28,16 @@ namespace RealPort.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers().AddJsonOptions(options=>
+            services.AddControllers().AddJsonOptions(options =>
             {
-                options.JsonSerializerOptions.PropertyNamingPolicy= JsonNamingPolicy.CamelCase; 
+                options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
             });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RealPort.API", Version = "v1" });
             });
+            services.AddCors(); // Make sure you call this previous to AddMvc
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +53,10 @@ namespace RealPort.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(builder => builder
+                 .AllowAnyOrigin()
+                 .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseAuthorization();
 
@@ -58,6 +64,7 @@ namespace RealPort.API
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

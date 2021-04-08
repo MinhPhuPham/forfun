@@ -1,8 +1,8 @@
-<form [formGroup]="rf" class="form-container" style="width: 30vw;">
+<form *ngIf="data && data.controls" [formGroup]="rf" class="form-container" style="width: 100%;" (ngSubmit)="submit()">
     <h2>
         {{data.title}}
     </h2>
-    <p>{{data.subtitle}}</p>
+    <p [innerHtml]="subTitle"></p>
     <div class="form-group" *ngFor="let control of data.controls">
         <div [ngSwitch]="control.type">
             <div *ngSwitchCase="controlType.Text" class="form-label-group">
@@ -74,6 +74,14 @@
             </div>
         </div>
         <!-- <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div> -->
+        <div *ngIf="showErrors" class="text-danger font-italic error-message">
+            <span *ngIf="rf.get(control.key).errors?.required">{{control.label}} is required.</span>
+            <span *ngIf="rf.get(control.key).errors?.email">Please enter valid email
+                address.</span>
+            <span *ngIf="rf.get(control.key).errors?.minlength">{{control.label}} must be at least 8
+                characters.</span>
+        </div>
     </div>
-    <a class="btn btn-clock yellow w-100">Submit</a>
+    <!-- <input *ngIf="rf.get('token')" type="hidden" formControlName="token"> -->
+    <button class="btn btn-clock yellow w-100">Submit</button>
 </form>

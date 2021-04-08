@@ -1,6 +1,6 @@
 .form-container {
   background: #dae0ea !important;
-  padding: 65px 30px;
+  padding: 30px;
   color: #f9fcfd;
   box-shadow: unset;
 
@@ -20,6 +20,11 @@
     font-size: 20px;
     margin-bottom: 50px;
   }
+  .error-message {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
   .form-group {
     label {
       width: auto;
@@ -93,7 +98,7 @@
 
   .form-label-group {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 3px;
   }
 
   .form-label-group > input,

@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RealPort.Common;
 using RealPort.Entities;
 using RealPort.Infrastructure.Models;
+using System;
+using System.Text.Json;
 
 namespace RealPort.API.Controllers
 {
@@ -18,7 +21,7 @@ namespace RealPort.API.Controllers
             {
                 Token = System.Guid.NewGuid(),
                 Title = "Get a FREE Quote",
-                Subtitle = "Submit this form or call us at (909) 548-0044",
+                Subtitle = "Submit this form or call us at<br> <a href=\"tel:+1-909-548-0044\" style=\"color:#f09718\" >(909) 548-0044</a> ",
                 Settings = new FormSettings()
                 {
                     Style = FormStyle.Stack
@@ -120,6 +123,15 @@ namespace RealPort.API.Controllers
             string url = Request.Headers["Referer"].ToString();
             actionResp.Url = url;
             return Json(actionResp);
+        }
+        [HttpPost]
+        public IActionResult Index([FromBody] JsonElement postData)
+        {
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            var resp = new ActionResponse();
+            resp.Success = true;
+            resp.Data = postData;
+            return Json(resp);
         }
     }
 }
