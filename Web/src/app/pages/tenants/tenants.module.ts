@@ -18,6 +18,7 @@ import { GetQuoteComponent } from './get-quote/get-quote.component';
   ],
   imports: [
     CommonModule,
+    DumbsModule,
     HttpClientModule,
     TenantsRoutingModule,
     DumbsModule

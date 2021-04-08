@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Banner, PageId } from 'src/app/shared/models/banner';
 import { BlockContent } from 'src/app/shared/models/block-content';
+import { AnimateOnScrollModule, DumbsModule } from 'src/app/shared';
 
 @Component({
   selector: 'app-tenants',
@@ -17,7 +18,7 @@ export class TenantsComponent implements OnInit {
     pageID : PageId.Tenants,
     mainTitle : "Solutions for Tenants",
     subTitle : `Search, pay, maintenance, resources...whatever you need you’ll find it here`,
-    backgroundImage : "/assets/images/tenants/cpm_banner_tenants.png"
+    backgroundImage : "/assets/images/tenants/cpm_banner_tenants.webp"
   }
 
   blockContent : BlockContent[] = [
