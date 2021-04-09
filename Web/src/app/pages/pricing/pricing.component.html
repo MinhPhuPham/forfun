@@ -1,294 +1,577 @@
-<app-banner [banner]="banner">
-</app-banner>
+<app-banner [banner]="banner"> </app-banner>
 <div id="body-container" class="container">
-  <section id="home-pricing">
-    <div class="container-fluid">
-      <h1>Service Plan Options</h1>
-      <table class="table">
-        <thead>
-            <tr>
-                <th>Features</th>
-                <th>Full Service</th>
-                <th>Platinum Service</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="grey-row">
-                <td style="text-align: center !important;">
-                    Upfront Pricing. <br />
-                    No hidden fees.
-                </td>
-                <td>
-                    <span class="medium">$99/month</span>
-                </td>
-                <td>
-                    $250/month + <br />
-                    $10 for rents over $2,500
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Tenant Placement
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">This fee covers preparing your home for rent, marketing &amp; advertising, showing appointments, screening, executing lease contracts and collecting funds.</span>
-                    </div>
-                </td>
-                <td>50% of full month’s rent</td>
-                <td>50% of full month’s rent</td>
-            </tr>
-            <tr>
-                <td>
-                    Home Assessments <span class="x-small">(Pre-Engagement Compliance, Lease Renewal, End-of-Lease)</span>
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            Clockwork performs 3 types of assessments.<br />
-                            <br />
-                            1. Pre-Engagement Compliance: This assessment is performed prior to marketing the property to verify the home is in compliance and to identify any clean up or repairs that need to be completed.<br />
-                            <br />
-                            2. Lease Renewal: This assessment is performed approx. 90 days prior to the end of the lease terms.<br />
-                            <br />
-                            3. End-of-Lease: This assessment is performed when a tenant vacates.
-                        </span>
-                    </div>
-                </td>
-                <td>$95</td>
-                <td>
-                  <span>
-                    <svg style="font-size:14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                  </span>
+    <section id="home-pricing">
+        <div class="container-fluid">
+            <h1 >Service Plan Options</h1>
+            <table class="table table-one mobile-hide">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Full Service</th>
+                        <th>Platinum Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="grey-row">
+                        <td style="text-align: center !important;">
+                            Upfront Pricing. <br />
+                            No hidden fees.
+                        </td>
+                        <td>
+                            <span class="medium">$99/month</span>
+                        </td>
+                        <td>
+                            $250/month + <br />
+                            $10 for rents over $2,500
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tenant Placement
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">This fee covers preparing your home for rent, marketing &amp; advertising, showing appointments, screening, executing lease contracts and collecting funds.</span>
+                            </div>
+                        </td>
+                        <td>50% of full month’s rent</td>
+                        <td>50% of full month’s rent</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Home Assessments <span class="x-small">(Pre-Engagement Compliance, Lease Renewal, End-of-Lease)</span>
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    Clockwork performs 3 types of assessments.<br />
+                                    <br />
+                                    1. Pre-Engagement Compliance: This assessment is performed prior to marketing the property to verify the home is in compliance and to identify any clean up or repairs that need to be completed.<br />
+                                    <br />
+                                    2. Lease Renewal: This assessment is performed approx. 90 days prior to the end of the lease terms.<br />
+                                    <br />
+                                    3. End-of-Lease: This assessment is performed when a tenant vacates.
+                                </span>
+                            </div>
+                        </td>
+                        <td>$95</td>
+                        <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lease Renewal
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">90 days prior the lease end date all leases will automatically renew with a 3% rent increase unless the owner notifies us NOT TO renew the lease.</span>
+                            </div>
+                        </td>
+                        <td>$275</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1099 Preparation &amp; Year-End Reports
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    This fee covers preparing the year-end tax documents:<br />
+                                    <br />
+                                    1. Form 1099<br />
+                                    2. Cash Flow Statement
+                                </span>
+                            </div>
+                        </td>
+                        <td>$100/yr.</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Malicous Damage $50,000
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    Damage perpetrated on the insured property which is deliberate, intentional and motivated by spite, malice or vindictiveness. It also includes arson where the fire is intentionally set by the perpetrator.
+                                </span>
+                            </div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            8 Weeks Rent Paid if Tenant Abandons
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    The tenant vacates with or without providing the required notice in accordance with their lease, or vacates at the end of their lease leaving unpaid rent during the Period of Liability.
+                                </span>
+                            </div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Lease Renewal
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">90 days prior the lease end date all leases will automatically renew with a 3% rent increase unless the owner notifies us NOT TO renew the lease.</span>
-                    </div>
-                </td>
-                <td>$275</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1099 Preparation &amp; Year-End Reports
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            This fee covers preparing the year-end tax documents:<br />
-                            <br />
-                            1. Form 1099<br />
-                            2. Cash Flow Statement
-                        </span>
-                    </div>
-                </td>
-                <td>$100/yr.</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Malicous Damage $50,000
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            Damage perpetrated on the insured property which is deliberate, intentional and motivated by spite, malice or vindictiveness. It also includes arson where the fire is intentionally set by the perpetrator.
-                        </span>
-                    </div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    8 Weeks Rent Paid if Tenant Abandons
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            The tenant vacates with or without providing the required notice in accordance with their lease, or vacates at the end of their lease leaving unpaid rent during the Period of Liability.
-                        </span>
-                    </div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
+                    <tr>
+                        <td>
+                            10 Weeks Rent Paid if Tenant is Evicted
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    When eviction action is brought against the tenant for delinquent rent, if the eviction is successful, an eviction order will be granted for the termination of the tenant's lease.
+                                </span>
+                            </div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            12 Weeks Rent Paid if Tenant Passes Away
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    The death of the tenant prevents the rent from being paid. This coverage only applies if the tenant was the sole person listed in the relevant lease during the Period of the Liability.
+                                </span>
+                            </div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Service Animal Damage <span class="x-small">(Covered up to $1,000)</span>
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">
+                                    A service companion or emotional support animal, determined by a qualifed third party, provides a benefit to an individual with a verifiable disability. Support animal shall mean any animal individually
+                                    trained to do work or perform tasks to meet the requirements of a disabled person, including, but not limited to, minimal protection work, rescue work, pulling a wheelchair or retrieving dropped items.
+                                </span>
+                            </div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Theft or Damage Due to Theft <span class="x-small">(Covered up to $25,000)</span>
+                            <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Theft or damage due to theft caused by an unknown person.</span></div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Eviction Filing Fee, Eviction Defense Cost <span class="x-small">(Covered up to $25,000)</span>
+                            <div class="tooltip-two">
+                                <i class="far fa-question-circle" aria-hidden="true"></i>
+                                <span class="tooltiptext">The costs incurred relating to an eviction lawsuit where a claim or complaint has been filed with a regulatory agency due to rent delinquency. </span>
+                            </div>
+                        </td>
+                        <td>N/A</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
 
-            <tr>
-                <td>
-                    10 Weeks Rent Paid if Tenant is Evicted
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            When eviction action is brought against the tenant for delinquent rent, if the eviction is successful, an eviction order will be granted for the termination of the tenant's lease.
-                        </span>
-                    </div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    12 Weeks Rent Paid if Tenant Passes Away
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            The death of the tenant prevents the rent from being paid. This coverage only applies if the tenant was the sole person listed in the relevant lease during the Period of the Liability.
-                        </span>
-                    </div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Service Animal Damage <span class="x-small">(Covered up to $1,000)</span>
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">
-                            A service companion or emotional support animal, determined by a qualifed third party, provides a benefit to an individual with a verifiable disability. Support animal shall mean any animal individually
-                            trained to do work or perform tasks to meet the requirements of a disabled person, including, but not limited to, minimal protection work, rescue work, pulling a wheelchair or retrieving dropped items.
-                        </span>
-                    </div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Theft or Damage Due to Theft <span class="x-small">(Covered up to $25,000)</span>
-                    <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Theft or damage due to theft caused by an unknown person.</span></div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Eviction Filing Fee, Eviction Defense Cost <span class="x-small">(Covered up to $25,000)</span>
-                    <div class="tooltip-two">
-                        <i class="far fa-question-circle" aria-hidden="true"></i>
-                        <span class="tooltiptext">The costs incurred relating to an eviction lawsuit where a claim or complaint has been filed with a regulatory agency due to rent delinquency. </span>
-                    </div>
-                </td>
-                <td>N/A</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-        </tbody>
-      </table>
-      <br>
+            <br />
+            <table class="table table table-two mobile-hide">
+                <thead style="display: table-header-group; vertical-align: middle; border-color: inherit;">
+                    <tr style="background: #d02802; text-align: center; color: #fff;">
+                        <td style="padding: 20px 0; width: 25%; text-align: center; border-right: 1px solid #d02802; border-left: 1px solid #d02802;" colspan="4">ONLY IF APPLICABLE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Home Warranty/Non-Approved Vendors</td>
+                        <td>$40</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Insurance Claim Oversight</td>
+                        <td>$100</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Insurance Non-Compliance</td>
+                        <td>$20/mo</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>588 Waiver</td>
+                        <td>$75</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Existing Tenant Setup</td>
+                        <td>$100</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Franchise Tax Board Withholding</td>
+                        <td>$25/quarter</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-      <br>
-      <table class="table">
-        <thead style="display: table-header-group; vertical-align: middle; border-color: inherit;">
-            <tr style="    background: #d02802;
-            text-align: center;
-            color: #fff;">
-                <td style="padding: 20px 0;
-                width: 25%;
-                text-align: center;
-                border-right: 1px solid #d02802;
-                border-left: 1px solid #d02802;" colspan="4">ONLY IF APPLICABLE</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Home Warranty/Non-Approved Vendors</td>
-                <td>$40</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>Insurance Claim Oversight</td>
-                <td>$100</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>Insurance Non-Compliance</td>
-                <td>$20/mo</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>588 Waiver</td>
-                <td>$75</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>Existing Tenant Setup</td>
-                <td>$100</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-            <tr>
-                <td>Franchise Tax Board Withholding</td>
-                <td>$25/quarter</td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+            <table class="table table-mobile mobile-show">
+              <thead>
+                <tr>
+                  <th>Features</th>
+                  <th>Full Service</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grey-row">
+                  <td>Upfront Pricing. <br>No hidden fees.</td>
+                  <td>
+                    <span class="larger">$99/month</span>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tenant Placement <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">This fee covers preparing your home for rent, marketing &amp; advertising, showing appointments, screening, executing lease contracts and collecting funds.</span></div></td>
+                  <td>50% of full month’s rent</td>
+                </tr>
+                <tr>
+                  <td>Commission to Agents <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Commission paid to the real estate agent for an approved applicant.</span></div></td>
+                  <td>10% of full month’s rent</td>
+                </tr>
+                <tr>
+                  <td>Home Assessments <span class="x-small">(Pre-Engagement Compliance, Lease Renewal, End-of-Lease)</span><div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Clockwork performs 3 types of assessments.<br><br>
+                  </span></div></td><td>$95</td>
+                </tr>
+                <tr>
+                  <td>Lease Renewal <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">90 days prior the lease end date all leases will automatically renew with a 3% rent increase unless the owner notifies us NOT TO renew the lease.</span></div></td>
+                  <td>$275</td>
+                </tr>
+
+                <tr>
+                  <td>1099 Preparation <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">This fee covers preparing the year-end tax documents:<br><br>
+                  1.  Form 1099<br>
+                  2.  Cash Flow Statement
+                  </span></div></td>
+                  <td>$100/yr.</td>
+                </tr>
+                <tr>
+                  <td>Malicous Damage $50,000 <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Damage perpetrated on the insured property which is deliberate, intentional and motivated by spite, malice or vindictiveness.  It also includes arson where the fire is intentionally set by the perpetrator.</span></div></td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>8 Weeks Rent Paid if Tenant Abandons <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">The tenant vacates with or without providing the required notice in accordance with their lease, or vacates at the end of their lease leaving unpaid rent during the Period of Liability.</span></div></td>
+                  <td>N/A</td>
+                </tr>
+
+                <tr>
+                  <td>10 Weeks Rent Paid if Tenant is Evicted <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">When eviction action is brought against the tenant for delinquent rent, if the eviction is successful, an eviction order will be granted for the termination of the tenant's lease. </span></div></td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>12 Weeks Rent Paid if Tenant Passes Away <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">The death of the tenant prevents the rent from being paid.  This coverage only applies if the tenant was the sole person listed in the relevant lease during the Period of the Liability.</span></div></td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Service Animal Damage <span class="x-small">(Coverage Up to $1,000)</span> <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">A service companion or emotional support animal, determined by a qualifed third party, provides a benefit to an individual with a verifiable disability.  Support animal shall mean any animal individually trained to do work or perform tasks to meet the requirements of a disabled person, including, but not limited to, minimal protection work, rescue work, pulling a wheelchair or retrieving dropped items.</span></div></td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Theft or Damage Due to Theft <span class="x-small">(Covered up to $25,000)</span></td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Eviction Filing Fee, Eviction Defense Cost <span class="x-small">(Covered up to $25,000)</span> <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">The costs incurred relating to an eviction lawsuit where a claim or complaint has been filed with a regulatory agency due to rent delinquency. </span></div></td>
+                  <td>N/A</td>
+                </tr>
+                <tr class="red-row" style="background-color: #d02802;text-align: center;color: #fff;">
+                  <td colspan="2" style="border-right: 1px solid #acacac;text-align: center;">ONLY IF APPLICABLE</td>
+                </tr>
+                <tr>
+                  <td>Home Warranty/Non-Approved Vendors</td>
+                  <td>$40</td>
+                </tr>
+                <tr>
+                  <td>Insurance Claim Oversight</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>Insurance Non-Compliance</td>
+                  <td>$20/mo.</td>
+                </tr>
+                <tr>
+                  <td>588 Waiver</td>
+                  <td>$75</td>
+                </tr>
+                <tr>
+                  <td>Existing Tenant Setup</td>
+                  <td>$100</td>
+                </tr>
+                <tr class="last-table-row">
+                  <td>Franchise Tax Board Withholding</td>
+                  <td>$25/quarter</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center mobile-show">
+              <a href="https://secure.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCx4zcFaQ06PV6l_Nu-SlhxlvvU21FJ_Sc_ycHziHCXl4NcO10G2DmGC2APvdhTK9Q*" target="_blank" class="btn">Click To Sign Up <br>(Full Service)</a>
+            </div>
+            <table class="table table-mobile mobile-show">
+              <thead>
+                <tr>
+                  <th>Features</th>
+                  <th style="background-color: #183252; color: #fff;">Platinum Service</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grey-row">
+                  <td>Upfront Pricing. <br>No hidden fees.</td>
+                  <td>$250/month + <br>$10 for rents over $2,500</td>
+                </tr>
+                <tr>
+                  <td>Tenant Placement <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">This fee covers preparing your home for rent, marketing &amp; advertising, showing appointments, screening, executing lease contracts and collecting funds.</span></div></td>
+                  <td>50% of full month’s rent <span class="x-small">(min $600)</span></td>
+                </tr>
+                <!-- <tr>
+                  <td>Commission to Agents <div class="tooltip-two"><i class="far fa-question-circle"></i><span class="tooltiptext">Commission paid to the real estate agent for an approved applicant.</span></div></td>
+                  <td>10% of full month’s rent</td>
+                </tr> -->
+                <tr>
+                  <td>Home Assessments <span class="x-small">(Pre-Engagement Compliance, Lease Renewal, End-of-Lease)</span><div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Clockwork performs 3 types of assessments.<br><br>
+                  </span></div></td><td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Lease Renewal <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">90 days prior the lease end date all leases will automatically renew with a 3% rent increase unless the owner notifies us NOT TO renew the lease.</span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+
+                <tr>
+                  <td>1099 Preparation <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">This fee covers preparing the year-end tax documents:<br><br>
+                  1.  Form 1099<br>
+                  2.  Cash Flow Statement
+                  </span></div></td>
+                                <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Malicous Damage $50,000 <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Damage perpetrated on the insured property which is deliberate, intentional and motivated by spite, malice or vindictiveness.  It also includes arson where the fire is intentionally set by the perpetrator.</span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>8 Weeks Rent Paid if Tenant Abandons <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">The tenant vacates with or without providing the required notice in accordance with their lease, or vacates at the end of their lease leaving unpaid rent during the Period of Liability.</span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+
+                <tr>
+                  <td>10 Weeks Rent Paid if Tenant is Evicted <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">When eviction action is brought against the tenant for delinquent rent, if the eviction is successful, an eviction order will be granted for the termination of the tenant's lease. </span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>12 Weeks Rent Paid if Tenant Passes Away <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">The death of the tenant prevents the rent from being paid.  This coverage only applies if the tenant was the sole person listed in the relevant lease during the Period of the Liability.</span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Service Animal Damage <span class="x-small">(Coverage Up to $1,000)</span> <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">A service companion or emotional support animal, determined by a qualifed third party, provides a benefit to an individual with a verifiable disability.  Support animal shall mean any animal individually trained to do work or perform tasks to meet the requirements of a disabled person, including, but not limited to, minimal protection work, rescue work, pulling a wheelchair or retrieving dropped items.</span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Theft or Damage Due to Theft <span class="x-small">(Covered up to $25,000)</span> <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">Theft or damage due to theft caused by an unknown person.</span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Eviction Filing Fee, Eviction Defense Cost <span class="x-small">(Covered up to $25,000)</span> <div class="tooltip-two"><i class="far fa-question-circle" aria-hidden="true"></i><span class="tooltiptext">The costs incurred relating to an eviction lawsuit where a claim or complaint has been filed with a regulatory agency due to rent delinquency. </span></div></td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr class="red-row" style="background-color: #d02802;text-align: center;color: #fff;">
+                  <td colspan="2" style="border-right: 1px solid #acacac;text-align: center;">ONLY IF APPLICABLE</td>
+                </tr>
+                <tr>
+                  <td>Home Warranty/Non-Approved Vendors</td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Insurance Claim Oversight</td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Insurance Non-Compliance</td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>588 Waiver</td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr>
+                  <td>Existing Tenant Setup</td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+                <tr class="last-table-row">
+                  <td>Franchise Tax Board Withholding</td>
+                  <td>
+                            <span>
+                                <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center mobile-show">
+              <a href="https://secure.na1.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCFkgAMt0b2ihhHJ5RW5hfrPb16x9Y8qDo13R2oDknL8uOihD0HGu7deZQbVKetw8M*" target="_blank" class="btn">Click To Sign Up <br>(Platinum Service)</a>
+            </div>
+        </div>
+    </section>
 </div>
-
-
-
