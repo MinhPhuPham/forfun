@@ -15,6 +15,7 @@ export class BannerComponent implements OnInit {
   @Input() buttonBannerTemplate: TemplateRef<any>;
 
   ngOnInit(): void {
+
     var splitted = this.banner.backgroundImage.split(".");
     if (getBrowserName() === 'safari' && splitted[splitted.length - 1].toLowerCase() === 'webp') {
       splitted[splitted.length - 1] = '.jpf';
