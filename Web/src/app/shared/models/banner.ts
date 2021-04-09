@@ -11,5 +11,6 @@ export enum PageId {
   Home,
   Tenants,
   TenantManagement,
-  Pricing
+  Pricing,
+  AboutUs
 }

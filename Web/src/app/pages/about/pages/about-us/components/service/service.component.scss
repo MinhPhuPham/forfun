@@ -1,0 +1,51 @@
+#full-service {
+  padding: 80px 0 100px;
+  background: #193252;
+  color: #fff;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#full-service .container-fluid {
+  max-width: 1334px;
+  margin: 0 auto;
+}
+
+#about-page h2 {
+  text-align: center;
+  font-family: 'gorditalight';
+  margin: 0 0 30px;
+}
+
+.banner h1, .banner h2 {
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 50px;
+  color: inherit;
+}
+
+#full-service p.lead {
+  margin-bottom: 70px;
+}
+
+.lead {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@media (min-width: 992px) {
+  #full-service .item .icon {
+    position: absolute;
+    left: 40px;
+    top: -21px;
+  }
+}
+
+#full-service .item .icon {
+  margin-bottom: 15px;
+  max-height: 60px;
+}
+
+h3 {
+  min-height: 60px;
+}

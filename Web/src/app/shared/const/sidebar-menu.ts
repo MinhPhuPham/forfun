@@ -75,11 +75,11 @@ export const SIDEBAR_MENU: SideBarMenu[] = [
     },
     {
         title: 'about us',
-        link: '',
+        link: 'about',
         submenu: [
             {
                 title: 'Our Team',
-                link: ''
+                link: 'our-team'
             },
             {
                 title: 'Join Our Team',

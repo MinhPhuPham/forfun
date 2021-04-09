@@ -1,4 +1,33 @@
-<p>about works!</p>
-<div style="float: right;padding-right: 10px;">
+<app-banner [banner]="banner"></app-banner>
+
+<!-- <app-tabs [tabs]="tabs"></app-tabs> -->
+<nav class="group-tabs">
+  <div class="container-tabs">
+    <ul class="tabs-header" #tabsWrap>
+      <li class="tab-btn">
+        <div class="tab-btn__left" (click)="scrollPagination('left')">
+          <i class="arrow left"></i>
+        </div>
+      </li>
+      <li *ngFor="let tab of tabs">
+        <a routerLink="{{ tab.link }}" routerLinkActive="tab-active" [routerLinkActiveOptions]="{exact:true}">
+          {{ tab.text }}
+        </a>
+      </li>
+      <li class="tab-btn">
+        <div class="tab-btn__right" (click)="scrollPagination('right')">
+          <i class="arrow right"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs-content">
+    <main class="router-animation">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</nav>
+
+<!-- <div style="float: right;padding-right: 10px;">
     <dynamic-form #dynamicForm></dynamic-form>
-</div>
+</div> -->

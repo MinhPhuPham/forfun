@@ -1,0 +1,24 @@
+.group-tabs {
+  .container-tabs {
+    background-color: #f7f7f7;
+    .tabs-header {
+      max-width: 1344px;
+      margin: 0 auto;
+    }
+
+    li {
+       width: 25%;
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .tabs-content {
+    max-width: 1344px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
