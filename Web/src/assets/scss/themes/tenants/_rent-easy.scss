@@ -1,0 +1,70 @@
+#rent-easy {
+  padding: 80px 0 100px;
+  background: $white-blue-300;
+  color: $white;
+  text-align: center;
+  justify-content: center;
+  font-family: 'gorditaMedium';
+
+  .container {
+    margin: 0 auto;
+
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 45px;
+    margin: 0 0 30px;
+    font-weight: normal;
+    line-height: 50px;
+  }
+
+  ul.numbers {
+    list-style: none;
+    padding: 0;
+
+    li {
+      position: relative;
+      margin: 0 0 50px;
+      padding: 0 15px;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-align: left;
+      counter-increment: item-counter;
+    }
+  }
+
+  .inline {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 15px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-size: 47px;
+        padding-right: 15px;
+        padding-top: 16px;
+      }
+
+      .numbers1, .numbers3 {
+        color: $light-blue-500;
+      }
+      .numbers2 {
+        color:  $dark-blue-900;
+      }
+    }
+  }
+}

@@ -16,6 +16,11 @@
     justify-content: center;
 }
 
+@mixin justify-space-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
 @mixin align-center {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -42,8 +47,24 @@
     @include align-center;
 }
 
+@mixin flex-justify-center {
+    @include flex-box;
+    @include justify-center;
+}
+
+@mixin flex-align-center {
+    @include flex-box;
+    @include align-center;
+}
+
 @mixin flex-center {
     @include flex-box;
     @include align-center;
     @include justify-center;
+}
+
+@mixin flex-space-around {
+    @include flex-box;
+    @include align-center;
+    @include justify-space-around;
 }

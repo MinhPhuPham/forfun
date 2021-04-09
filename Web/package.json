@@ -9,12 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "unused-css": "ngx-unused-css",
-    "postbuild": "node environments/postbuild.js",
     "scully": "scully",
     "scully:serve": "scully serve",
     "scully:preview": "npm run scully:build && npm run scully:serve",
-    "scully:build": "ng build --prod && scully --prod --scanRoutes",
-    "build:prod": "ng build --prod && scully -- --scanRoutes"
+    "scully:build": "ng build --prod && scully --prod --scanRoutes"
   },
   "private": true,
   "dependencies": {

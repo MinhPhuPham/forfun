@@ -1,12 +1,13 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
-import { Destroyable } from './shared/utils';
+import { Destroyable, fadeInOut } from './shared/utils';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [fadeInOut],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent extends Destroyable implements AfterViewInit {
@@ -20,5 +21,9 @@ export class AppComponent extends Destroyable implements AfterViewInit {
     //   ).subscribe((evt: any) => {
         
     //   });
+  }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 }

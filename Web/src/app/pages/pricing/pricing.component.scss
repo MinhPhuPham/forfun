@@ -19,46 +19,17 @@
     .tooltip-two {
       display: inline;
       opacity: 1;
-      .tooltiptext {
-        visibility: hidden;
-        width: 320px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 10px 5px;
-        position: absolute;
-        z-index: 1;
-        bottom: 95%;
-        left: 60%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        font-size: 16px;
-      }
     }
-    .table tr td:first-child i.fa-question-circle {
+    .table tr td:first-child{
+      position: relative;
+      padding-right: 40px;
+
+    }
+    .table tr td:first-child svg.question-circle {
       position: absolute;
       right: 15px;
       font-size: 20px;
-      top: 30%;
-    }
-    .tooltip-two .tooltiptext {
-      visibility: hidden;
-      width: 320px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 10px 5px;
-      position: absolute;
-      z-index: 1;
-      bottom: 95%;
-      left: 60%;
-      margin-left: -60px;
-      opacity: 0;
-      transition: opacity 0.3s;
-      font-size: 16px;
+      top: 10%;
     }
     .container-fluid {
       padding-right: 15px;
@@ -81,7 +52,7 @@
         font-weight: normal;
         line-height: 50px;
         color: #333;
-        font-family: 'gorditalight';
+        font-family: "gorditalight";
         margin-bottom: 80px;
         margin-top: 0;
 
@@ -145,7 +116,7 @@
             display: table-row;
             vertical-align: inherit;
             border-color: inherit;
-            td{
+            td {
               border-right: 1px solid #acacac;
               text-align: center;
               line-height: 18px;
@@ -169,13 +140,12 @@
               font-style: italic;
             }
           }
-          tr.grey-row> td {
+          tr.grey-row > td {
             background: #cccccc;
             text-align: center !important;
             font-size: 18px;
             line-height: 18px;
           }
-
 
           tr:nth-child(odd) {
             background: #ebebeb;
@@ -246,11 +216,40 @@
       }
     }
   }
-
-  #home-pricing .table tr td:first-child i.fa-question-circle {
+  #home-pricing .tooltip-two .tooltiptext {
+    visibility: hidden;
+    width: 320px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 5px;
     position: absolute;
-    right: 15px;
-    font-size: 20px;
-    top: 30%;
+    z-index: 1;
+    bottom: 95%;
+    left: 60%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 16px;
+}
+  #home-pricing .table.table-two {
+    margin-top: 50px;
+  }
+  #home-pricing .table.table-two > thead > tr {
+    background: #d02802;
+    text-align: center;
+    color: #fff;
+  }
+  #home-pricing .table.table-two > thead > tr > td {
+    padding: 20px 0;
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #d02802;
+    border-left: 1px solid #d02802;
+  }
+  #home-pricing .table.table-two> tbody> tr> td {
+    border-right: 1px solid #acacac;
+    width: 25%;
 }
 }

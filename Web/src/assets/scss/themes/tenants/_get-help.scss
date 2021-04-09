@@ -1,0 +1,66 @@
+#get-help {
+  padding: 80px 0 0;
+  background-color: $puper-300;
+
+  .row {
+    margin: 0px;
+  }
+
+  .container-fluid {
+    max-width: 1334px;
+    margin: 0 auto;
+  }
+
+  .content {
+    font-family: 'gorditalight';
+    margin-top: 5%;
+    padding-bottom: 50px;
+  }
+
+  .image {
+    text-align: center;
+    margin-bottom: 0px;
+    background-image: url('/assets/images/tenants/Free_Help_banner.png');
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    img {
+      max-width: 100%;
+      margin-bottom: 0px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin-bottom: 7%;
+  }
+
+  h2 {
+    font-size: 45px;
+    margin: 0 0 30px;
+    font-weight: normal;
+    line-height: 50px;
+    color: inherit;
+  }
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  #get-help .row {
+    text-align: center;
+    display: block;
+    .col-md-7 {
+      max-width: 100%;
+    }
+  }
+  #get-help .image {
+    min-height: 350px;
+    max-width: 100%;
+  }
+}

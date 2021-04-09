@@ -3,10 +3,13 @@ export interface Banner {
   mainTitle: string;
   subTitle: string;
   backgroundImage: string;
+  path?: string;
+  inner?: string;
 }
 
 export enum PageId {
   Home,
   Tenants,
+  TenantManagement,
   Pricing
 }
