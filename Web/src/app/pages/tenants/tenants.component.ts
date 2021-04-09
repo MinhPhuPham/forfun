@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Banner, PageId } from 'src/app/shared/models/banner';
 import { BlockContent } from 'src/app/shared/models/block-content';
+import { AnimateOnScrollModule, DumbsModule } from 'src/app/shared';
 
 @Component({
   selector: 'app-tenants',
