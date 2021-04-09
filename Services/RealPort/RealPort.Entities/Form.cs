@@ -33,6 +33,7 @@ namespace RealPort.Entities
         public string[] Validations { get; set; }
         public string Value { get; set; }
         public OptionInfo[] Options { get; set; }
+        public string Width { get; set; }
 
     }
     public record OptionInfo

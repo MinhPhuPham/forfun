@@ -41,10 +41,6 @@ namespace RealPort.API.Controllers
                             Label = "First Name",
                             Type = "text",
                             Required = true,
-<<<<<<< HEAD
-=======
-                            Width = "50%"
->>>>>>> 61e50e6 (Update dynamic-form schema)
                         },
                         new FormControl()
                         {
@@ -52,10 +48,6 @@ namespace RealPort.API.Controllers
                             Label = "Last Name",
                             Type = "text",
                             Required = true,
-<<<<<<< HEAD
-=======
-                            Width = "50%"
->>>>>>> 61e50e6 (Update dynamic-form schema)
                         },
                     },
                    new FormControl[]

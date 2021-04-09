@@ -1,0 +1,79 @@
+<div *ngIf="rf" [formGroup]="rf" class="px-1">
+    <div [ngSwitch]="control.type" [ngStyle]="{'width': ''}">
+        <div *ngSwitchCase="controlType.Text" class="form-label-group">
+            <input type="text" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Email" class="form-label-group">
+            <input type="email" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Password" class="form-label-group">
+            <input type="password" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Number" class="form-label-group">
+            <input type="number" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Date" class="form-label-group">
+            <input type="date" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Time" class="form-label-group">
+            <input type="time" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Url" class="form-label-group">
+            <input type="url" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Code" class="form-label-group">
+            <input type="code" [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus="" [formControlName]="control.key" (focusout)="onMouseLeave()">
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+        <div *ngSwitchCase="controlType.Radio" style="display: flex; width: 100%;">
+            <label [attr.for]="control.key" class="mr-5">{{control.label}}</label>
+            <span *ngFor="let opt of control.options" class="d-inline mr-3">
+                <input [name]="control.key" [id]="opt.value" type="radio">
+                <span> {{opt.name}}</span>
+            </span>
+        </div>
+        <div *ngSwitchCase="controlType.Checkbox" style="display: flex; width: 100%;">
+            <label [attr.for]="control.key">{{control.label}}</label>
+            <span>
+                <span *ngFor="let opt of control.options" class="d-inline ml-2">
+                    <input [name]="control.key" [id]="opt.value" type="checkbox" [formControlName]="control.key">
+                    <span> {{opt.name}}</span>
+                </span>
+            </span>
+        </div>
+        <div *ngSwitchCase="controlType.Select" class="form-label-group-select">
+            <label [attr.for]="control.key">{{control.label}}</label>
+            <select [id]="control.key" [formControlName]="control.key">
+                <option *ngFor="let opt of control.options" [value]="opt.value">{{opt.name}}</option>
+            </select>
+        </div>
+        <div *ngSwitchCase="controlType.TextArea" class="form-label-group">
+            <textarea [name]="control.key" [id]="control.key" placeholder="{{control.label}}" required=""
+                autofocus=""></textarea>
+            <label [attr.for]="control.key">{{control.label}}</label>
+        </div>
+    </div>
+    <!-- <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div> -->
+    <div *ngIf="showErrors" class="text-danger font-italic error-message">
+        <span *ngIf="rf.get(control.key).errors?.required">{{control.label}} is required.</span>
+        <span *ngIf="rf.get(control.key).errors?.email">Please enter valid email
+            address.</span>
+        <span *ngIf="rf.get(control.key).errors?.minlength">{{control.label}} must be at least 8
+            characters.</span>
+    </div>
+</div>

@@ -1,14 +1,13 @@
 On parent component:
 
-# Solution 1
-
 ### .ts
 
 ```typescript
     formData$: Observable<DynamicForm>;
     constructor(private http: HttpClient, private ref: ChangeDetectorRef) {
+        let url = `...`;
         this.formData$ = this.http
-        .get<DynamicForm>('https://localhost:44314/form')
+        .get<DynamicForm>(url)
         .pipe(map((resp: any) => resp.data));
     }
 ```
@@ -20,28 +19,4 @@ On parent component:
   [data]="formData$ | async"
   (onSubmit)="onSubmit($event)"
 ></dynamic-form>
-```
-
-# Solution 2
-
-### .ts
-
-```typescript
-    formData: DynamicForm;
-    constructor(private ref: ChangeDetectorRef) {
-        let url =`...`;
-        this.http.get(url).subscribe((resp: any) => {
-        this.formData = resp.data as DynamicForm;
-        ref.markForCheck();
-    });
-    onSubmit(postData:any) {
-        // do sth.
-    }
-  }
-```
-
-### .html
-
-```html
-<dynamic-form [data]="formData" (onSubmit)="onSubmit($event)"></dynamic-form>
 ```
