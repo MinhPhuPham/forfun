@@ -85,11 +85,7 @@ export class DynamicFormComponent implements OnInit {
             this.rf.addControl(
               control.key,
               new FormControl(
-<<<<<<< HEAD:Web/src/app/shared/modules/dynamic-form/dynamic-form.component.ts
                 control.value ? control.value : '',
-=======
-                '',
->>>>>>> 61e50e6 (Update dynamic-form schema):Web/src/app/shared/components/dynamic-form/dynamic-form.component.ts
                 Validators.compose([Validators.required, Validators.email])
               )
             );
@@ -98,11 +94,7 @@ export class DynamicFormComponent implements OnInit {
             this.rf.addControl(
               control.key,
               new FormControl(
-<<<<<<< HEAD:Web/src/app/shared/modules/dynamic-form/dynamic-form.component.ts
                 control.value ? control.value : '',
-=======
-                '',
->>>>>>> 61e50e6 (Update dynamic-form schema):Web/src/app/shared/components/dynamic-form/dynamic-form.component.ts
                 Validators.compose([
                   Validators.required,
                   Validators.minLength(8),
@@ -114,7 +106,6 @@ export class DynamicFormComponent implements OnInit {
             if (control.required) {
               this.rf.addControl(
                 control.key,
-<<<<<<< HEAD:Web/src/app/shared/modules/dynamic-form/dynamic-form.component.ts
                 new FormControl(
                   control.value ? control.value : '',
                   Validators.required
@@ -125,12 +116,7 @@ export class DynamicFormComponent implements OnInit {
                 control.key,
                 new FormControl(control.value ? control.value : '')
               );
-=======
-                new FormControl('', Validators.required)
-              );
-            } else {
-              this.rf.addControl(control.key, new FormControl(''));
->>>>>>> 61e50e6 (Update dynamic-form schema):Web/src/app/shared/components/dynamic-form/dynamic-form.component.ts
+
             }
         }
       });
