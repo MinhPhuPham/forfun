@@ -53,19 +53,23 @@ export const SIDEBAR_MENU: SideBarMenu[] = [
             },
             {
                 title: 'Request Maintenance',
-                link: 'https://scpm.appfolio.com/connect/users/sign_in'
+                link: 'https://scpm.appfolio.com/connect/users/sign_in',
+                fullLink: true,
             },
             {
                 title: 'Tenant Login',
-                link: 'https://scpm.appfolio.com/connect/users/sign_in'
+                link: 'https://scpm.appfolio.com/connect/users/sign_in',
+                fullLink: true
             },
             {
                 title: 'Home Buyer Program',
-                link: 'https://learn.homebridge.com/clockwork/'
+                link: 'https://learn.homebridge.com/clockwork/',
+                fullLink: true
             },
             {
                 title: 'School Information',
-                link: 'https://www.greatschools.org/'
+                link: 'https://www.greatschools.org/',
+                fullLink: true
             },
         ]
     },
@@ -91,7 +95,7 @@ export const SIDEBAR_MENU: SideBarMenu[] = [
             },
             {
                 title: 'Blog',
-                link: ''
+                link: '/blog'
             },
         ]
     },
