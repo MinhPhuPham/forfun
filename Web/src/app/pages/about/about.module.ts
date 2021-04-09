@@ -8,7 +8,7 @@ import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
 
 @NgModule({
-  declarations: [AboutComponent, DynamicFormComponent],
+  declarations: [AboutComponent, DynamicFormComponent,DynamicControlComponent],
   imports: [
     CommonModule,
     DumbsModule,

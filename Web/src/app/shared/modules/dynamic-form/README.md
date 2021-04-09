@@ -2,6 +2,9 @@ On parent component:
 
 ### .ts
 
+import DynamicFormModule to module which use dynamic form
+
+
 ```typescript
     formData$: Observable<DynamicForm>;
     constructor(private http: HttpClient, private ref: ChangeDetectorRef) {

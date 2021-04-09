@@ -12,16 +12,19 @@ import { DynamicFormControl, FormControlType } from './schema/dynamic-form';
 @Component({
   selector: 'app-dynamic-control',
   templateUrl: './dynamic-control.component.html',
-  styleUrls: ['./dynamic-control.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 }) //implements OnChanges
-export class DynamicControlComponent {
+export class DynamicControlComponent implements OnChanges {
   @Input() control: DynamicFormControl;
-  @Input('form') rf: FormGroup;
+  @Input() rf: FormGroup;
   controlType = FormControlType;
   showErrors: boolean = false;
   constructor(private cd: ChangeDetectorRef) {}
   onMouseLeave() {
     this.showErrors = true;
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(`control rf`, this.rf);
+    console.log(`control control`, this.control);
   }
 }

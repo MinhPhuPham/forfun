@@ -12,11 +12,11 @@ namespace RealPort.Entities
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public FormSettings Settings { get; set; }
-        public FormControl[] Controls { get; set; }
+        public FormControl[][] Controls { get; set; }
     }
     public record FormSettings
     {
-        public FormStyle Style { get; set; }
+        public string Style { get; set; }
         public string Color { get; set; }
         public string BackgroundColor { get; set; }
         public string TitleColor { get; set; }
@@ -27,13 +27,12 @@ namespace RealPort.Entities
     {
         public string Key { get; set; }
         public string Label { get; set; }
-        public FormControlType Type { get; set; }
+        public string Type { get; set; }
         public int Order { get; set; }
         public bool Required { get; set; }
         public string[] Validations { get; set; }
         public string Value { get; set; }
         public OptionInfo[] Options { get; set; }
-        public string Width { get; set; }
 
     }
     public record OptionInfo

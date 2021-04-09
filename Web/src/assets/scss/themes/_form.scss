@@ -7,8 +7,6 @@
 }
 
 .form-container {
-  display: flex;
-  flex-wrap: wrap;
   background: var(--dynamic-form-background-color) !important;
   padding: 30px;
   color: var(--dynamic-form-color);
@@ -61,6 +59,7 @@
   }
 
   .form-group {
+    display: flex;
     label {
       width: auto;
       max-width: 100%;
@@ -85,6 +84,7 @@
       height: 50px;
       padding: 0 20px;
       border: 2px solid var(--dynamic-form-color);
+      outline-color: var(--dynamic-form-color) !important;
       font-size: 18px;
       color: var(--dynamic-form-color);
       background: transparent;

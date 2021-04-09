@@ -14,19 +14,17 @@ import {
   Validators,
 } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { BehaviorSubject, Subject } from 'rxjs';
 import { DynamicForm, FormControlType, FormStyle } from './schema/dynamic-form';
 
 @Component({
   selector: 'dynamic-form',
   templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.scss'],
 })
 export class DynamicFormComponent implements OnInit {
   @Input() data: DynamicForm = new DynamicForm();
   @Output() onSubmit = new EventEmitter<any>();
   controlType = FormControlType;
-  formStyle = FormStyle
+  formStyle = FormStyle;
   rf: FormGroup;
   subTitle: SafeHtml;
   showErrors: boolean = false;
@@ -50,7 +48,7 @@ export class DynamicFormComponent implements OnInit {
     if (!this.data) return;
     this.loadFormSettings();
     this.generateForm();
-    //console.log(this.rf.value);
+    console.log(`form`, this.data);
     this.subTitle = this.sanitizer.bypassSecurityTrustHtml(this.data.subtitle);
   }
   loadFormSettings() {
@@ -80,44 +78,55 @@ export class DynamicFormComponent implements OnInit {
   generateForm() {
     this.rf = new FormGroup({});
     this.rf.addControl('token', new FormControl(this.data.token));
-    this.data.controls.forEach((control) => {
-      switch (control.type) {
-        case this.controlType.Email:
-          this.rf.addControl(
-            control.key,
-            new FormControl(
-              '',
-              Validators.compose([Validators.required, Validators.email])
-            )
-          );
-          break;
-        case this.controlType.Password:
-          this.rf.addControl(
-            control.key,
-            new FormControl(
-              '',
-              Validators.compose([Validators.required, Validators.minLength(8)])
-            )
-          );
-          break;
-        default:
-          if (control.required) {
+    this.data.controls.forEach((controls) => {
+      controls.forEach((control) => {
+        switch (control.type) {
+          case 'email':
             this.rf.addControl(
               control.key,
-              new FormControl('', Validators.required)
+              new FormControl(
+                control.value ? control.value : '',
+                Validators.compose([Validators.required, Validators.email])
+              )
             );
-          } else {
-            this.rf.addControl(control.key, new FormControl(''));
-          }
-      }
+            break;
+          case 'password':
+            this.rf.addControl(
+              control.key,
+              new FormControl(
+                control.value ? control.value : '',
+                Validators.compose([
+                  Validators.required,
+                  Validators.minLength(8),
+                ])
+              )
+            );
+            break;
+          default:
+            if (control.required) {
+              this.rf.addControl(
+                control.key,
+                new FormControl(
+                  control.value ? control.value : '',
+                  Validators.required
+                )
+              );
+            } else {
+              this.rf.addControl(
+                control.key,
+                new FormControl(control.value ? control.value : '')
+              );
+            }
+        }
+      });
     });
     console.log('rf', this.rf.value);
   }
   submit() {
     this.showErrors = true;
     console.log(this.rf.value);
-    // if (this.rf.valid) {
-    //   this.onSubmit.emit(this.rf.value);
-    // }
+    if (this.rf.valid) {
+      this.onSubmit.emit(this.rf.value);
+    }
   }
 }

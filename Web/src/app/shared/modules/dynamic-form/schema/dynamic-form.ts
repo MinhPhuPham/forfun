@@ -5,10 +5,10 @@ export class DynamicForm {
   title: string;
   subtitle: string;
   settings: FormSettings;
-  controls: DynamicFormControl[];
+  controls: DynamicFormControl[][];
 }
 export class FormSettings {
-  style: FormStyle;
+  style: string;
   color: string;
   backgroundColor: string;
   titleColor: string;
@@ -18,7 +18,7 @@ export class FormSettings {
 export class DynamicFormControl {
   key: string;
   label: string;
-  type: FormControlType;
+  type: string;
   order: number;
   required: boolean;
   validations: string[];

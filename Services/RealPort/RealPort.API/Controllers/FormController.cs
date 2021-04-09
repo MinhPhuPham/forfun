@@ -24,56 +24,65 @@ namespace RealPort.API.Controllers
                 Subtitle = "Submit this form or call us at<br> <a href=\"tel:+1-909-548-0044\" >(909) 548-0044</a> ",
                 Settings = new FormSettings()
                 {
-                    Style = FormStyle.Inline,
+                    Style = "floating",
                     Color = "#000",
                     BackgroundColor = "rgb(216, 181, 198)",
                     TitleColor = "rgb(23, 43, 108)",
                     SubtitleColor = "#000",
                     LinkColor = "rgb(240, 151, 24)"
                 },
-                Controls = new FormControl[]
+                Controls = new FormControl[][]
                 {
-                      new FormControl()
+                    new FormControl[]
                     {
-                        Key = "firstName",
-                        Label = "First Name",
-                        Type= FormControlType.Text,
-                        Required= true,
-                        Width = "50%"
-                    },
                         new FormControl()
-                    {
-                        Key = "lastName",
-                        Label = "Last Name",
-                        Type= FormControlType.Text,
-                        Required= true,
-                        Width = "50%"
+                        {
+                            Key = "firstName",
+                            Label = "First Name",
+                            Type = "text",
+                            Required = true,
+                        },
+                        new FormControl()
+                        {
+                            Key = "lastName",
+                            Label = "Last Name",
+                            Type = "text",
+                            Required = true,
+                        },
                     },
-                    new FormControl()
-                    {
-                        Key="email",
-                        Label = "Email Address",
-                        Type=FormControlType.Email
-                    },
-                    new FormControl()
+                   new FormControl[]
+                   {
+                        new FormControl()
+                        {
+                            Key="email",
+                            Label = "Email Address",
+                            Type="email"
+                        }
+                   },
+                   new FormControl[]
+                   {
+                       new FormControl()
                     {
                         Key="contactType",
                         Label = "I am a...",
-                        Type= FormControlType.Select,
+                        Type= "select",
                         Options = new OptionInfo[]
                         {
                             new OptionInfo("propertyOwner","Property Owner"),
                             new OptionInfo("tenant","Tenant"),
                         }
-                    },
-                     new FormControl()
-                    {
-                        Key="message",
-                        Label = "Message",
-                        Type=FormControlType.TextArea
                     }
-
-                     //new FormControl()
+                   },
+                    new FormControl[]
+                    {
+                        new FormControl()
+                        {
+                            Key="message",
+                            Label = "Message",
+                            Type="textarea"
+                        }
+                    }
+                    //new FormControl()
                     //{
                     //    Key="gender",
                     //    Label = "Gender",
@@ -123,7 +132,7 @@ namespace RealPort.API.Controllers
                     //    Label = "Time",
                     //    Type=FormControlType.Time
                     //},
-                      
+
                 }
             };
             actionResp.Data = form;
