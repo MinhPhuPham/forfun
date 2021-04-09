@@ -2,17 +2,27 @@
     <div class="management-banner" [innerHTML]="activeBanner.inner"></div>
 </app-banner>
 
-<div class="group-tabs">
-    <ul class="tabs-header">
+<nav class="group-tabs">
+    <ul class="tabs-header" #tabsWrap>
+        <li class="tab-btn">
+            <div class="tab-btn__left" (click)="scrollPagination('left')">
+                <i class="arrow left"></i>
+            </div>
+        </li>
         <li *ngFor="let tab of tabs">
             <a routerLink="{{ tab.link }}" routerLinkActive="tab-active">
                 {{ tab.text }}
             </a>
         </li>
+        <li class="tab-btn">
+            <div class="tab-btn__right" (click)="scrollPagination('right')">
+                <i class="arrow right"></i>
+            </div>
+        </li>
     </ul>
     <div class="tabs-content">
-        <main>
-            <router-outlet></router-outlet>
+        <main class="router-animation" [@fadeInOut]="getState(o)">
+            <router-outlet #o="outlet"></router-outlet>
         </main>
     </div>
-</div>
+</nav>

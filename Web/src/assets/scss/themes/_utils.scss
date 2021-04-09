@@ -47,6 +47,16 @@
     @include align-center;
 }
 
+@mixin flex-justify-center {
+    @include flex-box;
+    @include justify-center;
+}
+
+@mixin flex-align-center {
+    @include flex-box;
+    @include align-center;
+}
+
 @mixin flex-center {
     @include flex-box;
     @include align-center;

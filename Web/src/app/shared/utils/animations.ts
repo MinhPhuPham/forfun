@@ -1,4 +1,4 @@
-import { trigger, transition, query, style, animate } from '@angular/animations';
+import { trigger, transition, query, style, animate, state } from '@angular/animations';
 
 export const fadeInOut = trigger('fadeInOut', [
   transition('* => *', [
@@ -11,8 +11,15 @@ export const fadeInOut = trigger('fadeInOut', [
       { optional: true }
     ),
     query(
-      ':enter', [style({ opacity: 0 }), animate('500ms', style({ opacity: 1 }))],
+      ':enter', [style({ opacity: 0 }), animate('300ms', style({ opacity: 1 }))],
       { optional: true }
     )
   ])
 ]);
+
+export const fadeInOutState = trigger('fadeInOutState', [
+  state('in', style({ opacity: 1 })),
+  state('out', style({ opacity: 0 })),
+  transition('in => out', animate('200ms ease-in-out')),
+  transition('out => in', animate('200ms ease-in-out'))
+])

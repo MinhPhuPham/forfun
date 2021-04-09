@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { fadeInOut, Tabs } from 'src/app/shared';
 import { NavigationEnd, Router } from "@angular/router";
 import { Banner, PageId } from 'src/app/shared/models/banner';
@@ -15,6 +15,8 @@ import { filter } from 'rxjs/operators';
 export class ManagementComponent implements OnInit, OnDestroy {
   private _obsevers: Subscription[] = [];
   private groupBtn: [] = [];
+
+  @ViewChild('tabsWrap', { read: ElementRef }) public tabsWrapper: ElementRef<any>;
 
   banner: Banner[] = [
     {
@@ -84,6 +86,8 @@ export class ManagementComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    this.activeBanner = this.banner.find(item => item.path == this.router.url);
+    
     this._obsevers.push(
       this.router.events.pipe(
         filter(event => event instanceof NavigationEnd)
@@ -96,10 +100,13 @@ export class ManagementComponent implements OnInit, OnDestroy {
   ngAfterViewInit() {
     this.groupBtn = this.elementRef.nativeElement.querySelectorAll('a');
     this.groupBtn.forEach((anchor: HTMLAnchorElement) => {
-      console.log(anchor);
-
       anchor.addEventListener('click', this.overViewClick)
     })
+
+    // const tab = this.tabsWrapper.nativeElement;
+    // for (const eachChild of tab.children) {
+    //   console.log(eachChild.clientWidth);
+    // }
   }
 
   ngOnDestroy(): void {
@@ -112,9 +119,17 @@ export class ManagementComponent implements OnInit, OnDestroy {
     })
   }
 
-  overViewClick() {
-    console.log('click');
-
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
+  overViewClick() {
+    console.log('click');
+  }
+
+  scrollPagination(direction: string) {
+    const longScroll = direction == "left" ? -(this.tabsWrapper.nativeElement.offsetWidth) : this.tabsWrapper.nativeElement.offsetWidth;
+    let scroller = this.tabsWrapper.nativeElement.scrollLeft + longScroll;
+    this.tabsWrapper.nativeElement.scrollTo({ left: scroller, behavior: 'smooth' });
+  }
 }

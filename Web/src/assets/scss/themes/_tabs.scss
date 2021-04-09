@@ -1,33 +1,92 @@
 .group-tabs {
     width: 100%;
-    padding: 20px 0 0;
-    background-color: $puper-300;
+    position: relative;
+    display: block;
 
     .tabs-header {
-        list-style: none;
-        @include flex-space-around;
-        max-width: 1634px;
-        margin: 0 auto 70px;
+        @include flex-justify-center;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        background-color: #f7f7f7;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
 
         li {
-          padding: 15px 10px;
-          text-transform: uppercase;
+            text-transform: uppercase;
+            display: flex;
 
-          a {
-              font-family: 'gorditabold';
-              font-size: 12px;
-              color: $dark-blue-900;
+            a {
+                font-family: 'gorditabold';
+                font-size: 12px;
+                color: $dark-blue-900;
+                padding: 1.5rem;
+                text-align: center;
+                @include flex-align-center;
 
-              &:hover {
-                border-bottom: 6px solid $dark-blue-900;
-                transition: 0.3s;
-                margin: 0 auto;
-              }
-          }
+                &:hover {
+                    transition: 0.3s;
+                    background-color: white;
+                    color: #0fb2e4;
+                    margin: 0 auto;
+                }
+
+                &.tab-active {
+                    background-color: white;
+                    color: #0fb2e4;
+                }
+            }
+        }
+
+        .tab-btn {
+            display: none;
+
+            &__left,
+            &__right {
+                @include flex-align-center;
+                position: absolute;
+                z-index: 2;
+                top: 38%;
+
+                .arrow {
+                    border-color: gray;
+                    cursor: pointer;
+                }
+            }
+
+            &__left {
+                left: 6px;
+            }
+
+            &__right {
+                right: 6px;
+            }
         }
     }
 }
 
-.tab-active {
-  border-bottom: 6px solid $dark-blue-900;
+@media (max-width: 1250px) {
+    .tab-btn {
+        display: flex !important;
+    }
+
+    .group-tabs {
+        background-color: #dae1e9;
+        .tabs-header {
+            max-width: calc(100% - 38px);
+            margin: 0 auto;
+            -webkit-box-pack: unset;
+            -ms-flex-pack: unset;
+            justify-content: unset;
+
+            li {
+                a {
+                    padding: .5rem 1rem;
+                }
+            }
+        }
+    }
 }
