@@ -17,7 +17,11 @@ namespace RealPort.Entities
     public record FormSettings
     {
         public FormStyle Style { get; set; }
-        public string Css { get; set; }
+        public string Color { get; set; }
+        public string BackgroundColor { get; set; }
+        public string TitleColor { get; set; }
+        public string SubtitleColor { get; set; }
+        public string LinkColor { get; set; }
     }
     public record FormControl
     {
@@ -29,6 +33,7 @@ namespace RealPort.Entities
         public string[] Validations { get; set; }
         public string Value { get; set; }
         public OptionInfo[] Options { get; set; }
+        public string Width { get; set; }
 
     }
     public record OptionInfo

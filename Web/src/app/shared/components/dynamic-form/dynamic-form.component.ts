@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   EventEmitter,
@@ -7,7 +6,6 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-  TemplateRef,
 } from '@angular/core';
 import {
   FormBuilder,
@@ -16,26 +14,31 @@ import {
   Validators,
 } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { DynamicForm, FormControlType } from './schema/dynamic-form';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { DynamicForm, FormControlType, FormStyle } from './schema/dynamic-form';
 
 @Component({
   selector: 'dynamic-form',
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DynamicFormComponent implements OnInit {
   @Input() data: DynamicForm = new DynamicForm();
   @Output() onSubmit = new EventEmitter<any>();
   controlType = FormControlType;
-  rf: FormGroup = new FormGroup({});
+  formStyle = FormStyle
+  rf: FormGroup;
   subTitle: SafeHtml;
   showErrors: boolean = false;
   constructor(
     private ref: ChangeDetectorRef,
     private fb: FormBuilder,
     private sanitizer: DomSanitizer
-  ) {}
+  ) {
+    setInterval(() => {
+      this.ref.detectChanges();
+    }, 1000);
+  }
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {}
@@ -45,11 +48,34 @@ export class DynamicFormComponent implements OnInit {
   }
   loadData() {
     if (!this.data) return;
-    // this.data = { ...data };
+    this.loadFormSettings();
     this.generateForm();
-    console.log(this.rf.value);
+    //console.log(this.rf.value);
     this.subTitle = this.sanitizer.bypassSecurityTrustHtml(this.data.subtitle);
-    this.ref.markForCheck();
+  }
+  loadFormSettings() {
+    const formSettings = [
+      { name: '--dynamic-form-color', value: this.data.settings.color },
+      {
+        name: '--dynamic-form-background-color',
+        value: this.data.settings.backgroundColor,
+      },
+      {
+        name: '--dynamic-form-title-color',
+        value: this.data.settings.titleColor,
+      },
+      {
+        name: '--dynamic-form-subtitle-color',
+        value: this.data.settings.subtitleColor,
+      },
+      {
+        name: '--dynamic-form-link-color',
+        value: this.data.settings.linkColor,
+      },
+    ];
+    formSettings.forEach((data) => {
+      document.documentElement.style.setProperty(`${data.name}`, data.value);
+    });
   }
   generateForm() {
     this.rf = new FormGroup({});
@@ -85,12 +111,13 @@ export class DynamicFormComponent implements OnInit {
           }
       }
     });
+    console.log('rf', this.rf.value);
   }
   submit() {
     this.showErrors = true;
-    //console.log(this.rf.value);
-    if (this.rf.valid) {
-      this.onSubmit.emit(this.rf.value);
-    }
+    console.log(this.rf.value);
+    // if (this.rf.valid) {
+    //   this.onSubmit.emit(this.rf.value);
+    // }
   }
 }

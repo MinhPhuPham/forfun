@@ -8,10 +8,7 @@ import { LayoutModule } from './layout/layout.module';
 import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ErrorComponent
-  ],
+  declarations: [AppComponent, ErrorComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -19,9 +16,9 @@ import { ErrorComponent } from './pages/error/error.component';
     ScullyLibModule.forRoot({
       alwaysMonitor: true,
     }),
-    LayoutModule
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

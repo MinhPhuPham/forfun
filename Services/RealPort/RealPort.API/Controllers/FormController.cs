@@ -21,10 +21,15 @@ namespace RealPort.API.Controllers
             {
                 Token = System.Guid.NewGuid(),
                 Title = "Get a FREE Quote",
-                Subtitle = "Submit this form or call us at<br> <a href=\"tel:+1-909-548-0044\" style=\"color:#f09718\" >(909) 548-0044</a> ",
+                Subtitle = "Submit this form or call us at<br> <a href=\"tel:+1-909-548-0044\" >(909) 548-0044</a> ",
                 Settings = new FormSettings()
                 {
-                    Style = FormStyle.Stack
+                    Style = FormStyle.Inline,
+                    Color = "#000",
+                    BackgroundColor = "rgb(216, 181, 198)",
+                    TitleColor = "rgb(23, 43, 108)",
+                    SubtitleColor = "#000",
+                    LinkColor = "rgb(240, 151, 24)"
                 },
                 Controls = new FormControl[]
                 {
@@ -33,14 +38,16 @@ namespace RealPort.API.Controllers
                         Key = "firstName",
                         Label = "First Name",
                         Type= FormControlType.Text,
-                        Required= true
+                        Required= true,
+                        Width = "50%"
                     },
                         new FormControl()
                     {
                         Key = "lastName",
                         Label = "Last Name",
                         Type= FormControlType.Text,
-                        Required= true
+                        Required= true,
+                        Width = "50%"
                     },
                     new FormControl()
                     {
