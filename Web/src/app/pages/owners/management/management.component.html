@@ -3,9 +3,9 @@
 </app-banner>
 
 <nav class="group-tabs">
-    <ul class="tabs-header" #tabsWrap>
+    <ul class="tabs-header" tabsScrollable #tabsWrap="tabsScrollable">
         <li class="tab-btn">
-            <div class="tab-btn__left" (click)="scrollPagination('left')">
+            <div class="tab-btn__left" [class.tabDisabled]="!tabsWrap.canScrollStart" (click)="tabsWrap.scroll('right')">
                 <i class="arrow left"></i>
             </div>
         </li>
@@ -15,7 +15,7 @@
             </a>
         </li>
         <li class="tab-btn">
-            <div class="tab-btn__right" (click)="scrollPagination('right')">
+            <div class="tab-btn__right" [class.tabDisabled]="!tabsWrap.canScrollEnd" (click)="tabsWrap.scroll('left')">
                 <i class="arrow right"></i>
             </div>
         </li>

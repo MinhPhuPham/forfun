@@ -6,7 +6,7 @@ import { AnimateOnScrollModule, DumbsModule } from 'src/app/shared';
 
 import { ManagementRoutingModule } from './management-routing.module';
 import { ManagementComponent } from './management.component';
-
+import { SrcollableControlModule } from 'src/app/shared/directives/scrollable-control.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +17,7 @@ import { ManagementComponent } from './management.component';
     HttpClientModule,
     ManagementRoutingModule,
     DumbsModule,
+    SrcollableControlModule,
     AnimateOnScrollModule.forRoot(),
   ]
 })

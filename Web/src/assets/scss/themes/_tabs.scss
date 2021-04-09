@@ -64,6 +64,12 @@
             &__right {
                 right: 6px;
             }
+
+            .tabDisabled {
+                .arrow {
+                    border-color: #bbbaba;
+                }
+            }
         }
     }
 }
@@ -75,6 +81,7 @@
 
     .group-tabs {
         background-color: #dae1e9;
+
         .tabs-header {
             max-width: calc(100% - 38px);
             margin: 0 auto;

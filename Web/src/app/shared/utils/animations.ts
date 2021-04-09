@@ -3,11 +3,11 @@ import { trigger, transition, query, style, animate, state } from '@angular/anim
 export const fadeInOut = trigger('fadeInOut', [
   transition('* => *', [
     query(
-      ':enter', [style({ opacity: 0 })],
+      ':enter', [style({ opacity: 0, position: 'absolute', left: 0, right: 0, top: 0 })],
       { optional: true }
     ),
     query(
-      ':leave', [style({ opacity: 1 }), animate('200ms', style({ opacity: 0 }))],
+      ':leave', [style({ opacity: 1, position: 'absolute', left: 0, right: 0, top: 0 }), animate('200ms', style({ opacity: 0 }))],
       { optional: true }
     ),
     query(
