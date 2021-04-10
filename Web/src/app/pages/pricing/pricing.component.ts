@@ -14,10 +14,10 @@ export class PricingComponent implements OnInit {
   }
 
   banner : Banner = {
-    pageID : PageId.Tenants,
+    pageID : PageId.Pricing,
     mainTitle : "Full Service Property Solutions",
     subTitle : `For owners and investors in the San Bernardino, Riverside, Orange, and Los Angeles Counties`,
-    backgroundImage : "../../../assets/images/pricing/cpm_banner_pricing.webp"
+    backgroundImage : "/assets/images/pricing/cpm_banner_pricing.webp"
   }
 
 }
