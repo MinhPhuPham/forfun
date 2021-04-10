@@ -1,29 +1,243 @@
-#secondary-banner .container {
+#body-container {
   position: relative;
-  height: 100%;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #ebebeb;
+  padding-top: 100%;
+  padding-bottom: 100%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-top: 135px;
+  padding-bottom: 135px;
+ 
+  #home-pricing {
+    background: #ebebeb;
+    padding: 30px 0;
+    font-weight: 500;
+    .tooltip-two {
+      display: inline;
+      opacity: 1;
+    }
+    .table tr td:first-child {
+      position: relative;
+      padding-right: 40px;
+    }
+    .table tr td:first-child svg.question-circle {
+      position: absolute;
+      right: 15px;
+      font-size: 20px;
+      top: 10%;
+    }
+    .container-fluid {
+    
+      @media (max-width: 767px) {
+        .mobile-hide {
+          display: none !important;
+        }
+      }
+      @media (min-width: 767px) {
+        .mobile-show {
+          display: none !important;
+        }
+      }
+      h1,
+      h2.lead {
+        text-align: center;
+        font-size: 45px;
+        margin: 0 0 15px;
+        font-weight: normal;
+        line-height: 50px;
+        color: #333;
+        font-family: "gorditalight";
+        margin-bottom: 80px;
+        margin-top: 0;
+      }
+      table {
+        margin: 0 auto;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        display: table;
+        border-color: grey;
+        border-left: 1px solid #acacac;
+        border-right: 1px solid #acacac;
+        border-bottom: 1px solid #acacac;
+        border-top: 1px solid #acacac;
+        thead {
+          display: table-header-group;
+          vertical-align: middle;
+          border-color: inherit;
+          tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+            th {
+              width: 25%;
+              text-align: center;
+              font-weight: 400;
+              font-size: 22px;
+              padding: 2px 2;
+              border-bottom: 0;
+              border-right: 1px solid #acacac;
+              border-top: 1px solid #acacac;
+              max-height: 171px;
+              position: relative;
+              vertical-align: bottom;
+              padding: 8px;
+              line-height: 1.42857143;
+            }
+            th:nth-of-type(1) {
+              background-color: #fff;
+              border-left: 1px solid #acacac;
+            }
+            th:nth-of-type(2) {
+              background-color: #8ca8cb;
+              color: #fff;
+            }
+            th:nth-of-type(3) {
+              background-color: #4899fc;
+              color: #fff;
+            }
+          }
+        }
+        tbody {
+         
+          background: #ebebeb;
+          tr {
+           
+            td {
+              border-right: 1px solid #acacac;
+              text-align: center;
+              line-height: 18px;
+              svg {
+                width: 2rem;
+                height: 2rem;
+                opacity: 0.7;
+              }
+              span {
+                display: block;
+              }
+              span.medium {
+                font-size: 18px;
+              }
+            }
+            td:first-of-type {
+              text-align: left;
+            }
+            td span.x-small {
+              font-size: 14px;
+              font-style: italic;
+            }
+          }
+          tr.grey-row > td {
+            background: #cccccc;
+            text-align: center !important;
+            font-size: 18px;
+            line-height: 18px;
+          }
 
-}
-
-#jarallax-container-0 .container{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -100;
-}
-
-#jarallax-img .container{
-  top: 0px;
-  width: 100%;
-  height: 30%;
-  background-size: 100% 100%;
-  overflow: hidden;
-  pointer-events: none;
+          tr:nth-child(odd) {
+            background: #ebebeb;
+          }
+          tr:nth-child(even) {
+            background: #ffffff;
+          }
+        }
+        .table-mobile {
+          width: 100%;
+          tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+            tr.red-row {
+              background: #d02802;
+              color: #fff;
+              text-align: center;
+            }
+          }
+        }
+        .table.table-mobile {
+          tbody {
+            tr.red-row {
+              background: #d02802;
+              color: #fff;
+              text-align: center;
+            }
+          }
+        }
+        .table-mobile:nth-of-type(4) {
+          thead {
+            tr {
+              th:nth-of-type(2) {
+                background-color: #183252;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .text-center {
+        text-align: center;
+        .btn {
+          background: #f09719;
+          border-color: #f09719;
+          margin-bottom: 40px;
+          font-size: 15px;
+          line-height: 16px;
+          height: auto;
+          max-height: 52px;
+          padding: 11px 0;
+          min-width: 294px;
+          margin-top: 20px;
+          color: #fff !important;
+          border-radius: 0px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 700;
+          display: inline-block;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          touch-action: manipulation;
+          cursor: pointer;
+          border: 1px solid transparent;
+        }
+      }
+    }
+  }
+  #home-pricing .tooltip-two .tooltiptext {
+    visibility: hidden;
+    width: 320px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 95%;
+    left: 60%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 16px;
+  }
+  #home-pricing .table.table-two {
+    margin-top: 50px;
+  }
+  #home-pricing .table.table-two > thead > tr {
+    background: #d02802;
+    text-align: center;
+    color: #fff;
+  }
+  #home-pricing .table.table-two > thead > tr > td {
+    padding: 20px 0;
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #d02802;
+    border-left: 1px solid #d02802;
+  }
+  #home-pricing .table.table-two > tbody > tr > td {
+    border-right: 1px solid #acacac;
+    width: 25%;
+  }
 }
