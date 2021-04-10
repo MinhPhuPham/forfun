@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+
+steps:
+  - task: Npm@1
+    inputs:
+      command: 'install'
+      workingDir: 'Web'
+  - task: Npm@1
+    inputs:
+      command: 'custom'
+      customCommand: run scully:build
+      workingDir: 'Web'
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: "/Web" 
+      api_location: "api"
+      output_location: "dist/static"
+    env:
+      azure_static_web_apps_api_token: $(deployment_token)
