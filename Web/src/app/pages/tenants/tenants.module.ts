@@ -21,7 +21,6 @@ import { GetQuoteComponent } from './get-quote/get-quote.component';
     DumbsModule,
     HttpClientModule,
     TenantsRoutingModule,
-    DumbsModule
   ],
 })
 export class TenantsModule {}

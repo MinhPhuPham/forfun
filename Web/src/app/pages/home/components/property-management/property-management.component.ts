@@ -31,5 +31,4 @@ export class PropertyManagementComponent implements OnInit {
       imageAlt : "Experience in management"
     }
   ]
-
 }

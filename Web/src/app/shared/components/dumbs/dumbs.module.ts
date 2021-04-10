@@ -8,7 +8,7 @@ const COMPONENTS = [
   BannerComponent,
   BlockContentComponent,
   ScrollToTopComponent,
-  BlockContentComponent,
+  BlockContentComponent
 ];
 
 @NgModule({
