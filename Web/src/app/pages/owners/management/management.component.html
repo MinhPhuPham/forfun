@@ -1,0 +1,28 @@
+<app-banner [banner]="activeBanner">
+    <div class="management-banner" [innerHTML]="activeBanner.inner"></div>
+</app-banner>
+
+<nav class="group-tabs">
+    <ul class="tabs-header" tabsScrollable #tabsWrap="tabsScrollable">
+        <li class="tab-btn">
+            <div class="tab-btn__left" [class.tabDisabled]="!tabsWrap.canScrollStart" (click)="tabsWrap.scroll('right')">
+                <i class="arrow left"></i>
+            </div>
+        </li>
+        <li *ngFor="let tab of tabs">
+            <a routerLink="{{ tab.link }}" routerLinkActive="tab-active">
+                {{ tab.text }}
+            </a>
+        </li>
+        <li class="tab-btn">
+            <div class="tab-btn__right" [class.tabDisabled]="!tabsWrap.canScrollEnd" (click)="tabsWrap.scroll('left')">
+                <i class="arrow right"></i>
+            </div>
+        </li>
+    </ul>
+    <div class="tabs-content">
+        <main class="router-animation" [@fadeInOut]="getState(o)">
+            <router-outlet #o="outlet"></router-outlet>
+        </main>
+    </div>
+</nav>

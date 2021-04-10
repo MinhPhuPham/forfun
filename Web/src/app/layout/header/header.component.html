@@ -48,10 +48,12 @@
                 <div class="top-navbar">
                     <ul>
                         <li class="dropdown" *ngFor="let item of sideBarMenuData">
-                            <a routerLink="{{ item.link }}">{{ item.title }}</a>
+                            <a *ngIf="!item.fullLink" routerLink="{{ item.link }}">{{ item.title }}</a>
+                            <a *ngIf="item.fullLink" href="{{ item.link }}">{{ item.title }}</a>
                             <ul style="display: none" *ngIf="item.submenu">
                                 <li class="dropdown" *ngFor="let sub of item.submenu">
-                                    <a routerLink="{{ sub.link }}">{{ sub.title }}</a>
+                                    <a *ngIf="!sub.fullLink" routerLink="{{ sub.link }}">{{ sub.title }}</a>
+                                    <a *ngIf="sub.fullLink" href="{{ sub.link }}">{{ sub.title }}</a>
                                 </li>
                             </ul>
                         </li>
@@ -108,7 +110,7 @@
                 <ng-template ngbPanelHeader>
                     <div class="sidebar-menu__toolbar"
                         [ngClass]="{'sidebar-active': activeSideId === ('sidemenu-' + index)}">
-                        <a href="#">{{ item.title }}</a>
+                        <a href={{item.link}}>{{ item.title }}</a>
                         <span *ngIf="item.submenu" class="plus-icon" ngbPanelToggle></span>
                     </div>
                 </ng-template>

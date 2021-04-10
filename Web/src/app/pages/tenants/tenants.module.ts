@@ -5,15 +5,20 @@ import { TenantsRoutingModule } from './tenants-routing.module';
 import { TenantsComponent } from './tenants.component';
 import { DumbsModule } from 'src/app/shared';
 import { GetHelpComponent } from './get-help/get-help.component';
+import { RentEasyComponent } from './rent-easy/rent-easy.component';
+import { GetQuoteComponent } from './get-quote/get-quote.component';
 
 
 @NgModule({
   declarations: [
     TenantsComponent,
-    GetHelpComponent
+    GetHelpComponent,
+    RentEasyComponent,
+    GetQuoteComponent
   ],
   imports: [
     CommonModule,
+    DumbsModule,
     HttpClientModule,
     TenantsRoutingModule,
     DumbsModule
