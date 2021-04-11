@@ -1,0 +1,27 @@
+.container-fluid {
+  .block-content {
+    &__ng-deep,
+    .col-md-4:first-child {
+      padding-left: 0px;
+    }
+
+    &__ng-deep,
+    .col-md-4:last-child {
+      padding-right: 0px;
+    }
+
+    .content-box {
+      text-align: center !important;
+      justify-content: center;
+      color: $gray-600;
+      font-family: "gorditaRegular";
+      font-size: 1.1rem;
+    }
+
+    .box-title {
+      font-size: 1.3rem !important;
+    }
+  }
+}
+
+

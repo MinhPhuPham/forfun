@@ -1,0 +1,105 @@
+.container-fluid {
+  background: #fff;
+  max-width: 1334px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (min-width: 1200px){
+  .container {
+      width: 1170px;
+  }}
+  @media (min-width: 992px){
+  .container {
+      width: 970px;
+  }}
+  @media (min-width: 768px){
+  .container {
+      width: 750px;
+  }}
+  .container {
+    padding: 100px 20px;
+    max-width: 830px;
+    margin: 0 auto;
+    .text-center {
+      text-align: center;
+      h2 {
+        font-family: 'gorditalight';
+        margin: 0 0 30px;
+      }
+      @media (min-width: 768px){
+      .lead {
+          font-size: 21px;
+      }}
+      h2.lead {
+        font-size: 45px;
+        font-weight: normal;
+        line-height: 50px;
+        color: #333;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .container-fluid {
+    margin: -50px auto 100px;
+    max-width: 1035px;
+  }
+  .contact-us {
+    margin-top: -80px!important;
+    .padding-bottom-xl {
+      padding-bottom: 30px;
+    }
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+      @media (min-width: 992px){
+      .col-md-3 {
+          width: 25%;
+      }}
+      @media (min-width: 992px){
+      .col-md-3{
+          float: left;
+      }}
+      @media (min-width: 768px){
+      .col-sm-6 {
+          width: 50%;
+      }}
+      @media (min-width: 768px){
+      .col-sm-6 {
+          float: left;
+      }}
+      .col-sm-6 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        .icon {
+          height: 60px;
+          img {
+            max-height: 50px;
+            max-width: 100%;
+            vertical-align: middle;
+            border: 0;
+          }
+        }
+        h3 {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: normal;
+          letter-spacing: 1.5px;
+          color: #333;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-family: inherit;
+        }
+      }
+    }
+    .btn {
+
+    }
+    a, a:link {
+      text-decoration: none;
+    }
+  }
+}

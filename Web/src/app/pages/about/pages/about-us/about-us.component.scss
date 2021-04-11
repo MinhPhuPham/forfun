@@ -1,0 +1,27 @@
+.container-fluid {
+  background: #fff;
+  max-width: 1334px;
+  margin: 0 auto;
+}
+
+.container-fluid> .container {
+  padding: 100px 20px 50px 0px;
+  margin: 0 auto;
+}
+
+h2.lead {
+  text-align: center;
+  font-family: 'gorditaMedium';
+  margin: 0 0 30px;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 50px;
+  color: #062f6e;
+}
+
+p {
+  text-align: left;
+  font-size: 20px;
+  font-family: 'gorditalight';
+  margin-bottom: 30px;
+}

@@ -125,7 +125,6 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.activeBanner = this.banner.find(item => item.path == this.router.url);
-    console.log(this.router.url);
 
     this._obsevers.push(
       this.router.events.pipe(

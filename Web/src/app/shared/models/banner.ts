@@ -10,5 +10,7 @@ export interface Banner {
 export enum PageId {
   Home,
   Tenants,
-  TenantManagement
+  TenantManagement,
+  Pricing,
+  AboutUs
 }

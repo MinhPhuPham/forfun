@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "unused-css": "ngx-unused-css",
+    "ng-gen-m": "ng g m --module=app-routing",
     "scully": "scully",
     "scully:serve": "scully serve",
     "scully:preview": "npm run scully:build && npm run scully:serve",
