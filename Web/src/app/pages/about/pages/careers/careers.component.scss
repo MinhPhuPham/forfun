@@ -1,0 +1,90 @@
+.container-fluid {
+  background: #fff;
+  max-width: 1334px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (min-width: 1200px){
+  .container {
+      width: 1170px;
+  }}
+  @media (min-width: 992px){
+  .container {
+      width: 970px;
+  }}
+  @media (min-width: 768px){
+  .container {
+      width: 750px;
+  }}
+  .container {
+    padding: 100px 20px;
+    max-width: 830px;
+    margin: 0 auto;
+    .careers{
+      h2 {
+        text-align: center;
+        font-family: 'gorditalight';
+        margin: 0 0 30px;
+      }
+      @media (min-width: 768px){
+      .lead {
+          font-size: 21px;
+      }}
+      h2.lead {
+        font-size: 45px;
+        font-weight: normal;
+        line-height: 50px;
+        color: #333;
+      }
+      p {
+        margin-bottom: 30px;
+        margin: 0 0 10px;
+      }
+      .center {
+        text-align: left;
+        margin-left: 27%;
+        h3 {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: normal;
+          letter-spacing: 1.5px;
+          color: #333;
+          margin: 50px 0 10px;
+          font-family: inherit;
+        }
+        ul {
+          position: relative;
+          list-style: none;
+          margin-left: 0;
+          padding-left: 1.2em;
+        }
+        ul li:before {
+          content: "*";
+          position: absolute;
+          left: 0;
+        }
+      }
+      .padding-top-xl {
+        padding-top: 30px;
+        h3 {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: normal;
+          letter-spacing: 1.5px;
+          color: #333;
+          margin: 50px 0 10px;
+        }
+        p {
+          margin-bottom: 30px;
+          margin: 0 0 10px;
+          a, a:link{
+            color: #f09718;
+            text-decoration: none;
+            transition: all 0.5s;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
