@@ -3,9 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { OverviewRoutingModule } from './overview-routing.module';
 import { OverviewComponent } from './overview.component';
-import { ConfidenceGuaranteesModule, InclusiveLeasingModule } from '../../shared';
-import { TooltipModule } from 'src/app/shared';
-
+import {
+  InclusiveLeasingModule,
+  ConfidenceGuaranteesModule,
+  BlockContentModule,
+  FreeRentalAnalysisModule,
+  FreeQuoteModule,
+  ContactFormTemplateModule,
+  TooltipModule,
+  AreaServeModule,
+  AdvertisementRentalAnalysisModule,
+  AreaInfoModule,
+  AnimateOnScrollModule,
+} from 'src/app/shared';
 
 @NgModule({
   declarations: [OverviewComponent],
@@ -14,7 +24,15 @@ import { TooltipModule } from 'src/app/shared';
     OverviewRoutingModule,
     InclusiveLeasingModule,
     ConfidenceGuaranteesModule,
-    TooltipModule
-  ]
+    BlockContentModule,
+    FreeRentalAnalysisModule,
+    FreeQuoteModule,
+    ContactFormTemplateModule,
+    AreaServeModule,
+    AdvertisementRentalAnalysisModule,
+    AreaInfoModule,
+    TooltipModule,
+    AnimateOnScrollModule.forRoot(),
+  ],
 })
 export class OverviewModule { }

@@ -4,7 +4,7 @@ export interface Banner {
   subTitle: string;
   backgroundImage: string;
   path?: string;
-  inner?: string;
+  innerSingle?: boolean;
 }
 
 export enum PageId {

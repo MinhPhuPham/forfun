@@ -6,6 +6,9 @@ import { AnimateOnScrollModule, DumbsModule } from 'src/app/shared';
 @Component({
   selector: 'app-tenants',
   templateUrl: './tenants.component.html',
+  styles: [`
+    .block-content { padding-top: 1.5rem }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TenantsComponent implements OnInit {

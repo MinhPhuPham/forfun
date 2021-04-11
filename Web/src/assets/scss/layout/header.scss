@@ -64,7 +64,7 @@
   }
 
   .sidebar-quick {
-    background:  $color-basic-1100;
+    background: $color-basic-1100;
     padding: 0.5rem 1.5rem;
 
     ul {
@@ -213,7 +213,7 @@
   left: 0px;
   right: 0px;
   z-index: 2;
-  background:  $color-basic-1100;
+  background: $color-basic-1100;
   opacity: .75;
 }
 
@@ -229,6 +229,10 @@
   position: sticky;
   top: 0;
   z-index: 2;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  -webkit-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
 
   .socials-contacts-wrapper {
     @include flex-space-center;
@@ -391,15 +395,15 @@
 }
 
 .launch-sticky-header.affix {
-  -webkit-box-shadow: 0px 0px 5px 0px  $color-basic-1100;
-  box-shadow: 0px 0px 5px 0px  $color-basic-1100;
+  -webkit-box-shadow: 0px 0px 5px 0px $color-basic-1100;
+  box-shadow: 0px 0px 5px 0px $color-basic-1100;
 }
 
 
 @media (max-width: 991px) {
   .launch-sticky-header {
     .socials-contacts-wrapper {
-      background-color: $patone-650;
+      background-color: #2f4b6f;
     }
 
     .logo {
@@ -502,7 +506,7 @@
         z-index: 575;
         text-align: left;
         padding: 0;
-        background-color:  $white-blue-300;
+        background-color: $white-blue-300;
         top: 100%;
         left: 0px;
         min-width: 100%;
@@ -523,7 +527,7 @@
     display: block !important;
   }
 
-  background:  $white-blue-300;
+  background: $white-blue-300;
   transition: 0.3s;
 }
 
@@ -549,11 +553,11 @@
 }
 
 .top-navbar>ul>li>ul>li:hover {
-  background-color:  $white-blue-300;
+  background-color: $white-blue-300;
 }
 
 .top-navbar>ul>li>ul>li:hover a {
-  color:  $dark-blue-900;
+  color: $dark-blue-900;
 }
 
 @media (max-width: 1330px) {

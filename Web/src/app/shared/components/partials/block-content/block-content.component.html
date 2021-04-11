@@ -1,0 +1,25 @@
+<section class="block-content">
+  <div *ngIf="headerBlock" class="block-content__header hide-on-init" animateOnScroll animationName="auto-animated animated fadeInUp">
+    <h2 class="title-intro">
+      {{ headerBlock.header }}
+    </h2>
+    <p class="lower-text content-md-intro">
+      {{ headerBlock.subheader }}
+    </p>
+  </div>
+  <div class="block-content__content row">
+    <ng-container *ngFor="let item of blockContent; index as i">
+      <div class="col-md-4">
+        <div class="box-item hide-on-init animated-delay-haft" animateOnScroll
+          animationName="auto-animated animated zoomIn">
+          <div class="box-title">
+            <img [src]="item.image" [src]="item.image" [alt]="item.imageAlt">
+            {{item.title}}
+          </div>
+          <div class="content-box" [innerHTML]="item.content">
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>

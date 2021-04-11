@@ -1,0 +1,33 @@
+.confidence-guarantees-wrapper {
+    .item {
+        max-width: 380px;
+        margin-bottom: max(2.5rem, 5%);
+        .flex-align-center {
+            color: #4fc7eb;   
+            text-transform: uppercase;
+            margin-bottom: min(1rem, 3%);
+    
+            h4 {
+                font-size: 1.2rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .confidence-guarantees-wrapper .item { 
+        margin: max(1.5rem, 3%) auto;
+        text-align: center;
+
+        .flex-align-center {
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: .5rem;
+
+            img {
+                margin-bottom: .7rem;
+            }
+        }
+    }
+}

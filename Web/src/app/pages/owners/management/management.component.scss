@@ -1,8 +1,13 @@
 .management-banner {
     text-align: center;
     margin-top: 30px;
+}
 
-    .yellow:hover {
-        background-color: white !important;
+@media (max-width: 992px) {
+ ::ng-deep {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
     }
+ }
 }

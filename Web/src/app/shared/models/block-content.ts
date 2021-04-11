@@ -4,3 +4,8 @@ export interface BlockContent {
   title: string;
   content: string;
 }
+
+export interface HeaderBlockContent {
+  header?: string;
+  subheader?: string;
+}

@@ -36,7 +36,7 @@
     transition: all .3s;
 
     &:hover {
-        background-color: transparent;
+        background-color: $white;
         color: $light-blue-500;
         border: 1px solid $light-blue-500;
     }
@@ -47,7 +47,7 @@
   transition: all .3s;
 
   &:hover {
-      background-color: transparent;
+      background-color: $white;
       color: $orange-600;
       border: 1px solid $orange-600;
   }
@@ -58,7 +58,7 @@
   transition: all .3s;
 
   &:hover {
-      background-color: transparent;
+      background-color: $white;
       color: $dark-blue-900;
       border: 1px solid $dark-blue-900;
   }
@@ -71,7 +71,7 @@
   justify-content: center;
 
   .btn {
-    margin: 2% 1%;
+    margin: 3% 1% 0%;
   }
 }
 

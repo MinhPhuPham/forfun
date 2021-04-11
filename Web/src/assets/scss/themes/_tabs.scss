@@ -25,52 +25,54 @@
                 color: $dark-blue-900;
                 padding: 1.5rem;
                 text-align: center;
+                text-decoration: none;
+                cursor: pointer;
                 @include flex-align-center;
 
                 &:hover {
                     transition: 0.3s;
-                    background-color: white;
+                    background-color: $white;
                     color: #0fb2e4;
                     margin: 0 auto;
                 }
 
                 &.tab-active {
-                    background-color: white;
+                    background-color: $white;
                     color: #0fb2e4;
                 }
             }
         }
+    }
 
-        .tab-btn {
-            display: none;
+    .tab-btn {
+        display: none;
 
-            &__left,
-            &__right {
-                @include flex-align-center;
-                position: absolute;
-                z-index: 2;
-                top: 38%;
-
-                .arrow {
-                    border-color: gray;
-                    cursor: pointer;
-                }
-            }
-
-            &__left {
-                left: 6px;
-            }
-
-            &__right {
-                right: 6px;
-            }
-
-            .tabDisabled {
-                .arrow {
-                    border-color: #bbbaba;
-                }
+        &__left,
+        &__right {
+            margin-bottom: 3px;
+            .arrow {
+                border-color: gray;
+                cursor: pointer;
             }
         }
+
+        &__left {
+            margin-left: 6px;
+        }
+
+        &__right {
+            margin-right: 6px;
+        }
+
+        .tabDisabled {
+            .arrow {
+                border-color: #bbbaba;
+            }
+        }
+    }
+
+    .tabs-content {
+        background-color: white;
     }
 }
 
@@ -81,6 +83,8 @@
 
     .group-tabs {
         background-color: #dae1e9;
+        flex-wrap: wrap;
+        @include flex-align-center;
 
         .tabs-header {
             max-width: calc(100% - 38px);
@@ -92,6 +96,25 @@
             li {
                 a {
                     padding: .5rem 1rem;
+                }
+            }
+        }
+
+        .tabs-content {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .group-tabs {
+        .tabs-header {
+            li {
+                a {
+                    padding: 1.5rem 2.5rem;
                 }
             }
         }

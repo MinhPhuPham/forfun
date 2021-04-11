@@ -1,0 +1,46 @@
+.advertisement-rental-wrapper {
+    background-color: #cad1ea;
+
+    .adver-content {
+        margin-top: -10%;
+        align-self: center;
+    }
+
+    img {
+        padding-right: 8%;
+        float: right;
+        width: 80%;
+    }
+
+    p {
+        padding-bottom: 3%;
+    }
+}
+
+@media (max-width: 1040px) {
+    .advertisement-rental-wrapper {
+        .adver-content {
+            margin-top: 0;
+        }
+    }   
+}
+
+@media (max-width: 768px) {
+    .advertisement-rental-wrapper {
+        img {
+            padding-right: 0;
+            float: unset !important;
+        }
+
+        .adver-img {
+            text-align: center;
+            order: 2;
+        }        
+
+        .adver-content {
+            order: 1;
+            text-align: center;
+            padding-bottom: 5%;
+        }
+    }   
+}

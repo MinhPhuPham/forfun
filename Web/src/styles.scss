@@ -8,11 +8,13 @@
 //     display: inherit;
 // }
 
-.router-animation {
-    position: relative;
-}
-
 @import "~bootstrap/scss/bootstrap";
+@import "./assets/scss/variables.scss";
+@import "./assets/scss/themes/themes.scss";
+
+@import "./assets/scss/layout/header.scss";
+@import "./assets/scss/layout/banner.scss";
+@import "./assets/scss/layout/footer.scss";
 
 * {
     ul {
@@ -22,9 +24,8 @@
     }
 }
 
-@import "./assets/scss/variables.scss";
-@import "./assets/scss/themes/themes.scss";
-
-@import "./assets/scss/layout/header.scss";
-@import "./assets/scss/layout/banner.scss";
-@import "./assets/scss/layout/footer.scss";
+.router-animation {
+    position: relative;
+    background-color: $white;
+    min-height: 100vh;
+}

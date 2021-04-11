@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Directive, Input, ElementRef, HostListener, Renderer2, NgModule } from '@angular/core';
+import { Directive, Input, ElementRef, HostListener, Renderer2, NgModule, TemplateRef } from '@angular/core';
 
 @Directive({
     selector: '[tooltip]'
 })
 export class TooltipDirective {
-    @Input('tooltip') tooltipTitle: string;
+    @Input('tooltip') tooltipElement: string | TemplateRef<any>| null | undefined;
     @Input() placement: string;
     @Input() delay: number;
     tooltip: HTMLElement;
@@ -38,9 +38,13 @@ export class TooltipDirective {
     create() {
         this.tooltip = this.renderer.createElement('span');
 
+        if (!this.tooltipElement) return;
+        
+        // if (typeof this.tooltipElement )
+
         this.renderer.appendChild(
             this.tooltip,
-            this.renderer.createText(this.tooltipTitle) // textNode
+            this.renderer.createText(this.tooltipElement as string) // textNode
         );
 
         this.renderer.appendChild(document.body, this.tooltip);

@@ -4,14 +4,15 @@
   text-align: center;
 
   .intro {
-      margin: 70px 0px;
+    margin: 70px 0px;
   }
 
   .btn-process {
-      margin: 3.5% 0;
+    margin: 3.5% 0;
   }
 
   .block-content {
+
     &__ng-deep,
     .col-md-4:first-child {
       padding-left: 0px;
@@ -30,8 +31,27 @@
       font-size: 1rem;
 
       .box-title {
-          font-size: 1.2rem;
+        font-size: 1.2rem;
       }
+    }
+  }
+}
+
+.property-management {
+  background-color: #f7f7f7;
+  padding-top: max(2rem, 3%);
+  padding-bottom: max(2rem, 3%);
+
+  .block-content {
+    margin-top: 0px;
+
+    .box-title {
+      text-align: center;
+      background-color: #f7f7f7;
+    }
+
+    .content-box {
+      text-align: center;
     }
   }
 }

@@ -10,6 +10,11 @@
     justify-content: space-between;
 }
 
+@mixin flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
 @mixin justify-center {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -67,4 +72,12 @@
     @include flex-box;
     @include align-center;
     @include justify-space-around;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.flex-align-center {
+    @include flex-align-center;
 }
