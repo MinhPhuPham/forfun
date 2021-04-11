@@ -1,7 +1,6 @@
 <app-banner [banner]="activeBanner" [buttonBannerTemplate]="activeBanner.innerSingle ? singleButtonBanner : buttonBanner">
 </app-banner>
 
-<!-- <app-tabs [tabs]="tabs"></app-tabs> -->
 <nav class="group-tabs">
     <div class="tab-btn tab-btn__left" [class.tabDisabled]="!tabsWrap.canScrollStart"
         (click)="tabsWrap.scroll('right')">

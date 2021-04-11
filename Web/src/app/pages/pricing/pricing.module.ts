@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PricingRoutingModule } from './pricing-routing.module';
 import { PricingComponent } from './pricing.component';
-import { DumbsModule } from 'src/app/shared';
+import { DumbsModule, TooltipModule } from 'src/app/shared';
 
 @NgModule({
   declarations: [
@@ -9,7 +9,8 @@ import { DumbsModule } from 'src/app/shared';
   ],
   imports: [
     PricingRoutingModule,
-    DumbsModule
+    DumbsModule,
+    TooltipModule
   ]
 })
 export class PricingModule {}

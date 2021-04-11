@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AboutUsRoutingModule } from './about-us-routing.module';
 import { AboutUsComponent } from './about-us.component';
-import { DumbsModule } from 'src/app/shared';
+import { BlockContentModule, DumbsModule } from 'src/app/shared';
 import { ServiceComponent } from './components/service/service.component';
 import { FormBannerComponent } from './components/form-banner/form-banner.component';
 
@@ -13,7 +13,8 @@ import { FormBannerComponent } from './components/form-banner/form-banner.compon
   imports: [
     CommonModule,
     DumbsModule,
-    AboutUsRoutingModule
+    AboutUsRoutingModule,
+    BlockContentModule
   ]
 })
 export class AboutUsModule { }
