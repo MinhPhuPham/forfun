@@ -10,11 +10,11 @@ import {
   FreeRentalAnalysisModule,
   FreeQuoteModule,
   ContactFormTemplateModule,
-  TooltipModule,
   AreaServeModule,
   AdvertisementRentalAnalysisModule,
   AreaInfoModule,
   AnimateOnScrollModule,
+  IntersectionObserverModule,
 } from 'src/app/shared';
 
 @NgModule({
@@ -31,7 +31,7 @@ import {
     AreaServeModule,
     AdvertisementRentalAnalysisModule,
     AreaInfoModule,
-    TooltipModule,
+    IntersectionObserverModule,
     AnimateOnScrollModule.forRoot(),
   ],
 })

@@ -187,3 +187,11 @@
     }
   }
 }
+
+.question-circle {
+  cursor: pointer;
+
+  &:hover {
+    color:#1672ff;
+  }
+}

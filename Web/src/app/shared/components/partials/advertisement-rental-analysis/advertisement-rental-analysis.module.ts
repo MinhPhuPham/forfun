@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdvertisementRentalAnalysisComponent } from './advertisement-rental-analysis.component';
 import { ScrollToDivModule } from 'src/app/shared/directives';
-import { AnimateOnScrollModule } from 'src/app/shared/modules';
+import { AnimateOnScrollModule, IntersectionObserverModule } from 'src/app/shared/modules';
 
 
 
@@ -11,6 +11,7 @@ import { AnimateOnScrollModule } from 'src/app/shared/modules';
   imports: [
     CommonModule,
     ScrollToDivModule,
+    IntersectionObserverModule,
     AnimateOnScrollModule.forRoot()
   ],
   exports: [AdvertisementRentalAnalysisComponent]

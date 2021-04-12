@@ -3,8 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { PropertyTurnoverRoutingModule } from './property-turnover-routing.module';
 import { PropertyTurnoverComponent } from './property-turnover.component';
-import { InclusiveLeasingModule, ConfidenceGuaranteesModule, BlockContentModule, FreeRentalAnalysisModule, FreeQuoteModule, ContactFormTemplateModule, AreaServeModule, AdvertisementRentalAnalysisModule, AreaInfoModule, TooltipModule } from 'src/app/shared';
-
+import {
+  InclusiveLeasingModule,
+  ConfidenceGuaranteesModule,
+  BlockContentModule,
+  FreeRentalAnalysisModule,
+  FreeQuoteModule,
+  ContactFormTemplateModule,
+  AreaServeModule,
+  AdvertisementRentalAnalysisModule,
+  AreaInfoModule,
+} from 'src/app/shared';
 
 @NgModule({
   declarations: [PropertyTurnoverComponent],
@@ -19,7 +28,7 @@ import { InclusiveLeasingModule, ConfidenceGuaranteesModule, BlockContentModule,
     ContactFormTemplateModule,
     AreaServeModule,
     AdvertisementRentalAnalysisModule,
-    AreaInfoModule
-  ]
+    AreaInfoModule,
+  ],
 })
-export class PropertyTurnoverModule { }
+export class PropertyTurnoverModule {}

@@ -51,4 +51,13 @@
     <app-area-info></app-area-info>
     <app-area-serve></app-area-serve>
     <app-advertisement-rental-analysis></app-advertisement-rental-analysis>
+    <!-- <div appIntersectionObserver [appIntersectionObserverThreshold]="0.1">
+        <div appIntersectionObservee [appIntersectionObserveeDebounce]="1000" [appIntersectionObserveeElse]="abcxyz">
+            <app-advertisement-rental-analysis></app-advertisement-rental-analysis>
+        </div>
+    </div> -->
 </div>
+
+<ng-template #abcxyz>
+    <p>I'm lazy loading element</p>
+</ng-template>
