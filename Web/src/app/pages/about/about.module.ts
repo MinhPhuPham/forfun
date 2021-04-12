@@ -7,8 +7,9 @@ import { DynamicFormComponent } from 'src/app/shared/components/dynamic-form/dyn
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
 
+
 @NgModule({
-  declarations: [AboutComponent, DynamicFormComponent,DynamicControlComponent],
+  declarations: [AboutComponent],
   imports: [
     CommonModule,
     DumbsModule,

@@ -1,16 +1,14 @@
-import { HttpClient } from '@angular/common/http';
 import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  ViewChild,
-  ElementRef,
+  ChangeDetectionStrategy, Component,
+
+
+
+  ElementRef, OnInit,
+
+  ViewChild
 } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { filter } from 'rxjs/operators';
-import { DynamicFormComponent } from 'src/app/shared/components/dynamic-form/dynamic-form.component';
-import { DynamicForm } from 'src/app/shared/components/dynamic-form/schema/dynamic-form';
 import { Banner, PageId, Tabs } from 'src/app/shared/models';
 
 @Component({
@@ -53,8 +51,6 @@ export class AboutComponent implements OnInit {
   @ViewChild('tabsWrap', { read: ElementRef })
   public tabsWrapper: ElementRef<any>;
 
-  @ViewChild('dynamicForm') dynamicForm: DynamicFormComponent;
-  formData: DynamicForm;
   // constructor(private http: HttpClient) {
   //   this.http.get('https://localhost:44314/form').subscribe((resp: any) => {
   //     this.formData = resp.data as DynamicForm;
