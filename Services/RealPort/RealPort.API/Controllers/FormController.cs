@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RealPort.Common;
 using RealPort.Entities;
 using RealPort.Infrastructure.Models;
+using System;
+using System.Text.Json;
 
 namespace RealPort.API.Controllers
 {
@@ -18,52 +21,68 @@ namespace RealPort.API.Controllers
             {
                 Token = System.Guid.NewGuid(),
                 Title = "Get a FREE Quote",
-                Subtitle = "Submit this form or call us at (909) 548-0044",
+                Subtitle = "Submit this form or call us at<br> <a href=\"tel:+1-909-548-0044\" >(909) 548-0044</a> ",
                 Settings = new FormSettings()
                 {
-                    Style = FormStyle.Stack
+                    Style = "floating",
+                    Color = "#000",
+                    BackgroundColor = "rgb(216, 181, 198)",
+                    TitleColor = "rgb(23, 43, 108)",
+                    SubtitleColor = "#000",
+                    LinkColor = "rgb(240, 151, 24)"
                 },
-                Controls = new FormControl[]
+                Controls = new FormControl[][]
                 {
-                      new FormControl()
+                    new FormControl[]
                     {
-                        Key = "firstName",
-                        Label = "First Name",
-                        Type= FormControlType.Text,
-                        Required= true
-                    },
                         new FormControl()
-                    {
-                        Key = "lastName",
-                        Label = "Last Name",
-                        Type= FormControlType.Text,
-                        Required= true
+                        {
+                            Key = "firstName",
+                            Label = "First Name",
+                            Type = "text",
+                            Required = true,
+                        },
+                        new FormControl()
+                        {
+                            Key = "lastName",
+                            Label = "Last Name",
+                            Type = "text",
+                            Required = true,
+                        },
                     },
-                    new FormControl()
-                    {
-                        Key="email",
-                        Label = "Email Address",
-                        Type=FormControlType.Email
-                    },
-                    new FormControl()
+                   new FormControl[]
+                   {
+                        new FormControl()
+                        {
+                            Key="email",
+                            Label = "Email Address",
+                            Type="email"
+                        }
+                   },
+                   new FormControl[]
+                   {
+                       new FormControl()
                     {
                         Key="contactType",
                         Label = "I am a...",
-                        Type= FormControlType.Select,
+                        Type= "select",
                         Options = new OptionInfo[]
                         {
                             new OptionInfo("propertyOwner","Property Owner"),
                             new OptionInfo("tenant","Tenant"),
                         }
-                    },
-                     new FormControl()
-                    {
-                        Key="message",
-                        Label = "Message",
-                        Type=FormControlType.TextArea
                     }
-
-                     //new FormControl()
+                   },
+                    new FormControl[]
+                    {
+                        new FormControl()
+                        {
+                            Key="message",
+                            Label = "Message",
+                            Type="textarea"
+                        }
+                    }
+                    //new FormControl()
                     //{
                     //    Key="gender",
                     //    Label = "Gender",
@@ -113,13 +132,22 @@ namespace RealPort.API.Controllers
                     //    Label = "Time",
                     //    Type=FormControlType.Time
                     //},
-                      
+
                 }
             };
             actionResp.Data = form;
             string url = Request.Headers["Referer"].ToString();
             actionResp.Url = url;
             return Json(actionResp);
+        }
+        [HttpPost]
+        public IActionResult Index([FromBody] JsonElement postData)
+        {
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            var resp = new ActionResponse();
+            resp.Success = true;
+            resp.Data = postData;
+            return Json(resp);
         }
     }
 }
