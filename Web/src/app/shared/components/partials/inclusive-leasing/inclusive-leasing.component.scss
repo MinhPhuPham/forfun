@@ -1,0 +1,120 @@
+$numbers1: 2 4 5 7;
+$numbers2: 1 3 6 8;
+$numbers3: 1 2 3 4;
+$numbers4: 1 2 3 4 5 6 7 8;
+
+.inclusive-leasing-wrapper {
+    background-color: #cad1ea;
+
+    .col-md-5 {
+        padding-left: 0px;
+
+        p {
+            max-width: 480px;
+        }
+    }
+
+    .leasing-numbers {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        max-width: 700px;
+
+        li {
+            text-align: left;
+            width: calc(100%/4);
+            font-family: 'gorditamedium';
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+
+            ::ng-deep {
+                p {
+                    font-size: 2.5rem;
+                    font-family: 'gorditaUltra';
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    @each $number in $numbers1 {
+        .specific-#{$number} p {
+            color: #062f6e;
+        }
+    }
+
+    @each $number in $numbers2 {
+        .specific-#{$number} p {
+            color: #0fb2e4;
+        }
+    }
+
+    @each $number in $numbers3 {
+        .specific-#{$number} {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .inclusive-leasing-wrapper {
+        .col-md-5 {
+            padding-left: 15px;
+
+            p {
+                max-width: unset;
+            }
+        }
+
+        .leasing-numbers {
+
+            li {
+                font-size: .85rem;
+            }
+        }
+
+        .section-container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .inclusive-leasing-wrapper {
+        .col-md-5 {
+            text-align: center;
+            padding-bottom: max(1rem, 3%);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .inclusive-leasing-wrapper .leasing-numbers {
+        margin: 0 auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        li {
+            width: calc(100% / 3);
+            font-size: 0.6rem;
+            text-align: center;
+        }
+
+        ::ng-deep {
+            p {
+                color: #062f6e;
+            }
+
+            li:nth-child(even) p {
+                color: #0fb2e4;
+            }
+        }
+    }
+}

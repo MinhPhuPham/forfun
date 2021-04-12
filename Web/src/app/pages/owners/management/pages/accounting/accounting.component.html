@@ -1,0 +1,40 @@
+<div class="accounting-wrapper">
+    <app-contact-form-template>
+        <ng-container contentDescription>
+            <h2 class="title-intro">Accounting &amp; Financial Reporting</h2>
+            <p class="lead">
+                Detailed accounting and reporting combined with knowledgeable, full-time accounting staff
+                provides you access to a full understanding of your property’s performance.
+            </p>
+            <h3 class="sub-title-intro">FULL-TIME ACCOUNTING STAFF</h3>
+            <p>
+                Our goal is to maximize your income and minimize your expenses. To keep track of your income
+                and expenses we have a full-time Accounting staff. Our team works diligently to keep your
+                financials in order. The responsibilities of our accounting team include:
+            </p>
+            <ul class="list-style-disc">
+                <li>Rent collection and recording</li>
+                <li>Paying vendor bills</li>
+                <li>Monthly owner disbursements</li>
+                <li>Monthly owner statements and reporting</li>
+                <li>Security deposit disbursements</li>
+                <li>Tax statements and 1099s</li>
+                <li>New owner, tenant, and vendor setup</li>
+            </ul>
+        </ng-container>
+    </app-contact-form-template>
+    <div class="property-management">
+        <app-block-content [blockContent]="blockContent" [headerBlock]="headerContent"></app-block-content>
+
+        <div class="text-center">
+            <a routerLink="/" class="btn btn-clock yellow">request a free property evaluation</a>
+        </div>
+    </div>
+    <app-free-rental-analysis></app-free-rental-analysis>
+    <app-confidence-guarantees></app-confidence-guarantees>
+    <app-inclusive-leasing></app-inclusive-leasing>
+    <app-free-quote></app-free-quote>
+    <app-area-info></app-area-info>
+    <app-area-serve></app-area-serve>
+    <app-advertisement-rental-analysis></app-advertisement-rental-analysis>
+</div>

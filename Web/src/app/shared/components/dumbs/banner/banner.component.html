@@ -1,5 +1,5 @@
 
-<section class="launch-image-banner" [ngStyle]="{'background-image': 'url(' + banner.backgroundImage + ')'}">
+<section class="launch-image-banner" [lazyImage]="banner.backgroundImage" [isBackGroundImage]="true">
     <div class="container-fluid">
         <div class="main-section">
             <div class="main-title animated fadeIn">{{banner.mainTitle}}</div>

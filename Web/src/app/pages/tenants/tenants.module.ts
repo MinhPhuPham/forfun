@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { TenantsRoutingModule } from './tenants-routing.module';
 import { TenantsComponent } from './tenants.component';
-import { DumbsModule } from 'src/app/shared';
+import { BlockContentModule, DumbsModule } from 'src/app/shared';
 import { GetHelpComponent } from './get-help/get-help.component';
 import { RentEasyComponent } from './rent-easy/rent-easy.component';
 import { GetQuoteComponent } from './get-quote/get-quote.component';
@@ -21,6 +21,8 @@ import { GetQuoteComponent } from './get-quote/get-quote.component';
     DumbsModule,
     HttpClientModule,
     TenantsRoutingModule,
+    DumbsModule,
+    BlockContentModule
   ],
 })
 export class TenantsModule {}

@@ -1,0 +1,19 @@
+<section class="inclusive-leasing-wrapper">
+    <div class="row section-container">
+        <div class="col-md-5">
+            <h2 class="title-intro text-white ">All Inclusive Leasing</h2>
+            <p class="text-white">
+                An efficient and effective leasing process is an absolute must when
+                you're looking to fill vacancies. Our exclusive 8 step process
+                systematically produces quality tenants for your property FAST.
+            </p>
+            <a routerLink="/leasing" class="btn btn-clock yellow mt-2">Learn More About Leasing</a>
+        </div>
+        <div class="col-md-7">
+            <ul class="leasing-numbers">
+                <li *ngFor="let item of inclusives; let index = index" [ngClass]="'specific-' + (index + 1)" [innerHTML]="item">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

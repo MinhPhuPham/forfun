@@ -1,0 +1,34 @@
+.area-serve {
+    background-color: #f9f9f9;
+
+    .area-serve-title {
+        font-size: 1.2rem;
+        color: #464545;
+        padding-bottom: max(1rem, 1%);
+    }
+
+    .area-list {
+        a {
+            color: #f09718;
+
+            &:hover,
+            &:active {
+                color: #707070;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .area-serve {
+        background-color: #f9f9f9;
+    
+        .area-serve-title {
+            text-align: center;
+        }
+
+        .area-list:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+}

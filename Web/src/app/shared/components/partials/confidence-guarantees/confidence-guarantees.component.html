@@ -1,0 +1,15 @@
+<section class="confidence-guarantees-wrapper section-container" id="guarantess">
+    <h3 class="title-intro text-center mb-6">Take Confidence In Our Guarantees To You</h3>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6" *ngFor="let confiden of confidences">
+            <div class="item">
+                <div class="flex-align-center">
+                    <img [src]="confiden.img" [alt]="confiden.title" class="animated-slow zoomIn">
+                    <h4>{{ confiden.title }}</h4>
+                </div>
+                <p [innerHTML]="confiden.content"></p>
+            </div>
+        </div>
+    </div>
+</section>

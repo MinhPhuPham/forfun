@@ -1,14 +1,13 @@
 .clock-tooltip {
     position: absolute;
-    max-width: 150px;
-    font-size: 14px;
+    font-size: 1rem;
+    width: 320px;
     text-align: center;
     color: #f8f8f2;
-    padding: 3px 8px;
+    border-radius: 6px;
+    padding: 10px 5px;
     background: #282a36;
-    border-radius: 4px;
     z-index: 1000;
-    opacity: 0;
 
     &:after {
         content: "";

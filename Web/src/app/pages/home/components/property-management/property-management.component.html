@@ -1,15 +1,5 @@
 <div class="property-wrapper">
-  <div class="intro hide-on-init animated-delay-haft" animateOnScroll animationName="auto-animated animated fadeInUp">
-    <div class="title-intro">
-      Our Property Management System
-    </div>
-    <div class="lower-text content-md-intro">
-      Professional services that handle leasing, management, accounting, 24/7 maintenance, inspections, reporting &amp;
-      compliance help provide you peace of mind knowing that your property is always taken care of.
-    </div>
-  </div>
-
-  <app-block-content [blockContent]="blockContent"></app-block-content>
+  <app-block-content [blockContent]="blockContent" [headerBlock]="headerContent"></app-block-content>
 
   <div class="btn-process">
     <a routerLink="/" class="btn btn-clock yellow">request a free property evaluation</a>

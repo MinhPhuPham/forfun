@@ -1,0 +1,50 @@
+<div class="access-support-wrapper">
+    <app-contact-form-template>
+        <ng-container contentDescription>
+            <h2 class="title-intro">24/7 Access &amp; Support</h2>
+            <p class="lead">
+                Our team works together to take the hassle off your plate and keep your portfolio running
+                smoothly. Our comprehensive software gives you real-time 24/7 access to everything you need
+                to know about your property.
+            </p>
+            <h3 class="sub-title-intro">DEDICATED TEAM OF PROFESSIONALS</h3>
+            <p>
+                You have access to a team of professionals that can take care of everything you need when
+                renting or managing your home:
+            </p>
+            <ul class="list-style-disc mb-4">
+                <li><strong>Leasing Specialists</strong> - Focused on leasing your property and moving in
+                    your new tenants.</li>
+                <li><strong>Property Managers</strong> - Responsible for all communication, management, and
+                    maintenance of your property.</li>
+                <li><strong>Portfolio Managers</strong> - Property Managers specializing in managing and
+                    servicing the unique needs of owners that own multiple properties.</li>
+                <li><strong>Admin and Accounting Staff</strong> - Handling accounting, staff training,
+                    corporate leadership, and administrative duties.</li>
+                <li><strong>Support Specialists</strong> - Providing support services to tenants, owners,
+                    vendors, and our various team members.</li>
+            </ul>
+            <h3 class="sub-title-intro">24/7 ONLINE ACCESS</h3>
+            <p>
+                Both owners and tenants alike love their 24/7 online access via their convenient online
+                portal.
+            </p>
+        </ng-container>
+    </app-contact-form-template>
+    <app-detail-access></app-detail-access>
+    
+    <div class="property-management">
+        <app-block-content [blockContent]="blockContent" [headerBlock]="headerContent"></app-block-content>
+
+        <div class="text-center">
+            <a routerLink="/" class="btn btn-clock yellow">request a free property evaluation</a>
+        </div>
+    </div>
+    <app-free-rental-analysis></app-free-rental-analysis>
+    <app-confidence-guarantees></app-confidence-guarantees>
+    <app-inclusive-leasing></app-inclusive-leasing>
+    <app-free-quote></app-free-quote>
+    <app-area-info></app-area-info>
+    <app-area-serve></app-area-serve>
+    <app-advertisement-rental-analysis></app-advertisement-rental-analysis>
+</div>

@@ -1,3 +1,63 @@
-<div class="router-animation__content">
-    <div tooltip="tootip on top" placement="top" delay="300">tootip on top</div>
+<div class="overview-wrapper">
+    <app-contact-form-template>
+        <ng-container contentDescription>
+            <h2 class="title-intro">We help home owners get a return on their investments.</h2>
+            <p class="normal-text mb-4">
+                Property management in Chino Hills doesn’t have to be scary. At Clockwork, we take the hassle and
+                anxiety
+                out of leasing your home and supply you with the tools you need to be a confident investment
+                property owner.
+            </p>
+            <h4 class="sub-title-intro">How much rent can you get for your investment?</h4>
+            <p>
+                Want to list your Chino Hills home but aren’t sure what your property is worth? Our experts can give you
+                a quick, hassle free estimate with no commitment necessary.
+            </p>
+            <ul class="checks-orange hide-on-init" animateOnScroll animationName="auto-animated animated-haft fadeInRight">
+                <li>
+                    <img src="/assets/images/icons/icon_orange_checkmark.png" alt="Checks box">
+                    <p>Get Optimized Rental Value for Your Property</p>
+                </li>
+                <li>
+                    <img src="/assets/images/icons/icon_orange_checkmark.png" alt="Checks box">
+                    <p>Gain Crucial Insight into Current Market Conditions</p>
+                </li>
+                <li>
+                    <img src="/assets/images/icons/icon_orange_checkmark.png" alt="Checks box">
+                    <p>Determine Your Cashflow from Monthly Rental Value</p>
+                </li>
+            </ul>
+            <h3 class="sub-title-intro">3 EASY WAYS TO GET STARTED!</h3>
+            <p>
+                Save time and call us at <a href="tel:+1-909-548-0044" class="link-text">(909) 548-0044</a>, complete
+                the form to the right and we will give you
+                a call, or request your <a href="#free-rental-analysis" class="link-text">FREE RENTAL ANALYSIS</a> below
+                and get your report emailed to you within
+                a few minutes.
+            </p>
+        </ng-container>
+    </app-contact-form-template>
+    <div class="property-management">
+        <app-block-content [blockContent]="blockContent" [headerBlock]="headerContent"></app-block-content>
+
+        <div class="text-center">
+            <a routerLink="/" class="btn btn-clock yellow">request a free property evaluation</a>
+        </div>
+    </div>
+    <app-free-rental-analysis></app-free-rental-analysis>
+    <app-confidence-guarantees></app-confidence-guarantees>
+    <app-inclusive-leasing></app-inclusive-leasing>
+    <app-free-quote></app-free-quote>
+    <app-area-info></app-area-info>
+    <app-area-serve></app-area-serve>
+    <app-advertisement-rental-analysis></app-advertisement-rental-analysis>
+    <!-- <div appIntersectionObserver [appIntersectionObserverThreshold]="0.1">
+        <div appIntersectionObservee [appIntersectionObserveeDebounce]="1000" [appIntersectionObserveeElse]="abcxyz">
+            <app-advertisement-rental-analysis></app-advertisement-rental-analysis>
+        </div>
+    </div> -->
 </div>
+
+<ng-template #abcxyz>
+    <p>I'm lazy loading element</p>
+</ng-template>

@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { HEADER_PROPERTY, PROPERTY_BLOCK_CONTENT } from 'src/app/shared';
 
 @Component({
   selector: 'app-tent-placement',
@@ -12,5 +13,8 @@ export class TentPlacementComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  headerContent = HEADER_PROPERTY;
+  blockContent = PROPERTY_BLOCK_CONTENT;
 
 }

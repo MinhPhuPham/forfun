@@ -1,0 +1,78 @@
+.free-rental-wrapper {
+    background-color: #cad1ea;
+    padding-top: 3%;
+
+    .row {
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+
+    .analysis-image {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .pac-target-input {
+        padding: 1rem;
+        border-width: 0px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        font-size: 12px;
+        outline: none;
+        width: 55%;
+        font-family: 'gorditabold';
+    }
+
+    .frs-btn {
+        padding: .8rem 1.25rem;
+        text-transform: uppercase;
+        color: white;
+        background-color: #ff9e1a;
+        border-width: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-family: 'gorditabold';
+    }
+
+    .sample-report {
+        font-family: 'gorditabold';
+        color: #ff9e1a;
+        font-size: 1.2rem;
+        display: block;
+        padding-top: .5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .rental-image {
+        order: 2;
+        text-align: center;
+    }
+
+    .rental-content {
+        order: 1;
+        text-align: center;
+        padding-bottom: max(1.5rem, 3%);
+
+        .frs-widget {
+            display: block;
+
+            .pac-target-input {
+                display: block;
+                border-radius: 5px;
+                margin: 0 auto;
+                width: 70%;
+                min-width: 250px;
+                margin-bottom: max(1rem, 3%);
+            }
+
+            .frs-btn {
+                border-radius: 5px;
+            }
+        }
+
+        .sample-report {
+            padding-top: max(1rem, 2%);
+        }
+    }
+}

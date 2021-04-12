@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbAccordionModule } from '../shared/modules';
 import { RouterModule } from '@angular/router';
+import { HideOnScrollModule } from '../shared';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     BrowserAnimationsModule,
     NgbAccordionModule,
+    HideOnScrollModule
   ],
   exports: [HeaderComponent, FooterComponent],
 })

@@ -24,30 +24,72 @@ export class ManagementComponent implements OnInit, OnDestroy {
       mainTitle: "24/7 Chino Hills Property Management",
       subTitle: `Lease it, manage it, protect it, guaranteed!`,
       backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
-      path: '/management/overview',
-      inner: '<a (click)="overViewClick()" class="btn btn-clock yellow">FIND OUT WHAT YOUR HOME COULD RENT FOR</a>'
+      path: '/management/chino-hills-property-management',
+      innerSingle: true
     },
     {
       pageID: PageId.Tenants,
       mainTitle: "Quality Tenant Placement",
       subTitle: `Lease it, manage it, protect it, guaranteed!`,
       backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
-      path: '/management/tenant-placement'
+      path: '/management/tenant-placement',
+      innerSingle: false
+    },
+    {
+      pageID: PageId.Tenants,
+      mainTitle: "Dedicated Property Manager",
+      subTitle: `Lease it, manage it, protect it, guaranteed!`,
+      backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
+      path: '/management/dedicated-management',
+      innerSingle: false
     },
     {
       pageID: PageId.Tenants,
       mainTitle: "Reliable Maintenance",
       subTitle: `Lease it, manage it, protect it, guaranteed!`,
       backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
-      path: '/management/maintenance'
+      path: '/management/maintenance',
+      innerSingle: false
+    },
+    {
+      pageID: PageId.Tenants,
+      mainTitle: "Accounting & Financial Reporting",
+      subTitle: `Lease it, manage it, protect it, guaranteed!`,
+      backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
+      path: '/management/accounting',
+      innerSingle: false
+    },
+    {
+      pageID: PageId.Tenants,
+      mainTitle: "24/7 Access & Support",
+      subTitle: `Lease it, manage it, protect it, guaranteed!`,
+      backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
+      path: '/management/access-support',
+      innerSingle: false
+    },
+    {
+      pageID: PageId.Tenants,
+      mainTitle: "Compliance & Inspections",
+      subTitle: `Lease it, manage it, protect it, guaranteed!`,
+      backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
+      path: '/management/compliance-inspections',
+      innerSingle: false
+    },
+    {
+      pageID: PageId.Tenants,
+      mainTitle: "Property Turnover",
+      subTitle: `Lease it, manage it, protect it, guaranteed!`,
+      backgroundImage: "/assets/images/owners/management/cpm_banner_owners.png",
+      path: '/management/turnover',
+      innerSingle: false
     }
   ]
-  activeBanner: Banner = this.banner[0];
+  activeBanner: Banner;
 
   tabs: Tabs[] = [
     {
       text: 'Overview',
-      link: 'overview'
+      link: 'chino-hills-property-management'
     },
     {
       text: 'tenant placement',
@@ -55,7 +97,7 @@ export class ManagementComponent implements OnInit, OnDestroy {
     },
     {
       text: 'management',
-      link: 'management'
+      link: 'dedicated-management'
     },
     {
       text: 'maintenance',
@@ -76,10 +118,6 @@ export class ManagementComponent implements OnInit, OnDestroy {
     {
       text: 'turnover',
       link: 'turnover'
-    },
-    {
-      text: 'guarantees',
-      link: 'guarantees'
     }
   ]
 
@@ -98,11 +136,6 @@ export class ManagementComponent implements OnInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.groupBtn = this.elementRef.nativeElement.querySelectorAll('a');
-    this.groupBtn.forEach((anchor: HTMLAnchorElement) => {
-      anchor.addEventListener('click', this.overViewClick)
-    })
-
     // const tab = this.tabsWrapper.nativeElement;
     // for (const eachChild of tab.children) {
     //   console.log(eachChild.clientWidth);
@@ -113,23 +146,14 @@ export class ManagementComponent implements OnInit, OnDestroy {
     for (const obs of this._obsevers) {
       obs.unsubscribe();
     }
-
-    this.groupBtn.forEach((anchor: HTMLAnchorElement) => {
-      anchor.removeEventListener('click', this.overViewClick)
-    })
   }
 
   getState(outlet) {
     return outlet.activatedRouteData.state;
   }
 
-  overViewClick() {
-    console.log('click');
-  }
-
-  scrollPagination(direction: string) {
-    const longScroll = direction == "left" ? -(this.tabsWrapper.nativeElement.offsetWidth) : this.tabsWrapper.nativeElement.offsetWidth;
-    let scroller = this.tabsWrapper.nativeElement.scrollLeft + longScroll;
-    this.tabsWrapper.nativeElement.scrollTo({ left: scroller, behavior: 'smooth' });
+  scrollToElement(id: string) {
+    const el = document.getElementById(id) as HTMLElement;
+    el.scrollIntoView({ behavior: 'smooth', block: "start", inline: "start" });
   }
 }

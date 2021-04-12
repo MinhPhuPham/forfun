@@ -3,8 +3,6 @@
   background-color: #ebebeb;
   margin-top: 4%;
   margin-bottom: 4%;
-  padding-top: 135px;
-  padding-bottom: 135px;
 
   #home-pricing {
     background: #ebebeb;
@@ -187,5 +185,13 @@
       padding: 20px 0;
       text-align: center;
     }
+  }
+}
+
+.question-circle {
+  cursor: pointer;
+
+  &:hover {
+    color:#1672ff;
   }
 }
